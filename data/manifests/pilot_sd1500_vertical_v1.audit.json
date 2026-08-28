@@ -1,0 +1,17 @@
+{
+  "cohort": "pilot_sd1500_vertical_v1",
+  "duplicate_rows_removed": 34,
+  "eligible_events": 10081,
+  "missing_direction_targets": 0,
+  "pilot_events": 1000,
+  "release": "3",
+  "selection_sha256": "5d2dad150943385cb0116f1a0dfa5d200cf1ffbe93aae2cc029bf19a969f827b",
+  "split_counts": {
+    "test": 144,
+    "train": 711,
+    "validation": 145
+  },
+  "strata": 36,
+  "summary_rows": 24319,
+  "unique_events": 24285
+}
