@@ -13,6 +13,9 @@ improve it without using leaked outputs from Auger's official reconstruction?
 The project begins with physics and reproducibility. Deployment and an interactive
 application belong to Phase 2, after the scientific result is complete.
 
+The complete research program, staged research releases, and interactive deployment
+vision are documented in [`docs/project_scope_and_deployment.md`](docs/project_scope_and_deployment.md).
+
 ## Current scope
 
 1. Learn the schema using official example event `081847956000`.
