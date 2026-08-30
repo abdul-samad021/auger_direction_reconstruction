@@ -11,3 +11,7 @@ each module connects physical ideas to the measurements and code that use them.
 Interactive material is stored in [`assets/`](assets/). Reusable scientific code
 belongs in `src/auger_reco/`; the learning assets are explanatory companions.
 
+## Reference audits
+
+- [Auger tutorial audit and verified conventions](../auger_tutorial_audit.md)
+
