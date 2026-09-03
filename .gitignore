@@ -8,6 +8,11 @@ __pycache__/
 .ipynb_checkpoints/
 .coverage
 htmlcov/
+.env
+.env.*
+!.env.example
+build/
+dist/
 
 # Raw and derived data are reproducible artifacts, not source code.
 data/raw/*
@@ -21,4 +26,3 @@ data/processed/*
 .vscode/settings.json
 .DS_Store
 Thumbs.db
-
