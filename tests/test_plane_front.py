@@ -106,10 +106,7 @@ def _make_exact_event(
     # Generate exact station times from:
     #
     # t_i = t_0 + r_i dot u / c
-    exact_times_ns = (
-        origin_time_ns
-        + positions_m @ propagation_direction / REFERENCE_C_M_PER_NS
-    )
+    exact_times_ns = origin_time_ns + positions_m @ propagation_direction / REFERENCE_C_M_PER_NS
 
     return sky_direction, exact_times_ns
 
@@ -179,9 +176,7 @@ def test_exact_nonplanar_event_is_recovered(
 ) -> None:
     """The complete fitter must recover noiseless synthetic truth."""
 
-    true_sky_direction, exact_times_ns = _make_exact_event(
-        station_positions_m
-    )
+    true_sky_direction, exact_times_ns = _make_exact_event(station_positions_m)
 
     result = plane_front.fit_plane_front(
         station_positions_m,
@@ -219,10 +214,7 @@ def test_exact_nonplanar_event_is_recovered(
         atol=EXACT_TIME_TOLERANCE_NS,
     )
 
-    assert (
-        result.maximum_absolute_residual_ns
-        < EXACT_TIME_TOLERANCE_NS
-    )
+    assert result.maximum_absolute_residual_ns < EXACT_TIME_TOLERANCE_NS
 
     # This particular station layout genuinely spans x, y, and z.
     assert result.full_geometry_rank == 3
@@ -231,10 +223,7 @@ def test_exact_nonplanar_event_is_recovered(
     # reference time and two direction slopes.
     assert result.final_jacobian_rank == 3
 
-    assert (
-        result.degrees_of_freedom
-        == len(station_positions_m) - 3
-    )
+    assert result.degrees_of_freedom == len(station_positions_m) - 3
 
     np.testing.assert_allclose(
         result.propagation_direction,
@@ -253,14 +242,9 @@ def test_exact_nonplanar_event_is_recovered(
 
     assert selected_attempt.accepted is True
 
-    assert (
-        selected_attempt.final_parameters
-        == result.optimizer_parameters
-    )
+    assert selected_attempt.final_parameters == result.optimizer_parameters
 
-    assert selected_attempt.objective_sum_squares == pytest.approx(
-        result.objective_sum_squares
-    )
+    assert selected_attempt.objective_sum_squares == pytest.approx(result.objective_sum_squares)
 
     assert result.optimizer_function_evaluations >= 1
     assert np.isfinite(result.optimizer_cost)
@@ -318,10 +302,7 @@ def test_rank_two_flat_array_recovers_every_azimuth_quadrant(
     assert result.degrees_of_freedom == len(flat_positions_m) - 3
     assert np.isinf(result.full_condition_number)
 
-    assert (
-        "rank_two_surface_geometry"
-        in result.quality_flags
-    )
+    assert "rank_two_surface_geometry" in result.quality_flags
 
 
 def test_vertical_event_marks_azimuth_as_undefined(
@@ -358,10 +339,7 @@ def test_vertical_event_marks_azimuth_as_undefined(
     # All azimuths describe the same point when the direction is straight up.
     assert np.isnan(result.azimuth_deg)
 
-    assert (
-        "azimuth_undefined_near_vertical"
-        in result.quality_flags
-    )
+    assert "azimuth_undefined_near_vertical" in result.quality_flags
 
 
 def test_noisy_fits_reconstruct_and_report_distinct_objectives(
@@ -370,9 +348,7 @@ def test_noisy_fits_reconstruct_and_report_distinct_objectives(
 ) -> None:
     """A deterministic noisy case must report each minimized objective."""
 
-    true_sky_direction, exact_times_ns = _make_exact_event(
-        station_positions_m
-    )
+    true_sky_direction, exact_times_ns = _make_exact_event(station_positions_m)
 
     # A fixed seed makes the test repeatable on every run.
     random_generator = np.random.default_rng(2026)
@@ -415,9 +391,7 @@ def test_noisy_fits_reconstruct_and_report_distinct_objectives(
 
     # For timing weighting, the minimized residuals are e_i / dt_i.
     # Therefore, objective sum of squares equals chi-square.
-    assert weighted_result.objective_sum_squares == pytest.approx(
-        weighted_result.chi_square
-    )
+    assert weighted_result.objective_sum_squares == pytest.approx(weighted_result.chi_square)
 
     # For uniform weighting, the fit scale is one for every station.
     # Therefore, the numerical objective equals raw timing RSS.
@@ -429,16 +403,12 @@ def test_noisy_fits_reconstruct_and_report_distinct_objectives(
 
     # WLS directly minimizes chi-square, so its chi-square cannot be worse
     # than the chi-square obtained from the OLS solution, apart from rounding.
-    assert weighted_result.chi_square <= (
-        uniform_result.chi_square
-        * (1.0 + comparison_tolerance)
-    )
+    assert weighted_result.chi_square <= (uniform_result.chi_square * (1.0 + comparison_tolerance))
 
     # OLS directly minimizes raw RSS, so its RSS cannot be worse than the
     # raw RSS obtained from the WLS solution, apart from rounding.
     assert uniform_result.residual_sum_squares_ns2 <= (
-        weighted_result.residual_sum_squares_ns2
-        * (1.0 + comparison_tolerance)
+        weighted_result.residual_sum_squares_ns2 * (1.0 + comparison_tolerance)
     )
 
     np.testing.assert_allclose(
@@ -456,14 +426,9 @@ def test_noisy_fits_reconstruct_and_report_distinct_objectives(
     )
 
     # Independently recompute the diagnostic quantities from the public result.
-    expected_weighted_residuals_ns = (
-        noisy_times_ns - weighted_result.predicted_times_ns
-    )
+    expected_weighted_residuals_ns = noisy_times_ns - weighted_result.predicted_times_ns
 
-    expected_weighted_standardized = (
-        expected_weighted_residuals_ns
-        / timing_uncertainties_ns
-    )
+    expected_weighted_standardized = expected_weighted_residuals_ns / timing_uncertainties_ns
 
     np.testing.assert_allclose(
         weighted_result.residuals_ns,
@@ -484,22 +449,11 @@ def test_noisy_fits_reconstruct_and_report_distinct_objectives(
     )
 
     assert weighted_result.rms_residual_ns == pytest.approx(
-        float(
-            np.sqrt(
-                np.mean(expected_weighted_residuals_ns**2)
-            )
-        )
+        float(np.sqrt(np.mean(expected_weighted_residuals_ns**2)))
     )
 
-    assert (
-        weighted_result.maximum_absolute_residual_ns
-        == pytest.approx(
-            float(
-                np.max(
-                    np.abs(expected_weighted_residuals_ns)
-                )
-            )
-        )
+    assert weighted_result.maximum_absolute_residual_ns == pytest.approx(
+        float(np.max(np.abs(expected_weighted_residuals_ns)))
     )
 
     assert np.isfinite(weighted_result.reduced_chi_square)
@@ -514,9 +468,7 @@ def test_repeated_fit_is_deterministic(
 
     _, exact_times_ns = _make_exact_event(station_positions_m)
 
-    noisy_times_ns = exact_times_ns + np.random.default_rng(
-        7391
-    ).normal(
+    noisy_times_ns = exact_times_ns + np.random.default_rng(7391).normal(
         loc=0.0,
         scale=timing_uncertainties_ns,
     )
@@ -576,15 +528,9 @@ def test_result_arrays_and_dataclass_are_immutable(
         result.singular_values,
     )
 
-    assert all(
-        values.dtype == np.float64
-        for values in returned_arrays
-    )
+    assert all(values.dtype == np.float64 for values in returned_arrays)
 
-    assert all(
-        not values.flags.writeable
-        for values in returned_arrays
-    )
+    assert all(not values.flags.writeable for values in returned_arrays)
 
     # The arrays inside the result are also read-only.
     with pytest.raises(ValueError):
@@ -633,9 +579,7 @@ def test_nonpositive_or_nonfinite_uncertainty_is_rejected(
 
     _, exact_times_ns = _make_exact_event(station_positions_m)
 
-    invalid_uncertainties_ns = (
-        timing_uncertainties_ns.copy()
-    )
+    invalid_uncertainties_ns = timing_uncertainties_ns.copy()
 
     invalid_uncertainties_ns[0] = invalid_uncertainty
 
@@ -756,9 +700,7 @@ def test_invalid_fit_option_is_rejected() -> None:
         ValueError,
         match="minimum_stations must be at least four",
     ):
-        plane_front.PlaneFrontFitOptions(
-            minimum_stations=3
-        )
+        plane_front.PlaneFrontFitOptions(minimum_stations=3)
 
 
 def test_configured_condition_threshold_produces_quality_flag(
@@ -784,15 +726,9 @@ def test_configured_condition_threshold_produces_quality_flag(
 
     assert result.options == options
 
-    assert (
-        result.surface_condition_number
-        > options.surface_condition_warning_threshold
-    )
+    assert result.surface_condition_number > options.surface_condition_warning_threshold
 
-    assert (
-        "ill_conditioned_surface_geometry"
-        in result.quality_flags
-    )
+    assert "ill_conditioned_surface_geometry" in result.quality_flags
 
 
 def test_near_horizon_fit_is_flagged(
@@ -815,10 +751,7 @@ def test_near_horizon_fit_is_flagged(
         timing_uncertainties_ns,
     )
 
-    assert (
-        "near_horizon_slope_parameterization"
-        in result.quality_flags
-    )
+    assert "near_horizon_slope_parameterization" in result.quality_flags
 
     assert (
         plane_front.angular_separation_deg(
@@ -852,9 +785,7 @@ def test_one_failed_optimizer_start_does_not_abort_reconstruction(
         number_of_calls += 1
 
         if number_of_calls == 1:
-            raise FloatingPointError(
-                "Injected single-start failure for testing."
-            )
+            raise FloatingPointError("Injected single-start failure for testing.")
 
         return original_fit_from_seed(
             system,
@@ -874,28 +805,15 @@ def test_one_failed_optimizer_start_does_not_abort_reconstruction(
         timing_uncertainties_ns,
     )
 
-    failed_attempts = [
-        attempt
-        for attempt in result.optimizer_attempts
-        if not attempt.accepted
-    ]
+    failed_attempts = [attempt for attempt in result.optimizer_attempts if not attempt.accepted]
 
     assert number_of_calls >= 2
 
-    assert any(
-        attempt.exception_type == "FloatingPointError"
-        for attempt in failed_attempts
-    )
+    assert any(attempt.exception_type == "FloatingPointError" for attempt in failed_attempts)
 
-    assert any(
-        attempt.accepted
-        for attempt in result.optimizer_attempts
-    )
+    assert any(attempt.accepted for attempt in result.optimizer_attempts)
 
-    assert any(
-        flag.startswith("failed_initializers:")
-        for flag in result.quality_flags
-    )
+    assert any(flag.startswith("failed_initializers:") for flag in result.quality_flags)
 
 
 def test_all_failed_optimizer_starts_raise_structured_error(
@@ -908,9 +826,7 @@ def test_all_failed_optimizer_starts_raise_structured_error(
     _, exact_times_ns = _make_exact_event(station_positions_m)
 
     def always_fail(*_args, **_kwargs):
-        raise FloatingPointError(
-            "Injected total optimizer failure for testing."
-        )
+        raise FloatingPointError("Injected total optimizer failure for testing.")
 
     monkeypatch.setattr(
         plane_front,
@@ -918,9 +834,7 @@ def test_all_failed_optimizer_starts_raise_structured_error(
         always_fail,
     )
 
-    with pytest.raises(
-        plane_front.PlaneFrontOptimizationError
-    ) as error_info:
+    with pytest.raises(plane_front.PlaneFrontOptimizationError) as error_info:
         plane_front.fit_plane_front(
             station_positions_m,
             exact_times_ns,
@@ -932,28 +846,14 @@ def test_all_failed_optimizer_starts_raise_structured_error(
     assert attempts
     assert len(attempts) >= 2
 
-    assert all(
-        not attempt.accepted
-        for attempt in attempts
-    )
+    assert all(not attempt.accepted for attempt in attempts)
+
+    assert all(attempt.scipy_success is False for attempt in attempts)
+
+    assert all(attempt.status is None for attempt in attempts)
+
+    assert all(attempt.exception_type == "FloatingPointError" for attempt in attempts)
 
     assert all(
-        attempt.scipy_success is False
-        for attempt in attempts
-    )
-
-    assert all(
-        attempt.status is None
-        for attempt in attempts
-    )
-
-    assert all(
-        attempt.exception_type == "FloatingPointError"
-        for attempt in attempts
-    )
-
-    assert all(
-        attempt.message
-        == "Injected total optimizer failure for testing."
-        for attempt in attempts
+        attempt.message == "Injected total optimizer failure for testing." for attempt in attempts
     )

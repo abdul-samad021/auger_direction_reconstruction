@@ -1,3 +1,10 @@
+"""Uncertainty-aware plane-front reconstruction for surface-detector timings.
+
+The fitter centres and whitens station measurements, uses an SVD to diagnose the
+detector geometry and construct physical starting directions, then minimizes timing
+residuals over a downward unit-vector parameterization.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -324,6 +331,8 @@ def _prepare_system(
     weighting: WeightingMode,
     options: PlaneFrontFitOptions,
 ) -> _PreparedSystem:
+    """Centre and whiten measurements, then diagnose geometry with an SVD."""
+
     if weighting == "timing":
         fit_scales_ns = uncertainties_ns.copy()
     elif weighting == "uniform":
@@ -391,12 +400,16 @@ def _prepare_system(
 
 
 def _truncated_linear_solution(system: _PreparedSystem, components: int) -> FloatArray:
+    """Solve the weighted timing equation in a selected SVD subspace."""
+
     projected_times = system.left_vectors[:, :components].T @ system.whitened_times
     coefficients = projected_times / system.singular_values[:components]
     return system.right_vectors_transposed[:components].T @ coefficients
 
 
 def _downward_from_horizontal(vector: FloatArray, *, margin: float) -> FloatArray:
+    """Project an x-y estimate inside the unit disk and recover its negative z."""
+
     horizontal = np.asarray(vector[:2], dtype=np.float64)
     horizontal_norm = float(np.linalg.norm(horizontal))
     maximum_horizontal_norm = 1.0 - margin
@@ -437,6 +450,8 @@ def _build_propagation_seeds(
     system: _PreparedSystem,
     options: PlaneFrontFitOptions,
 ) -> tuple[list[tuple[str, FloatArray]], tuple[str, ...], tuple[str, ...]]:
+    """Build distinct downward optimizer seeds from rank-two and rank-three fits."""
+
     seeds: list[tuple[str, FloatArray]] = []
     flags: list[str] = list(system.quality_flags)
 
@@ -500,6 +515,8 @@ def _slopes_from_propagation(
     *,
     minimum_sky_z: float,
 ) -> tuple[float, float]:
+    """Convert a downward propagation seed to unconstrained upper-sky slopes."""
+
     unit_propagation = _unit_vector(
         propagation_direction,
         name="propagation initializer",
@@ -517,6 +534,8 @@ def _slopes_from_propagation(
 
 
 def _objective_residuals(parameters: FloatArray, system: _PreparedSystem) -> FloatArray:
+    """Evaluate the residual vector minimized by SciPy's least-squares solver."""
+
     time_offset_ns, horizontal_slope_x, horizontal_slope_y = parameters
     sky_direction = _sky_direction_from_slopes(horizontal_slope_x, horizontal_slope_y)
     propagation_direction = -sky_direction
@@ -535,6 +554,8 @@ def _fit_from_seed(
     propagation_seed: FloatArray,
     options: PlaneFrontFitOptions,
 ) -> OptimizeResult:
+    """Run one nonlinear optimization attempt from a propagation seed."""
+
     horizontal_slope_x, horizontal_slope_y = _slopes_from_propagation(
         propagation_seed,
         minimum_sky_z=options.minimum_sky_z_for_slopes,
