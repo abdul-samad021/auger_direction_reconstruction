@@ -16,7 +16,7 @@ the event, but this reliance must be disclosed and later ablated.
 - `sdrec.theta`, `sdrec.phi`
 - Their released uncertainties, when present
 
-Convert directions to unit vectors for fitting and angular-error calculation.
+Convert directions to unit vectors for fitting and angular-separation calculation.
 
 ## Quarantined from model inputs
 
@@ -29,4 +29,3 @@ Convert directions to unit vectors for fitting and angular-error calculation.
 
 These quantities may be used only for post-hoc stratification or diagnostics after
 predictions are frozen. Every added feature requires a written leakage review.
-

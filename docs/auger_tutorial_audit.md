@@ -475,16 +475,16 @@ Our implementation will not imitate the notebooks cell for cell. It will use:
 
 | Category | Fields or examples | Project role |
 |---|---|---|
-| Baseline inputs | selected `x`, `y`, `z`, `t`, `dt` | Independent fit |
+| Baseline inputs | Auger-selected `x`, `y`, `z`, `t`, `dt` | Independently implemented fit with Auger-assisted station selection |
 | Diagnostics | `signal`, `dsignal`, `sat`, rejected triggers | Plots and later justified features |
 | Evaluation reference | official `theta`, `phi`, `ra`, `dec` | Reveal after prediction |
 | Evaluation metadata | official energy, multiplicity, quality fields, external weather variables | Post-fit stratification and systematic checks |
 | Prohibited baseline inputs | official core, `R`, `spDistance`, `sd_wcorr`, official fit quality, official direction-derived fields | Leakage |
 
-## 10. Immediate consequence for the next exercise
+## 10. Consequence for the synthetic exercise
 
-The manual-verification phase has resolved the convention needed for coding. The
-synthetic reconstruction should now:
+The manual-verification phase resolved the convention used by the synthetic
+reconstruction. That implementation was required to:
 
 1. define station coordinates in the Auger site system;
 2. choose a known Auger sky direction $(\theta,\phi)$;
@@ -495,7 +495,9 @@ synthetic reconstruction should now:
 7. test exact, noisy, vertical, four-quadrant, and degenerate cases;
 8. compare using unit-vector angular separation.
 
-No convention question now blocks the synthetic implementation.
+The completed convention check remains the reference for production and real-event
+integration. No extra azimuth rotation or propagation/arrival sign swap should be
+introduced later.
 
 ## Authoritative references
 

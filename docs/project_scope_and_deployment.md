@@ -29,7 +29,8 @@ The central research question is:
 > How accurately can an independent, uncertainty-aware reconstruction recover the
 > arrival direction of a cosmic-ray air shower from Pierre Auger surface-detector
 > station positions and timing measurements, and can physically motivated or
-> machine-learning corrections improve that reconstruction on sealed held-out events?
+> machine-learning corrections improve that reconstruction on predeclared held-out
+> events whose evaluation targets are technically quarantined during development?
 
 The project is deliberately hybrid:
 
@@ -44,7 +45,7 @@ The project is deliberately hybrid:
 ## Scientific claims boundary
 
 The project may claim improvement over its own independently implemented baselines
-when the appropriate sealed test cohort supports that conclusion. It must not
+when the appropriate target-quarantined test cohort supports that conclusion. It must not
 automatically claim
 to outperform the Pierre Auger Collaboration's official reconstruction because:
 
@@ -74,7 +75,8 @@ simulation-based references remains part of the full research scope.
 - Preserve raw data outside Git and track deterministic manifests.
 - Deduplicate physical events that appear through multiple reconstruction views.
 - Freeze train, validation, and test event identifiers before modelling.
-- Preserve a separate sealed evaluation cohort for each declared research release.
+- Preserve a separate fixed evaluation cohort for each declared research release and
+  technically withhold its reference directions while models are being developed.
   Once its result is viewed, that cohort becomes a historical benchmark and must not
   be described as untouched or used to select later improvements.
 - Before opening a release's test cohort, freeze all preprocessing, feature,
@@ -82,6 +84,9 @@ simulation-based references remains part of the full research scope.
   release.
 - Reserve a non-overlapping final benchmark for the completed full-scope study.
 - Record all cohort rules, exclusions, failures, and software environments.
+- The current pilot manifest contains both split assignments and released reference
+  values. Before batch evaluation, generate a label-free execution manifest and load
+  reference values only after predictions for that release are frozen.
 
 ## 2. Data understanding and leakage control
 
@@ -140,9 +145,11 @@ simulation-based references remains part of the full research scope.
 - Provide batch reconstruction without hidden notebook state.
 - Preserve model and software version provenance with every result.
 
-## 6. Blinded real-event reconstruction
+## 6. Reference-hidden real-event reconstruction
 
-- Apply the fitter to the first real Auger event without reading its released answer.
+- Use event `081847956000` as an unblinded integration and convention check because
+  its released answer was already inspected during the tutorial audit.
+- Predeclare a different real event for a genuinely reference-hidden demonstration.
 - Record the predicted direction before revealing the reference.
 - Compare using angular separation only after the prediction is frozen.
 - Plot measured and predicted station times.
@@ -305,12 +312,13 @@ Target: the first defensible end-to-end research result.
 
 - noisy synthetic validation;
 - reusable tested fitter;
-- blinded first real event;
+- unblinded first-event integration check and a separate predeclared,
+  reference-hidden demonstration event;
 - frozen pilot evaluation;
 - baseline comparisons;
 - one physical improvement;
 - one leakage-safe ML residual correction;
-- one-time comparison on the sealed Research Release 1 test cohort;
+- one-time comparison on the target-quarantined Research Release 1 test cohort;
 - concise report and reproducibility instructions.
 
 Completion permits the accurate statement:
@@ -326,7 +334,7 @@ Completion permits the accurate statement:
 - deeper failure and subgroup analysis;
 - uncertainty calibration and abstention;
 - systematic checks involving weather or other justified metadata.
-- one-time evaluation on the sealed Research Release 2 test cohort.
+- one-time evaluation on the target-quarantined Research Release 2 test cohort.
 
 ## Research Release 3 — advanced ML and full research package
 
