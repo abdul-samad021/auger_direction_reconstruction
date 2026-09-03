@@ -7,11 +7,17 @@ from pathlib import Path, PurePosixPath
 from typing import Any
 
 REQUIRED_TOP_LEVEL = {"meta", "info", "flags", "stations"}
-REQUIRED_STATION_FIELDS = {"id", "x", "y", "z", "t", "signal", "isSelected"}
+REQUIRED_STATION_FIELDS = {"id", "x", "y", "z", "t", "dt", "isSelected"}
+MINIMUM_SELECTED_STATIONS = 4
 
 
 def _finite_number(value: Any) -> bool:
     return isinstance(value, int | float) and not isinstance(value, bool) and math.isfinite(value)
+
+
+def _binary_integer(value: Any) -> bool:
+    """Return whether a JSON value is exactly the integer zero or one."""
+    return type(value) is int and value in {0, 1}
 
 
 def _load_json_object(path: Path) -> dict[str, Any]:
@@ -37,7 +43,7 @@ def validate_event(path: Path) -> dict[str, object]:
         stations = []
 
     selected: list[dict[str, Any]] = []
-    seen_ids: set[object] = set()
+    seen_ids: set[int | str] = set()
     for index, station in enumerate(stations):
         if not isinstance(station, dict):
             errors.append(f"station {index} is not an object")
@@ -47,34 +53,51 @@ def validate_event(path: Path) -> dict[str, object]:
             errors.append(f"station {index} missing: {', '.join(sorted(missing_fields))}")
             continue
         station_id = station["id"]
-        if station_id in seen_ids:
+        if not isinstance(station_id, int | str) or isinstance(station_id, bool):
+            errors.append(f"station {index} has an invalid id")
+        elif station_id in seen_ids:
             errors.append(f"duplicate station id: {station_id}")
-        seen_ids.add(station_id)
-        if station["isSelected"] in (1, True):
+        else:
+            seen_ids.add(station_id)
+
+        selection = station["isSelected"]
+        if not _binary_integer(selection):
+            errors.append(f"station {station_id} has isSelected outside integer 0 or 1")
+        elif selection == 1:
             selected.append(station)
 
-    if len(selected) < 3:
-        errors.append(f"only {len(selected)} selected stations; at least 3 are required")
+    if len(selected) < MINIMUM_SELECTED_STATIONS:
+        errors.append(
+            f"only {len(selected)} selected stations; "
+            f"at least {MINIMUM_SELECTED_STATIONS} are required"
+        )
 
     for station in selected:
         station_id = station["id"]
-        for field in ("x", "y", "z", "t", "signal"):
+        for field in ("x", "y", "z", "t", "dt"):
             if not _finite_number(station[field]):
                 errors.append(f"station {station_id} has non-finite or non-numeric {field}")
-        if _finite_number(station["signal"]) and station["signal"] < 0:
+
+        if _finite_number(station["dt"]) and station["dt"] <= 0:
+            errors.append(f"station {station_id} has a non-positive dt")
+
+        signal = station.get("signal")
+        if signal is not None and not _finite_number(signal):
+            errors.append(f"station {station_id} has a non-finite or non-numeric signal")
+        elif _finite_number(signal) and signal < 0:
             errors.append(f"station {station_id} has a negative signal")
 
     if selected:
-        times = [station["t"] for station in selected if _finite_number(station["t"])]
         xy = [
             (station["x"], station["y"])
             for station in selected
             if _finite_number(station["x"]) and _finite_number(station["y"])
         ]
-        if len(times) > 1 and max(times) == min(times):
-            errors.append("selected-station times have zero spread")
         if len(xy) > 1 and len(set(xy)) == 1:
-            errors.append("selected stations have no horizontal spatial spread")
+            warnings.append(
+                "selected stations have no horizontal spatial spread; "
+                "the reconstruction geometry may be degenerate"
+            )
 
     sdrec = event.get("sdrec")
     if not isinstance(sdrec, dict):
@@ -148,7 +171,11 @@ def validate_path(path: Path) -> dict[str, object]:
 def inspect_event(path: Path) -> dict[str, object]:
     event = _load_json_object(path)
     stations = event.get("stations", [])
-    selected = [station for station in stations if station.get("isSelected") in (1, True)]
+    selected = [
+        station
+        for station in stations
+        if isinstance(station, dict) and station.get("isSelected") == 1
+    ]
     flags = event.get("flags", {})
     sdrec = event.get("sdrec", {})
 
