@@ -10,12 +10,13 @@ accidentally enter the physics fit before a prediction has been frozen.
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass
 from enum import StrEnum
 from pathlib import Path
 
 import numpy as np
-from numpy.typing import NDArray
+from numpy.typing import ArrayLike, NDArray
 
 # Reusable type annotations for the NumPy arrays returned by this adapter.
 type FloatArray = NDArray[np.float64]
@@ -204,3 +205,282 @@ class AugerDirectionReference:
     # Some Auger event categories may omit one or both angle uncertainties.
     zenith_uncertainty_deg: float | None
     azimuth_uncertainty_deg: float | None
+
+
+# A unique marker for absent keys; JSON null is represented by None instead.
+_MISSING = object()
+
+
+def _child_location(parent: str, field: str | int) -> str:
+    """Build a location from our fixed schema keys or station indices."""
+
+    if parent == "/":
+        return f"/{field}"
+
+    return f"{parent}/{field}"
+
+
+def _record_issue(issues: list[EventDataIssue], *, code: str, location: str, message: str) -> None:
+    """Add one structured issue to the caller's error list."""
+
+    issues.append(EventDataIssue(code=code, location=location, message=message))
+
+
+def _required_field(
+    mapping: Mapping[str, object], field: str, *, parent_location: str, issues: list[EventDataIssue]
+) -> object:
+    """Read one required key and report its absence once."""
+
+    try:
+        return mapping[field]
+    except KeyError:
+        _record_issue(
+            issues,
+            code="missing_field",
+            location=_child_location(parent_location, field),
+            message=f"Required field {field!r} is absent.",
+        )
+        return _MISSING
+
+
+def _optional_field(mapping: Mapping[str, object], field: str) -> object:
+    """Read an optional key while preserving missing versus explicit null."""
+
+    try:
+        return mapping[field]
+    except KeyError:
+        return _MISSING
+
+
+def _mapping_value(
+    value: object, *, location: str, issues: list[EventDataIssue]
+) -> Mapping[str, object] | None:
+    """Validate an object without copying or inspecting all its fields."""
+
+    if value is _MISSING:
+        return None  # Its absence was already recorded by _required_field.
+
+    if not isinstance(value, Mapping):
+        _record_issue(
+            issues, code="wrong_type", location=location, message="Expected a JSON object."
+        )
+        return None
+
+    return value
+
+
+def _non_empty_list_value(
+    value: object, *, location: str, issues: list[EventDataIssue]
+) -> list[object] | None:
+    """Require a non-empty JSON array."""
+
+    if value is _MISSING:
+        return None
+
+    if not isinstance(value, list):
+        _record_issue(
+            issues, code="wrong_type", location=location, message="Expected a JSON array."
+        )
+        return None
+
+    if not value:
+        _record_issue(
+            issues,
+            code="empty_value",
+            location=location,
+            message="The array must contain at least one item.",
+        )
+        return None
+
+    return value
+
+
+def _integer_value(
+    value: object,
+    *,
+    location: str,
+    issues: list[EventDataIssue],
+    minimum: int | None = None,
+    maximum: int | None = None,
+) -> int | None:
+    """Require a built-in JSON integer within optional inclusive bounds."""
+
+    if value is _MISSING:
+        return None
+
+    if type(value) is not int:  # Reject bool, float, and numeric strings.
+        _record_issue(
+            issues, code="wrong_type", location=location, message="Expected a JSON integer."
+        )
+        return None
+
+    if minimum is not None and value < minimum:
+        _record_issue(
+            issues,
+            code="out_of_range",
+            location=location,
+            message=f"Integer must be at least {minimum}.",
+        )
+        return None
+
+    if maximum is not None and value > maximum:
+        _record_issue(
+            issues,
+            code="out_of_range",
+            location=location,
+            message=f"Integer must be at most {maximum}.",
+        )
+        return None
+
+    return value
+
+
+def _finite_float_value(
+    value: object,
+    *,
+    location: str,
+    issues: list[EventDataIssue],
+    minimum: float | None = None,
+    maximum: float | None = None,
+    strictly_positive: bool = False,
+) -> float | None:
+    """Validate a JSON number before converting it into a fitter value."""
+
+    if value is _MISSING:
+        return None
+
+    if type(value) not in (int, float):  # JSON booleans are not measurements.
+        _record_issue(
+            issues, code="wrong_type", location=location, message="Expected a JSON number."
+        )
+        return None
+
+    try:
+        number = float(value)
+    except OverflowError:
+        # Do not print a potentially enormous invalid integer in the message.
+        _record_issue(
+            issues,
+            code="out_of_range",
+            location=location,
+            message="Number is too large to convert to a float64 value.",
+        )
+        return None
+
+    if not np.isfinite(number):
+        _record_issue(
+            issues,
+            code="nonfinite_number",
+            location=location,
+            message="Number must not be NaN or infinite.",
+        )
+        return None
+
+    if strictly_positive and number <= 0.0:
+        _record_issue(
+            issues,
+            code="out_of_range",
+            location=location,
+            message="Number must be strictly positive.",
+        )
+        return None
+
+    if minimum is not None and number < minimum:
+        _record_issue(
+            issues,
+            code="out_of_range",
+            location=location,
+            message=f"Number must be at least {minimum}.",
+        )
+        return None
+
+    if maximum is not None and number > maximum:
+        _record_issue(
+            issues,
+            code="out_of_range",
+            location=location,
+            message=f"Number must be at most {maximum}.",
+        )
+        return None
+
+    return number
+
+
+def _binary_flag_value(value: object, *, location: str, issues: list[EventDataIssue]) -> int | None:
+    """Accept only the integer 0 or 1."""
+
+    if value is _MISSING:
+        return None
+
+    if type(value) is not int or value not in (0, 1):
+        _record_issue(
+            issues,
+            code="invalid_binary_flag",
+            location=location,
+            message="Expected the integer 0 or 1.",
+        )
+        return None
+
+    return value
+
+
+def _nonblank_string_value(
+    value: object, *, location: str, issues: list[EventDataIssue]
+) -> str | None:
+    """Require meaningful text while preserving the released string."""
+
+    if value is _MISSING:
+        return None
+
+    if not isinstance(value, str) or not value.strip():
+        _record_issue(
+            issues, code="wrong_type", location=location, message="Expected a nonblank string."
+        )
+        return None
+
+    return value  # Validation does not silently trim source text.
+
+
+def _readonly_float_array(values: ArrayLike) -> FloatArray:
+    """Copy already-validated measurements into a contiguous read-only array."""
+
+    result = np.array(values, dtype=np.float64, order="C", copy=True)
+    result.setflags(write=False)  # Prevent ordinary accidental assignment.
+    return result
+
+
+def _readonly_integer_array(values: ArrayLike) -> IntegerArray:
+    """Copy already-range-checked IDs into a contiguous read-only array."""
+
+    result = np.array(values, dtype=np.int64, order="C", copy=True)
+    result.setflags(write=False)
+    return result
+
+
+def _normalize_selection(selection: StationSelection | str) -> StationSelection:
+    """Convert a supported selection value into its enum member."""
+
+    try:
+        return StationSelection(selection)
+    except (TypeError, ValueError):
+        allowed_values = ", ".join(repr(option.value) for option in StationSelection)
+        raise ValueError(f"selection must be one of: {allowed_values}") from None
+
+
+def _validate_minimum_stations(minimum_stations: int) -> int:
+    """Reject invalid caller configuration before reading event data."""
+
+    if type(minimum_stations) is not int:
+        raise TypeError("minimum_stations must be an integer")
+
+    if minimum_stations < DEFAULT_MINIMUM_STATIONS:
+        raise ValueError(f"minimum_stations must be at least {DEFAULT_MINIMUM_STATIONS}")
+
+    return minimum_stations
+
+
+def _raise_schema_errors(issues: list[EventDataIssue], *, source_path: Path | None) -> None:
+    """Raise once after the caller has checked all relevant fields."""
+
+    if issues:
+        raise AugerEventSchemaError(tuple(issues), source_path=source_path)
