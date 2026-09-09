@@ -484,3 +484,143 @@ def _raise_schema_errors(issues: list[EventDataIssue], *, source_path: Path | No
 
     if issues:
         raise AugerEventSchemaError(tuple(issues), source_path=source_path)
+
+
+def _read_event_identity(
+    document: Mapping[str, object], *, issues: list[EventDataIssue], include_date: bool = True
+) -> tuple[int | None, str | None]:
+    """Read event identity, optionally retaining unparsed date text.
+
+    Missing dates are allowed. When consumed, a present date must be a
+    nonblank string; explicit null is not treated as an absent field.
+    The reference adapter can set include_date=False to avoid reading a
+    field that its output does not use.
+    """
+
+    info = _mapping_value(
+        _required_field(document, "info", parent_location="/", issues=issues),
+        location="/info",
+        issues=issues,
+    )
+
+    if info is None:
+        return None, None  # Do not fabricate missing children of an invalid parent.
+
+    event_id = _integer_value(
+        _required_field(info, "id", parent_location="/info", issues=issues),
+        location="/info/id",
+        issues=issues,
+        minimum=0,
+        maximum=MAX_CANONICAL_EVENT_ID,
+    )
+
+    event_date: str | None = None
+
+    if include_date:
+        raw_date = _optional_field(info, "date")
+        if raw_date is not _MISSING:
+            event_date = _nonblank_string_value(raw_date, location="/info/date", issues=issues)
+
+    return event_id, event_date
+
+
+def _read_format_metadata(
+    document: Mapping[str, object], *, issues: list[EventDataIssue]
+) -> tuple[str | None, int | None]:
+    """Read the embedded release identifier and supported JSON format.
+
+    This adapter accepts nonnegative integer release identifiers and
+    stores them as text. The embedded identifier is not the portal DOI
+    or its release date. Invalid fields are reported through issues.
+    """
+
+    meta = _mapping_value(
+        _required_field(document, "meta", parent_location="/", issues=issues),
+        location="/meta",
+        issues=issues,
+    )
+
+    if meta is None:
+        return None, None
+
+    release_id = _integer_value(
+        _required_field(meta, "release", parent_location="/meta", issues=issues),
+        location="/meta/release",
+        issues=issues,
+        minimum=0,
+    )
+
+    format_version = _integer_value(
+        _required_field(meta, "format", parent_location="/meta", issues=issues),
+        location="/meta/format",
+        issues=issues,
+        minimum=0,
+    )
+
+    if format_version is not None and format_version not in SUPPORTED_FORMAT_VERSIONS:
+        _record_issue(
+            issues,
+            code="unsupported_format_version",
+            location="/meta/format",
+            message=f"Supported JSON format versions: {sorted(SUPPORTED_FORMAT_VERSIONS)}.",
+        )
+        format_version = None
+
+    embedded_release: str | None = None
+    if release_id is not None:
+        try:
+            embedded_release = str(release_id)
+        except ValueError:
+            # Python limits conversion of extraordinarily large integers to text.
+            _record_issue(
+                issues,
+                code="out_of_range",
+                location="/meta/release",
+                message="Release identifier is too large to represent as a decimal text.",
+            )
+
+    return embedded_release, format_version
+
+
+def _classify_detector_array(
+    document: Mapping[str, object], *, issues: list[EventDataIssue]
+) -> tuple[DetectorArray | None, tuple[str, ...]]:
+    """Classify released detector flags without consulting reconstruction outputs.
+
+    Invalid or missing flags add schema issues. Valid mixed or unclassified
+    combinations instead return nonfatal quality flags; cohort filtering is
+    a separate decision.
+    """
+
+    flags = _mapping_value(
+        _required_field(document, "flags", parent_location="/", issues=issues),
+        location="/flags",
+        issues=issues,
+    )
+
+    if flags is None:
+        return None, ()
+
+    sd1500 = _binary_flag_value(
+        _required_field(flags, "sd1500", parent_location="/flags", issues=issues),
+        location="/flags/sd1500",
+        issues=issues,
+    )
+
+    sd750 = _binary_flag_value(
+        _required_field(flags, "sd750", parent_location="/flags", issues=issues),
+        location="/flags/sd750",
+        issues=issues,
+    )
+
+    if sd1500 is None or sd750 is None:
+        return None, ()  # Malformed flags are not an unclassified detector array.
+
+    if sd1500 == 1 and sd750 == 1:
+        return DetectorArray.MIXED, ("mixed_surface_detector_flags",)
+    if sd1500 == 1:
+        return DetectorArray.SD_1500, ()
+    if sd750 == 1:
+        return DetectorArray.SD_750, ()
+
+    return DetectorArray.UNCLASSIFIED, ("unclassified_surface_detector_array",)
