@@ -10,6 +10,7 @@ accidentally enter the physics fit before a prediction has been frozen.
 
 from __future__ import annotations
 
+import json
 from collections.abc import Mapping
 from dataclasses import dataclass
 from enum import StrEnum
@@ -930,3 +931,77 @@ def adapt_auger_direction_reference(
         zenith_uncertainty_deg=zenith_uncertainty_deg,
         azimuth_uncertainty_deg=azimuth_uncertainty_deg,
     )
+
+
+def _json_object_without_duplicate_keys(
+    pairs: list[tuple[str, object]],
+) -> dict[str, object]:
+    """Build one JSON object without silently overwriting duplicate members."""
+
+    result: dict[str, object] = {}
+
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"Duplicate JSON object key: {key!r}.")
+        result[key] = value
+
+    return result
+
+
+def _decode_auger_event_file(source_path: str | Path) -> tuple[object, Path]:
+    """Decode one local UTF-8 event file and retain its resolved source path.
+
+    Accept an optional UTF-8 byte-order mark and reject duplicate object keys.
+    Preserve filesystem errors. Wrap text/JSON decoding failures with their
+    original causes; report line/column only when the JSON parser provides them.
+
+    Scientific validation belongs to the adapters. The decoder retains Python's
+    handling of NaN/Infinity; consumed numerical fields must still pass the
+    adapters' finite-value checks. This is not a whole-file scientific validator.
+    """
+
+    resolved_source = Path(source_path).expanduser().resolve()
+
+    try:
+        with resolved_source.open("r", encoding="utf-8-sig") as stream:
+            document: object = json.load(
+                stream, object_pairs_hook=_json_object_without_duplicate_keys
+            )
+    except json.JSONDecodeError as error:
+        raise AugerEventDecodeError(
+            resolved_source, error.msg, line=error.lineno, column=error.colno
+        ) from error
+    except UnicodeDecodeError as error:
+        raise AugerEventDecodeError(resolved_source, "Expected UTF-8 encoded JSON text.") from error
+    except ValueError as error:
+        # Includes duplicate keys and the interpreter's integer-digit limit.
+        raise AugerEventDecodeError(resolved_source, str(error)) from error
+
+    return document, resolved_source
+
+
+def load_auger_plane_front_input(
+    source_path: str | Path,
+    *,
+    selection: StationSelection | str = StationSelection.OFFICIAL_SELECTED,
+    minimum_stations: int = DEFAULT_MINIMUM_STATIONS,
+) -> AugerPlaneFrontInput:
+    """Load one event file and return validated station inputs, not reference angles."""
+
+    document, resolved_source = _decode_auger_event_file(source_path)
+
+    # Keep adapter calls outside the decoding error handler.
+    return adapt_auger_plane_front_input(
+        document,
+        selection=selection,
+        minimum_stations=minimum_stations,
+        source_path=resolved_source,
+    )
+
+
+def load_auger_direction_reference(source_path: str | Path) -> AugerDirectionReference:
+    """Load Auger's published direction through the separate evaluation adapter."""
+
+    document, resolved_source = _decode_auger_event_file(source_path)
+
+    return adapt_auger_direction_reference(document, source_path=resolved_source)
