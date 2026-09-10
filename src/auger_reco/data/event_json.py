@@ -624,3 +624,199 @@ def _classify_detector_array(
         return DetectorArray.SD_750, ()
 
     return DetectorArray.UNCLASSIFIED, ("unclassified_surface_detector_array",)
+
+
+def _read_station_measurements(
+    station: Mapping[str, object],
+    *,
+    location: str,
+    issues: list[EventDataIssue],
+) -> tuple[tuple[float, float, float], float, float] | None:
+    """Validate one included station's position, start time, and uncertainty."""
+
+    values: dict[str, float] = {}
+    fields = ("x", "y", "z", "t", "dt")
+
+    for field in fields:
+        value = _finite_float_value(
+            _required_field(station, field, parent_location=location, issues=issues),
+            location=_child_location(location, field),
+            issues=issues,
+            strictly_positive=(field == "dt"),
+        )
+
+        if value is not None:  # Zero coordinates and zero times are valid.
+            values[field] = value
+
+    if len(values) != len(fields):
+        return None  # Keep all recorded issues; do not invent missing measurements.
+
+    position_m = (values["x"], values["y"], values["z"])
+
+    return position_m, values["t"], values["dt"]
+
+
+def adapt_auger_plane_front_input(
+    document: object,
+    *,
+    selection: StationSelection | str = StationSelection.OFFICIAL_SELECTED,
+    minimum_stations: int = DEFAULT_MINIMUM_STATIONS,
+    source_path: str | Path | None = None,
+) -> AugerPlaneFrontInput:
+    """Adapt decoded event JSON into aligned, leakage-controlled fit inputs.
+
+    Validate each station's mapping, ID, and selection flag, including
+    excluded stations. Validate names and measurements only for included
+    stations. Malformed included rows invalidate the event; they are not
+    silently dropped from a successful result.
+
+    The default policy relies on Auger's released isSelected flag, which
+    remains an explicit dependency on the official reconstruction.
+
+    source_path labels provenance only; this function does not load a file.
+    It never reads sdrec, fdrec, or reconstructed station distances.
+    """
+
+    policy = _normalize_selection(selection)
+    required_count = _validate_minimum_stations(minimum_stations)
+    resolved_source = None if source_path is None else Path(source_path).expanduser().resolve()
+
+    if not isinstance(document, Mapping):
+        raise AugerEventSchemaError(
+            (EventDataIssue("wrong_type", "/", "Expected a JSON object."),),
+            source_path=resolved_source,
+        )
+
+    issues: list[EventDataIssue] = []
+    event_id, event_date = _read_event_identity(document, issues=issues)
+    embedded_release, format_version = _read_format_metadata(document, issues=issues)
+    detector_array, detector_quality_flags = _classify_detector_array(document, issues=issues)
+    station_entries = _non_empty_list_value(
+        _required_field(document, "stations", parent_location="/", issues=issues),
+        location="/stations",
+        issues=issues,
+    )
+
+    seen_station_ids: set[int] = set()
+    station_ids: list[int] = []
+    station_names: list[str] = []
+    positions_m: list[tuple[float, float, float]] = []
+    times_ns: list[float] = []
+    uncertainties_ns: list[float] = []
+    official_selected_count = 0
+    name_fallback_count = 0
+
+    # An invalid list has already added an issue; the final gate will raise it.
+    entries_to_check = station_entries if station_entries is not None else []
+
+    for index, raw_station in enumerate(entries_to_check):
+        location = _child_location("/stations", index)
+        row_issue_count = len(issues)
+        station = _mapping_value(raw_station, location=location, issues=issues)
+        if station is None:
+            continue
+
+        station_id = _integer_value(
+            _required_field(station, "id", parent_location=location, issues=issues),
+            location=_child_location(location, "id"),
+            issues=issues,
+            minimum=INT64_MIN,
+            maximum=INT64_MAX,
+        )
+
+        is_selected = _binary_flag_value(
+            _required_field(station, "isSelected", parent_location=location, issues=issues),
+            location=_child_location(location, "isSelected"),
+            issues=issues,
+        )
+
+        if station_id is not None:
+            if station_id in seen_station_ids:
+                _record_issue(
+                    issues,
+                    code="duplicate_station_id",
+                    location=_child_location(location, "id"),
+                    message=f"Station ID {station_id} appears more than once.",
+                )
+            else:
+                seen_station_ids.add(station_id)
+
+        if is_selected is None and policy is StationSelection.OFFICIAL_SELECTED:
+            continue
+        if is_selected == 1:
+            official_selected_count += 1
+
+        if policy is StationSelection.OFFICIAL_SELECTED and is_selected == 0:
+            continue  # Do not access excluded names or measurement fields.
+
+        raw_name = _optional_field(station, "name")
+        used_name_fallback = raw_name is _MISSING
+
+        if used_name_fallback:
+            station_name = str(station_id) if station_id is not None else None
+        else:
+            station_name = _nonblank_string_value(
+                raw_name, location=_child_location(location, "name"), issues=issues
+            )
+
+        measurements = _read_station_measurements(station, location=location, issues=issues)
+
+        if (
+            len(issues) != row_issue_count
+            or station_id is None
+            or station_name is None
+            or measurements is None
+        ):
+            continue  # Errors remain recorded; the event cannot pass the final gate.
+
+        position_m, observed_time_ns, timing_uncertainty_ns = measurements
+        station_ids.append(station_id)
+        station_names.append(station_name)
+        positions_m.append(position_m)
+        times_ns.append(observed_time_ns)
+        uncertainties_ns.append(timing_uncertainty_ns)
+        if used_name_fallback:
+            name_fallback_count += 1
+
+    # Schema failures take precedence over too-few-stations failures.
+    _raise_schema_errors(issues, source_path=resolved_source)
+
+    if (
+        event_id is None
+        or embedded_release is None
+        or format_version is None
+        or detector_array is None
+        or station_entries is None
+    ):
+        raise RuntimeError("Adapter validation returned incomplete data without an issue.")
+
+    if len(station_ids) < required_count:
+        raise AugerStationSelectionError(
+            selection_policy=policy,
+            available_stations=len(station_ids),
+            required_stations=required_count,
+            source_path=resolved_source,
+        )
+
+    quality_flags = detector_quality_flags
+    if name_fallback_count:
+        quality_flags += (f"station_name_fallbacks:{name_fallback_count}",)
+
+    return AugerPlaneFrontInput(
+        event_id=event_id,
+        canonical_event_id=f"{event_id:012d}",
+        embedded_release=embedded_release,
+        format_version=format_version,
+        event_date=event_date,
+        source_path=resolved_source,
+        detector_array=detector_array,
+        selection_policy=policy,
+        triggered_station_count=len(station_entries),
+        official_selected_station_count=official_selected_count,
+        station_ids=_readonly_integer_array(station_ids),
+        station_names=tuple(station_names),
+        station_positions_m=_readonly_float_array(positions_m),
+        observed_times_ns=_readonly_float_array(times_ns),
+        timing_uncertainties_ns=_readonly_float_array(uncertainties_ns),
+        quality_flags=quality_flags,
+    )
