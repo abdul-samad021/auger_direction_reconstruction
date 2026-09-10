@@ -820,3 +820,113 @@ def adapt_auger_plane_front_input(
         timing_uncertainties_ns=_readonly_float_array(uncertainties_ns),
         quality_flags=quality_flags,
     )
+
+
+def _read_reference_uncertainty(
+    reconstruction: Mapping[str, object], field: str, *, issues: list[EventDataIssue]
+) -> float | None:
+    """Read an optional, finite, nonnegative angular uncertainty in degrees."""
+
+    raw_value = _optional_field(reconstruction, field)
+
+    if raw_value is _MISSING:
+        return None  # An absent uncertainty is unknown, not zero.
+
+    return _finite_float_value(
+        raw_value,
+        location=_child_location("/sdrec", field),
+        issues=issues,
+        minimum=0.0,  # Reference metadata may contain zero; station dt may not.
+    )
+
+
+def adapt_auger_direction_reference(
+    document: object, *, source_path: str | Path | None = None
+) -> AugerDirectionReference:
+    """Read Auger's published direction separately from reconstruction inputs.
+
+    Read only event identity, format metadata, and sdrec direction fields.
+    Missing angular uncertainties become None; present values must be finite
+    and nonnegative. Validate angle ranges before mapping 360 degrees to zero.
+
+    This is an evaluation reference, not known physical truth. source_path
+    records provenance only; this function does not open a file.
+    """
+
+    resolved_source = None if source_path is None else Path(source_path).expanduser().resolve()
+
+    if not isinstance(document, Mapping):
+        raise AugerEventSchemaError(
+            (EventDataIssue("wrong_type", "/", "Expected a JSON object."),),
+            source_path=resolved_source,
+        )
+
+    issues: list[EventDataIssue] = []
+
+    # This output needs the ID, but does not consume or validate info.date.
+    event_id, _ = _read_event_identity(document, issues=issues, include_date=False)
+
+    embedded_release, format_version = _read_format_metadata(document, issues=issues)
+
+    reconstruction = _mapping_value(
+        _required_field(document, "sdrec", parent_location="/", issues=issues),
+        location="/sdrec",
+        issues=issues,
+    )
+
+    zenith_deg: float | None = None
+    azimuth_deg: float | None = None
+    zenith_uncertainty_deg: float | None = None
+    azimuth_uncertainty_deg: float | None = None
+
+    if reconstruction is not None:
+        zenith_deg = _finite_float_value(
+            _required_field(reconstruction, "theta", parent_location="/sdrec", issues=issues),
+            location="/sdrec/theta",
+            issues=issues,
+            minimum=0.0,
+            maximum=90.0,
+        )
+
+        azimuth_deg = _finite_float_value(
+            _required_field(reconstruction, "phi", parent_location="/sdrec", issues=issues),
+            location="/sdrec/phi",
+            issues=issues,
+            minimum=0.0,
+            maximum=360.0,
+        )
+
+        zenith_uncertainty_deg = _read_reference_uncertainty(
+            reconstruction,
+            "dtheta",
+            issues=issues,
+        )
+        azimuth_uncertainty_deg = _read_reference_uncertainty(
+            reconstruction,
+            "dphi",
+            issues=issues,
+        )
+
+    # Reject all recorded schema errors before constructing a successful result.
+    _raise_schema_errors(issues, source_path=resolved_source)
+
+    if (
+        event_id is None
+        or embedded_release is None
+        or format_version is None
+        or zenith_deg is None
+        or azimuth_deg is None
+    ):
+        raise RuntimeError("Reference validation returned incomplete data without an issue.")
+
+    return AugerDirectionReference(
+        event_id=event_id,
+        canonical_event_id=f"{event_id:012d}",
+        embedded_release=embedded_release,
+        format_version=format_version,
+        source_path=resolved_source,
+        zenith_deg=zenith_deg,
+        azimuth_deg=azimuth_deg % 360.0,  # Only a validated 360 becomes zero.
+        zenith_uncertainty_deg=zenith_uncertainty_deg,
+        azimuth_uncertainty_deg=azimuth_uncertainty_deg,
+    )
