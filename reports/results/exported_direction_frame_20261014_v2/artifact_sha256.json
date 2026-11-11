@@ -1,0 +1,10 @@
+{
+  "audit_protocol.json": "e5c6f218f3c2308b9eaa8301a22f8abca9f7ca2fb14d59d75a1c813faceddf6c",
+  "audit_source.py": "49ed1346c0552dc94d64a664743c4c75147f523f6ce45372b5d097df0f81357c",
+  "corrected_reference_comparisons.csv": "c0c492fcace304435e5280a3a1d91896a16d74de66f3a142def9285ee21972de",
+  "event_redundancy_checks.csv": "40479431e22211c8cfdeb9791a99aa6be43c966dab56503f9337249da44fbb98",
+  "input_sha256.json": "0df6c65903da813232867ae14cc6dd4086679df694126a0ca200e0663c1603bf",
+  "saved_fit_reference_comparisons.csv": "12d23ea2bea3701e7e7e81c1beaf0f95ba24e4992a7e833bb935936c44a9f0ba",
+  "selected_station_redundancy_checks.csv": "d9ccb4cdbf4f46a8c83e7eda35788b3145e34e991452b6a4de914a4552271651",
+  "summary.json": "8515f44901f358faafab6f33da160d37925ac5e0d99a14d662fd7a82f9769036"
+}

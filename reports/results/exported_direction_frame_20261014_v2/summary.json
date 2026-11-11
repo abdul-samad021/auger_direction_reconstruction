@@ -1,0 +1,212 @@
+{
+  "protocol": {
+    "scope": "711 previously observed training events plus old focus; no protected files",
+    "hypotheses": [
+      "native_site_angles",
+      "core_local_angles_rotated_to_site"
+    ],
+    "basis": "WGS84 geodetic ENU; UTM19 south; exact supplied UTM origin",
+    "selection": "No direction-frame choice based on agreement with our fitted directions",
+    "status": "post-email follow-up; focus exploratory check preceded full-sample execution",
+    "rounding_check": "conditional conservative bounds, NOT statistical confidence intervals",
+    "rounding_assumptions": "theta/phi/dec 0.01deg; positions/spDistance 0.01m",
+    "historical_policy": "no refitting, no overwrites, both comparison scenarios saved",
+    "limitation": "Site ENU tested empirically; not exporter source proof"
+  },
+  "mathematical_checks": {
+    "origin_longitude_deg": -69.25000004895915,
+    "origin_latitude_deg": -35.24999996602447,
+    "maximum_timing_change_ns": 4.547473508864641e-12,
+    "status": "passed"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.2",
+    "pyproj": "3.7.2",
+    "proj": "9.5.1"
+  },
+  "event_count": 712,
+  "selected_station_count": 5661,
+  "focus": {
+    "event_id": "081847956000",
+    "population": "focus",
+    "core_latitude_deg": -35.2464049284866,
+    "core_longitude_deg": -69.30265757180301,
+    "reference_vector_rotation_deg": 0.05139465940118936,
+    "local_vertical_tilt_deg": 0.043153283683268095,
+    "exported_core_x_residual_m": 0.0031560804918626673,
+    "exported_core_y_residual_m": -0.00137319920918344,
+    "exported_core_z_residual_m": -0.0013938078093156392,
+    "site_declination_residual_deg": -0.010833621348547595,
+    "core_declination_residual_deg": -0.007696543484932761,
+    "declination_rounding_bound_deg": 0.014051487082670618,
+    "selected_stations": 24,
+    "site_median_absolute_distance_residual_m": 0.8164179643692933,
+    "site_max_absolute_distance_residual_m": 2.5653175886909594,
+    "site_rounding_consistent_stations": 7,
+    "core_median_absolute_distance_residual_m": 0.08351683333125948,
+    "core_max_absolute_distance_residual_m": 0.24117936963011744,
+    "core_rounding_consistent_stations": 24
+  },
+  "all_events": {
+    "site": {
+      "event_median_absolute_spDistance_residual_m": {
+        "count": 712,
+        "median": 0.8055646377335961,
+        "p95": 2.8535087642893324,
+        "max": 6.681981941524668
+      },
+      "station_absolute_spDistance_residual_m": {
+        "count": 5661,
+        "median": 0.7290964306473597,
+        "p95": 5.309341448544274,
+        "max": 17.090452634428857
+      },
+      "stations_within_rounding_bound": 1217,
+      "events_all_selected_stations_within_rounding_bound": 7,
+      "absolute_declination_residual_deg": {
+        "count": 712,
+        "median": 0.088468991950446,
+        "p95": 0.23656632047340284,
+        "max": 0.302457220790572
+      },
+      "declinations_within_rounding_bound": 59
+    },
+    "core": {
+      "event_median_absolute_spDistance_residual_m": {
+        "count": 712,
+        "median": 0.016904328597803442,
+        "p95": 0.05292797036597105,
+        "max": 0.10440434130293852
+      },
+      "station_absolute_spDistance_residual_m": {
+        "count": 5661,
+        "median": 0.014192803907803864,
+        "p95": 0.10180660720061496,
+        "max": 0.28765410241067
+      },
+      "stations_within_rounding_bound": 5661,
+      "events_all_selected_stations_within_rounding_bound": 712,
+      "absolute_declination_residual_deg": {
+        "count": 712,
+        "median": 0.002797682993978867,
+        "p95": 0.007106623557607783,
+        "max": 0.010159923443413987
+      },
+      "declinations_within_rounding_bound": 712
+    }
+  },
+  "training_comparisons": {
+    "timing": {
+      "plane": {
+        "site_interpretation_separation_deg": {
+          "count": 711,
+          "median": 1.1060431497364513,
+          "p95": 4.278690600184756,
+          "max": 9.635395315522224
+        },
+        "core_local_interpretation_separation_deg": {
+          "count": 711,
+          "median": 1.0773335331383287,
+          "p95": 4.181922756258236,
+          "max": 9.412400126595685
+        }
+      },
+      "quadratic": {
+        "site_interpretation_separation_deg": {
+          "count": 711,
+          "median": 0.30657317229331166,
+          "p95": 0.6837563972225623,
+          "max": 2.065135114652204
+        },
+        "core_local_interpretation_separation_deg": {
+          "count": 711,
+          "median": 0.2550789818481976,
+          "p95": 0.5895906163026168,
+          "max": 1.8961646010374724
+        }
+      },
+      "site_interpretation": {
+        "paired_events": 711,
+        "quadratic_farther_events": 61
+      },
+      "core_local_interpretation": {
+        "paired_events": 711,
+        "quadratic_farther_events": 43
+      }
+    },
+    "uniform": {
+      "plane": {
+        "site_interpretation_separation_deg": {
+          "count": 711,
+          "median": 1.5935165288735316,
+          "p95": 4.741510498053733,
+          "max": 10.099362332292253
+        },
+        "core_local_interpretation_separation_deg": {
+          "count": 711,
+          "median": 1.5757993207218322,
+          "p95": 4.725414265571931,
+          "max": 10.319196153889832
+        }
+      },
+      "quadratic": {
+        "site_interpretation_separation_deg": {
+          "count": 711,
+          "median": 0.7195310202378256,
+          "p95": 2.5063114752607665,
+          "max": 5.07219271801594
+        },
+        "core_local_interpretation_separation_deg": {
+          "count": 711,
+          "median": 0.6628879322743575,
+          "p95": 2.4968590430299837,
+          "max": 5.210651698952362
+        }
+      },
+      "site_interpretation": {
+        "paired_events": 711,
+        "quadratic_farther_events": 101
+      },
+      "core_local_interpretation": {
+        "paired_events": 711,
+        "quadratic_farther_events": 103
+      }
+    }
+  },
+  "core_hypothesis_smaller_distance_error_events": 712,
+  "reference_vector_rotation_deg": {
+    "count": 712,
+    "median": 0.16823382673874707,
+    "p95": 0.31144088061988434,
+    "max": 0.3830870614368825
+  },
+  "local_vertical_tilt_deg": {
+    "count": 712,
+    "median": 0.1901668462105061,
+    "p95": 0.30355353902576304,
+    "max": 0.341685398285037
+  },
+  "core_export_consistency_m": {
+    "x": {
+      "count": 712,
+      "median": 0.003227829246583269,
+      "p95": 0.007707025972467815,
+      "max": 0.00963490304457082
+    },
+    "y": {
+      "count": 712,
+      "median": 0.003087372664595023,
+      "p95": 0.008079431192254558,
+      "max": 0.009880474754027091
+    },
+    "z": {
+      "count": 712,
+      "median": 0.0028465166907150063,
+      "p95": 0.007844371633478151,
+      "max": 0.00955146209880553
+    }
+  },
+  "operational_frame_verified_by_redundant_fields": true,
+  "verification_qualification": "Empirical export consistency; not exporter-source proof or absolute pointing calibration. Evidence gate documented after initial exploration; not a preregistered statistical test."
+}

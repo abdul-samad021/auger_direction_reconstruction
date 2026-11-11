@@ -1,0 +1,14 @@
+{
+  "scope": "711 previously observed training events plus old focus; no protected files",
+  "hypotheses": [
+    "native_site_angles",
+    "core_local_angles_rotated_to_site"
+  ],
+  "basis": "WGS84 geodetic ENU; UTM19 south; exact supplied UTM origin",
+  "selection": "No direction-frame choice based on agreement with our fitted directions",
+  "status": "post-email follow-up; focus exploratory check preceded full-sample execution",
+  "rounding_check": "conditional conservative bounds, NOT statistical confidence intervals",
+  "rounding_assumptions": "theta/phi/dec 0.01deg; positions/spDistance 0.01m",
+  "historical_policy": "no refitting, no overwrites, both comparison scenarios saved",
+  "limitation": "Site ENU tested empirically; not exporter source proof"
+}
