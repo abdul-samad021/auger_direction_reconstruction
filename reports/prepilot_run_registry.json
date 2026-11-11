@@ -1,0 +1,17 @@
+{
+  "authoritative_run": "prepilot_diagnostics_20261010T234353_804166Z",
+  "pilot_executed": false,
+  "signal_model_promoted": false,
+  "runs": [
+    {
+      "run": "prepilot_diagnostics_20261010T233730_323552Z",
+      "use_for_final_analysis": false,
+      "reason": "Initial complete study, superseded by explicit core-boundary quality classification and frozen target-free pilot handoff. Numerical settings and sample unchanged; artifacts preserved."
+    },
+    {
+      "run": "prepilot_diagnostics_20261010T234353_804166Z",
+      "use_for_final_analysis": true,
+      "reason": "Fresh-kernel execution, 399 passing tests, lint, independent objective checks, provenance validation and visual figure inspection. Baseline-comparison readiness only; experimental signal-core model is not promoted."
+    }
+  ]
+}
