@@ -1,0 +1,645 @@
+{
+  "seed": 20261013,
+  "trials_per_scenario": 100,
+  "bootstrap_resamples": 2000,
+  "scenarios": [
+    {
+      "base_index": 0,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 0,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 0,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 0,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 0,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 0,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 1,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 1,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 1,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 1,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 1,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 1,
+      "layout": "well_spread",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 2,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 2,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 2,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 2,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 2,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 2,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 3,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 3,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 3,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 3,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 3,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 3,
+      "layout": "well_spread",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 4,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 4,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 4,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 4,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 4,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 4,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 5,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 5,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 5,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 5,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 5,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 5,
+      "layout": "elongated",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 6,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 6,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 6,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 6,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 6,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 6,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 7,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 7,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 7,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 7,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 7,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 7,
+      "layout": "elongated",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 8,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 8,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 8,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 8,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 8,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 8,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 9,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 9,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 9,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 9,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 9,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 9,
+      "layout": "one_sided",
+      "station_count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 10,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 10,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 10,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 10,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 10,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 10,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 20.0,
+      "regime": "centered_skew"
+    },
+    {
+      "base_index": 11,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "calibrated_gaussian"
+    },
+    {
+      "base_index": 11,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "base_index": 11,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_calibrated"
+    },
+    {
+      "base_index": 11,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "radial_underreported"
+    },
+    {
+      "base_index": 11,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "heavy_tail_t5"
+    },
+    {
+      "base_index": 11,
+      "layout": "one_sided",
+      "station_count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "centered_skew"
+    }
+  ],
+  "expected_datasets": 7200,
+  "expected_fits": 28800,
+  "expected_control_fits": 96,
+  "core_position_m": [
+    120.0,
+    -80.0,
+    0.0
+  ],
+  "curvature_delay_ns": 80.0,
+  "asymmetry_delay_ns": 30.0,
+  "plane_options": {
+    "minimum_stations": 4,
+    "surface_seed_margin": 1e-06,
+    "vertical_azimuth_tolerance": 1e-12,
+    "planarity_ratio_threshold": 0.05,
+    "surface_condition_warning_threshold": 100000000.0,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "optimizer_method": "trf",
+    "optimizer_loss": "linear",
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "maximum_function_evaluations": 2000
+  },
+  "quadratic_options": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 2000,
+    "positive_curvature_seeds_ns": [
+      100.0
+    ],
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  },
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1"
+  },
+  "python": "3.12.13",
+  "sources": {
+    "src/auger_reco/evaluation/conference_stress.py": "e76f17c3552e935a92442ea2b5bda3bf9fa09a9204a542226880be665addb21d",
+    "src/auger_reco/physics/plane_front.py": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7",
+    "src/auger_reco/physics/curved_front.py": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273",
+    "docs/conference_stress_protocol.md": "5c80a03236dc18a886d5900e4189fe71af5009147379b75abfe2b6454c78db1f",
+    "tests/test_conference_stress.py": "e90509e09efb13d54bcd19a813fe825c2fcf18b361180ed660340a01c781929c"
+  },
+  "threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "real_events_accessed": 0
+}

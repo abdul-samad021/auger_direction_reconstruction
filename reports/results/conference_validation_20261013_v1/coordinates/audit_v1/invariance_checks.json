@@ -1,0 +1,261 @@
+{
+  "fit_checks": [
+    {
+      "model": "plane",
+      "azimuth_deg": 0.0,
+      "scenario": "base",
+      "angular_error_deg": 1.8472423740908933e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 0.0,
+      "scenario": "translate",
+      "angular_error_deg": 1.5627952194679918e-13,
+      "maximum_forward_difference_ns": 5.820766091346741e-11,
+      "maximum_fit_residual_ns": 5.820766091346741e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 0.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 1.2420463085051909e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 0.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 8.74248637489443e-12,
+      "maximum_forward_difference_ns": 1.5570549294352531e-09,
+      "maximum_fit_residual_ns": 8.585629984736443e-10
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 0.0,
+      "scenario": "base",
+      "angular_error_deg": 1.8602389880416597e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.2960299500264227e-11
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 0.0,
+      "scenario": "translate",
+      "angular_error_deg": 3.2419812421965314e-13,
+      "maximum_forward_difference_ns": 8.731149137020111e-11,
+      "maximum_fit_residual_ns": 1.20508047984913e-10
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 0.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 1.5982089477441056e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.2505552149377763e-11
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 0.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 1.0462158372582138e-11,
+      "maximum_forward_difference_ns": 1.4842953532934189e-09,
+      "maximum_fit_residual_ns": 9.60412194217497e-10
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 90.0,
+      "scenario": "base",
+      "angular_error_deg": 4.5402756687499704e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 90.0,
+      "scenario": "translate",
+      "angular_error_deg": 1.060711513885748e-11,
+      "maximum_forward_difference_ns": 1.0331859812140465e-09,
+      "maximum_fit_residual_ns": 1.1350493878126144e-09
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 90.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 4.7202046142216463e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 90.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 7.534463381264403e-13,
+      "maximum_forward_difference_ns": 3.2014213502407074e-10,
+      "maximum_fit_residual_ns": 1.6007106751203537e-10
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 90.0,
+      "scenario": "base",
+      "angular_error_deg": 6.373102629199463e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.0089706847793423e-11
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 90.0,
+      "scenario": "translate",
+      "angular_error_deg": 1.0645233465310208e-11,
+      "maximum_forward_difference_ns": 1.0622898116707802e-09,
+      "maximum_fit_residual_ns": 1.1554561751836445e-09
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 90.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 5.4743435170138663e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 9.407585821463726e-12
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 90.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 1.5749146569602257e-12,
+      "maximum_forward_difference_ns": 4.0745362639427185e-10,
+      "maximum_fit_residual_ns": 1.646185410209e-10
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 180.0,
+      "scenario": "base",
+      "angular_error_deg": 4.166403654560677e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 180.0,
+      "scenario": "translate",
+      "angular_error_deg": 2.2050337681522051e-13,
+      "maximum_forward_difference_ns": 5.820766091346741e-11,
+      "maximum_fit_residual_ns": 7.275957614183426e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 180.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 5.226184633248679e-14,
+      "maximum_forward_difference_ns": 1.4551915228366852e-11,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 180.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 8.385672966270655e-12,
+      "maximum_forward_difference_ns": 1.5570549294352531e-09,
+      "maximum_fit_residual_ns": 8.731149137020111e-10
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 180.0,
+      "scenario": "base",
+      "angular_error_deg": 6.794415999184954e-15,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.2846612662542611e-11
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 180.0,
+      "scenario": "translate",
+      "angular_error_deg": 5.448065939464846e-13,
+      "maximum_forward_difference_ns": 1.0186340659856796e-10,
+      "maximum_fit_residual_ns": 1.198259269585833e-10
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 180.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 1.3587335555305743e-14,
+      "maximum_forward_difference_ns": 1.4551915228366852e-11,
+      "maximum_fit_residual_ns": 1.2391865311656147e-11
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 180.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 1.1374443755090854e-11,
+      "maximum_forward_difference_ns": 1.6152625903487206e-09,
+      "maximum_fit_residual_ns": 9.130474154517287e-10
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 270.0,
+      "scenario": "base",
+      "angular_error_deg": 1.8108913815391977e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 270.0,
+      "scenario": "translate",
+      "angular_error_deg": 1.0742830463228867e-11,
+      "maximum_forward_difference_ns": 1.0331859812140465e-09,
+      "maximum_fit_residual_ns": 1.1350493878126144e-09
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 270.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 1.881641525004915e-14,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.4551915228366852e-11
+    },
+    {
+      "model": "plane",
+      "azimuth_deg": 270.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 7.853621719239173e-13,
+      "maximum_forward_difference_ns": 3.2014213502407074e-10,
+      "maximum_fit_residual_ns": 1.6007106751203537e-10
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 270.0,
+      "scenario": "base",
+      "angular_error_deg": 1.149524231791791e-13,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.2732925824820995e-11
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 270.0,
+      "scenario": "translate",
+      "angular_error_deg": 1.0743680573563935e-11,
+      "maximum_forward_difference_ns": 1.0040821507573128e-09,
+      "maximum_fit_residual_ns": 1.1101519703515805e-09
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 270.0,
+      "scenario": "rotate_z",
+      "angular_error_deg": 1.180238660975413e-13,
+      "maximum_forward_difference_ns": 0.0,
+      "maximum_fit_residual_ns": 1.2221335055073723e-11
+    },
+    {
+      "model": "quadratic",
+      "azimuth_deg": 270.0,
+      "scenario": "rotate_and_translate",
+      "angular_error_deg": 7.48614084810117e-13,
+      "maximum_forward_difference_ns": 3.2014213502407074e-10,
+      "maximum_fit_residual_ns": 1.482476363889873e-10
+    }
+  ],
+  "sign_and_reference_time_checks": "passed"
+}

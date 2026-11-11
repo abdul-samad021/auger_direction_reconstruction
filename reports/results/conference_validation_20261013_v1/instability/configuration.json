@@ -1,0 +1,96 @@
+{
+  "created_at_utc": "2026-10-14T01:29:38.996906+00:00",
+  "protocol": "docs/conference_instability_protocol.md",
+  "source_hashes": {
+    "src/auger_reco/evaluation/conference_instability.py": "0884e1c6276756151e4afd2ba63cbca34a9d5675a13218607668d4973ddac736",
+    "src/auger_reco/physics/curved_front.py": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273",
+    "src/auger_reco/physics/plane_front.py": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7",
+    "src/auger_reco/data/core_reference.py": "1c6ba4b13989b6fc3972b63528b9e5a4f493681af1007be1591781be362d9d30",
+    "src/auger_reco/data/event_json.py": "ed038376c6300d4bc6f1d5e25a756d5fff0b4d55f54b9c1cdee17e51c3675b5d",
+    "docs/conference_instability_protocol.md": "943b12a36dee89087c6923cc978c9049867eaa52d7324a052ae3db1fff17d261",
+    "reports/results/training_pilot_20261011_v1/report/training_event_metrics.csv": "c198078c656fe7f590aa44f2db5eb3db814e1dc156ed1fd845e2af0c660927ff",
+    "data/manifests/pilot_sd1500_vertical_v1.csv": "5d2dad150943385cb0116f1a0dfa5d200cf1ffbe93aae2cc029bf19a969f827b",
+    "reports/results/training_pilot_20261011_v1/configuration.json": "e548b2fde05ed0ed31b79aefd7bed5da8d8bab46b97564893ab7356334254d22"
+  },
+  "settings": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 10000,
+    "positive_curvature_seeds_ns": [
+      1.0,
+      25.0,
+      100.0,
+      500.0,
+      2500.0
+    ],
+    "optimizer_ftol": 1e-12,
+    "optimizer_xtol": 1e-12,
+    "optimizer_gtol": 1e-12,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  },
+  "core_offsets_m": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      50.0,
+      0.0
+    ],
+    [
+      -50.0,
+      0.0
+    ],
+    [
+      0.0,
+      50.0
+    ],
+    [
+      0.0,
+      -50.0
+    ],
+    [
+      100.0,
+      0.0
+    ],
+    [
+      -100.0,
+      0.0
+    ],
+    [
+      0.0,
+      100.0
+    ],
+    [
+      0.0,
+      -100.0
+    ]
+  ],
+  "profile_points": 101,
+  "independent_direction_grid": {
+    "theta_deg": [
+      20,
+      50,
+      75
+    ],
+    "phi_deg": [
+      0,
+      90,
+      180,
+      270
+    ]
+  },
+  "protected_event_access": false,
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1"
+  }
+}

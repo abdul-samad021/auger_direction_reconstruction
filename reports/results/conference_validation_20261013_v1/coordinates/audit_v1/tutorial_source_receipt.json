@@ -1,0 +1,8 @@
+{
+  "url": "https://zenodo.org/records/10488964/files/notebook.zip?download=1",
+  "archive_sha256": "3568191c87dacd42ce26b747c2f1ad31a084cd1d87d3f7f7e841dbcf4e6e6138",
+  "member": "notebook/plot_json.ipynb",
+  "zero_based_cell": 32,
+  "source": "E0 = 477256.66         #Easting of the Auger-site center (longitude  69.25\u02da W)\nN0 = 6099203.68        #Northing of the Auger-site center (latitude 35.35\u02da S)\nA0 = 1400              #Altitude of the Auger-site center [m]\nalpha = 2.52e-3        #Rotation angle\nbeta = 6.03e-4         #Scaling factor\nR = 6368000           #Earth\u2019s radius\n\nstations['E'] = E0 + (1-beta)*stations.x - alpha*stations.y \nstations['N'] = N0 + (1-beta)*stations.y + alpha*stations.x\nstations['A'] = A0 + stations.z + (pow(stations.x,2) + pow(stations.y,2))/2/R\nstations['Delta E'] = stations.easting - stations.E\nstations['Delta N'] = stations.northing - stations.N\nstations['Delta A'] = stations.altitude - stations.A\n\npd.options.display.float_format = '{:.2f}'.format\ndisplay(stations[['easting', 'E', 'Delta E', 'northing', 'N', 'Delta N', 'altitude', 'A', 'Delta A']])",
+  "note": "Tutorial comment says latitude 35.35 S; team email says 35.25 S. Not resolved here."
+}

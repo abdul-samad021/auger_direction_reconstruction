@@ -1,0 +1,7 @@
+event_id,model,weighting,number_of_stations,full_success,heldout_complete,reduced_chi_square,maximum_loo_direction_shift_deg,selection_roles
+081881294400,quadratic,timing,7,True,True,2.6676355874329527,18.577818326473857,top_influence
+082726270900,quadratic,timing,7,True,True,0.2915581220114582,0.5109604457412096,matched_stable_median
+113434887000,quadratic,timing,7,True,True,43.18227998899561,3.722282026220972,high_chi_square
+133035602401,quadratic,timing,7,True,True,0.6067589364699654,16.948640264708793,top_influence
+140415557800,quadratic,timing,7,True,True,0.3777839692113347,12.881217756174976,top_influence
+143024870400,quadratic,timing,8,True,True,49.23962356227378,4.112068561088655,high_chi_square

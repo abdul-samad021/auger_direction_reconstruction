@@ -1,0 +1,207 @@
+{
+  "created_at_utc": "2026-10-10T19:12:34.908279+00:00",
+  "no_replacement_policy": true,
+  "records": [
+    {
+      "attempts": 0,
+      "bytes": 1485316,
+      "event_id": "081847956000",
+      "path": "data/raw/events/Auger_081847956000.json",
+      "sha256": "c5292ad278953a55a39a0bedf257f86d0faa58bc5968e69a229dafbe2273d349",
+      "status": "already_present",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_081847956000.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 739070,
+      "errors": [],
+      "event_id": "160210414600",
+      "path": "data/raw/events/Auger_160210414600.json",
+      "sha256": "2671d7e5f0aebd7969731d6028c8823e02f73c129a789a7830323166e32090d1",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_160210414600.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 414423,
+      "errors": [],
+      "event_id": "120797883000",
+      "path": "data/raw/events/Auger_120797883000.json",
+      "sha256": "f57109586d649ebe4746954d5555dac4034021f25d1f92d1e021a282eb9e5b69",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_120797883000.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 486781,
+      "errors": [],
+      "event_id": "130207988600",
+      "path": "data/raw/events/Auger_130207988600.json",
+      "sha256": "5a79174eaee8c67b1f90b4cd02205b29a76b41f1a1b371e991a64e0fed2b32b8",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_130207988600.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 774490,
+      "errors": [],
+      "event_id": "140876912800",
+      "path": "data/raw/events/Auger_140876912800.json",
+      "sha256": "1b9e3c093cfcd4bdb533000da03dcb1ae57eece81c2af575f3132d7a41ccc240",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_140876912800.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 416591,
+      "errors": [],
+      "event_id": "133556408900",
+      "path": "data/raw/events/Auger_133556408900.json",
+      "sha256": "ecc1a9bf1a1efbddd34a770e18e9c682c9f7e0ea65068379034e890a29dbbbbf",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_133556408900.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 432162,
+      "errors": [],
+      "event_id": "112954615400",
+      "path": "data/raw/events/Auger_112954615400.json",
+      "sha256": "ee9d33e2137e8e9954b4359f9025acf32b0d10c0990cecf4cf082fea18deb41c",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_112954615400.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 758044,
+      "errors": [],
+      "event_id": "123274772200",
+      "path": "data/raw/events/Auger_123274772200.json",
+      "sha256": "2af4c080835a17a653686142874246162b47b1a461c17b9507dd5be9996e4be2",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_123274772200.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 379820,
+      "errors": [],
+      "event_id": "113434887000",
+      "path": "data/raw/events/Auger_113434887000.json",
+      "sha256": "a9038cda5e9a5d332b7461ec5e50c70aaf9f2c5be28e0da2906705db9f9aa5a8",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_113434887000.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 577583,
+      "errors": [],
+      "event_id": "163051054600",
+      "path": "data/raw/events/Auger_163051054600.json",
+      "sha256": "7d80260af1a421515d34951f4ce90621351bbbb73df86bc82eba454a3bcc85f6",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_163051054600.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 720400,
+      "errors": [],
+      "event_id": "103545570600",
+      "path": "data/raw/events/Auger_103545570600.json",
+      "sha256": "c6b89f72d7d424708d49f015e2d067f17195c8e0839a063103c3fa4fde588ede",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_103545570600.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 381715,
+      "errors": [],
+      "event_id": "173064766400",
+      "path": "data/raw/events/Auger_173064766400.json",
+      "sha256": "f8411d046f1249eaf94c2d8cc4258c7d535fca3c4dc39c376b6301cfef021798",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_173064766400.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 662928,
+      "errors": [],
+      "event_id": "162626086100",
+      "path": "data/raw/events/Auger_162626086100.json",
+      "sha256": "ec328e79c792edb6a28197d54cc2aa1115a13f0bf15058d4f7545bd16119cc3f",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_162626086100.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 899879,
+      "errors": [],
+      "event_id": "070137858700",
+      "path": "data/raw/events/Auger_070137858700.json",
+      "sha256": "e274712049a496d48734c13b023f0056231bbffbf6d04c4d7f0fb484accde413",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_070137858700.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 484223,
+      "errors": [],
+      "event_id": "130237366100",
+      "path": "data/raw/events/Auger_130237366100.json",
+      "sha256": "91de497b7cd8902ea1c3e279d5d20f9aa171d9333e936c6f86b15db39f2ebaa6",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_130237366100.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 576792,
+      "errors": [],
+      "event_id": "111883060100",
+      "path": "data/raw/events/Auger_111883060100.json",
+      "sha256": "427543d8ca17fb6031543325f69e07f81c4d5e22272109ccc49d5d26d6636d52",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_111883060100.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 863531,
+      "errors": [],
+      "event_id": "103648222300",
+      "path": "data/raw/events/Auger_103648222300.json",
+      "sha256": "31761a6015c75ce09bdd05e1dc4fc6d6b5030c65d814944a9d4d3911842315f5",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_103648222300.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 426800,
+      "errors": [],
+      "event_id": "162706023800",
+      "path": "data/raw/events/Auger_162706023800.json",
+      "sha256": "a6d4f537694732f6c517ef0c9e10fc73bc5b1421ec0e50065018243b1517c4b4",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_162706023800.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 486385,
+      "errors": [],
+      "event_id": "133323550000",
+      "path": "data/raw/events/Auger_133323550000.json",
+      "sha256": "55bcc00325e7ff0fde55cc1029945abe831965d9e21f31b261de3c9b7c054cc1",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_133323550000.json"
+    },
+    {
+      "attempts": 1,
+      "bytes": 738842,
+      "errors": [],
+      "event_id": "080523660200",
+      "path": "data/raw/events/Auger_080523660200.json",
+      "sha256": "340cd790bc54c1c4cfadce415ddc6d4ce10d98029b11a6bc3778b698914a4daa",
+      "status": "downloaded",
+      "url": "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_080523660200.json"
+    }
+  ],
+  "selection_manifest": "data/manifests/real_front_development_v1.json",
+  "selection_manifest_sha256": "bbf7241b17581b74bb70a960f096568fa5bea1270af6cf875a00090d1f5752e6"
+}

@@ -1,0 +1,13 @@
+{
+  "audited_fit_count": 28800,
+  "identical_fit_records_to_prior_full_run": 28800,
+  "verified_artifacts": 157,
+  "maximum_relative_objective_difference": 1.0098839837915615e-11,
+  "maximum_rms_difference_ns": 2.710009994189022e-11,
+  "maximum_angle_difference_deg": 8.881784197001252e-15,
+  "maximum_independent_mean_generation_difference_ns": 0.0,
+  "quadratic_curvature_boundary_fits": 48,
+  "exact_matching_controls": 72,
+  "audit_source_sha256": "d734c6cf7df45d04d75464270b145012f2158af54cac6441858ce7ce3f9ba071",
+  "status": "passed"
+}

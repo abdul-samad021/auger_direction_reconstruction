@@ -1,0 +1,156 @@
+{
+  "requested_fits": 28800,
+  "successful_fits": 28800,
+  "failed_fits": 0,
+  "control_fits": 96,
+  "exact_matching_controls": 72,
+  "nested_objective_checks": 14400,
+  "nested_violations": 0,
+  "regime_median_of_scenario_medians": [
+    {
+      "regime": "calibrated_gaussian",
+      "method": "plane_timing",
+      "median_error_deg": 3.5160134535079726,
+      "median_scenario_mean_nominal_chi2": 72.36828354438033
+    },
+    {
+      "regime": "calibrated_gaussian",
+      "method": "plane_uniform",
+      "median_error_deg": 2.3846079365904065,
+      "median_scenario_mean_nominal_chi2": 75.91604421491185
+    },
+    {
+      "regime": "calibrated_gaussian",
+      "method": "quadratic_timing",
+      "median_error_deg": 0.21738628223254844,
+      "median_scenario_mean_nominal_chi2": 0.9949455500691486
+    },
+    {
+      "regime": "calibrated_gaussian",
+      "method": "quadratic_uniform",
+      "median_error_deg": 0.22193472825222438,
+      "median_scenario_mean_nominal_chi2": 1.0940746218465618
+    },
+    {
+      "regime": "asymmetric_mean",
+      "method": "plane_timing",
+      "median_error_deg": 3.174799482893773,
+      "median_scenario_mean_nominal_chi2": 73.58677766841129
+    },
+    {
+      "regime": "asymmetric_mean",
+      "method": "plane_uniform",
+      "median_error_deg": 2.106315267738256,
+      "median_scenario_mean_nominal_chi2": 84.05916498989032
+    },
+    {
+      "regime": "asymmetric_mean",
+      "method": "quadratic_timing",
+      "median_error_deg": 0.7796589668271241,
+      "median_scenario_mean_nominal_chi2": 1.7224500271558003
+    },
+    {
+      "regime": "asymmetric_mean",
+      "method": "quadratic_uniform",
+      "median_error_deg": 0.745207693515897,
+      "median_scenario_mean_nominal_chi2": 1.9412277979430173
+    },
+    {
+      "regime": "radial_calibrated",
+      "method": "plane_timing",
+      "median_error_deg": 0.6354458175354993,
+      "median_scenario_mean_nominal_chi2": 9.75784545369379
+    },
+    {
+      "regime": "radial_calibrated",
+      "method": "plane_uniform",
+      "median_error_deg": 2.319867006363895,
+      "median_scenario_mean_nominal_chi2": 22.798735212089056
+    },
+    {
+      "regime": "radial_calibrated",
+      "method": "quadratic_timing",
+      "median_error_deg": 0.44994948505441684,
+      "median_scenario_mean_nominal_chi2": 0.9868883466154753
+    },
+    {
+      "regime": "radial_calibrated",
+      "method": "quadratic_uniform",
+      "median_error_deg": 0.7466399197989626,
+      "median_scenario_mean_nominal_chi2": 1.3389807346528153
+    },
+    {
+      "regime": "radial_underreported",
+      "method": "plane_timing",
+      "median_error_deg": 1.8244221690190092,
+      "median_scenario_mean_nominal_chi2": 41.10984830653241
+    },
+    {
+      "regime": "radial_underreported",
+      "method": "plane_uniform",
+      "median_error_deg": 2.319867006363895,
+      "median_scenario_mean_nominal_chi2": 46.42637994934368
+    },
+    {
+      "regime": "radial_underreported",
+      "method": "quadratic_timing",
+      "median_error_deg": 0.5831911916164407,
+      "median_scenario_mean_nominal_chi2": 4.600261121128412
+    },
+    {
+      "regime": "radial_underreported",
+      "method": "quadratic_uniform",
+      "median_error_deg": 0.7466399197989626,
+      "median_scenario_mean_nominal_chi2": 5.060313250061295
+    },
+    {
+      "regime": "heavy_tail_t5",
+      "method": "plane_timing",
+      "median_error_deg": 3.5328594848107637,
+      "median_scenario_mean_nominal_chi2": 72.42980201767044
+    },
+    {
+      "regime": "heavy_tail_t5",
+      "method": "plane_uniform",
+      "median_error_deg": 2.4050875076798897,
+      "median_scenario_mean_nominal_chi2": 76.50223268190399
+    },
+    {
+      "regime": "heavy_tail_t5",
+      "method": "quadratic_timing",
+      "median_error_deg": 0.1848856026273733,
+      "median_scenario_mean_nominal_chi2": 0.98434654936933
+    },
+    {
+      "regime": "heavy_tail_t5",
+      "method": "quadratic_uniform",
+      "median_error_deg": 0.18996750461267986,
+      "median_scenario_mean_nominal_chi2": 1.0462504013628262
+    },
+    {
+      "regime": "centered_skew",
+      "method": "plane_timing",
+      "median_error_deg": 3.5122755639362113,
+      "median_scenario_mean_nominal_chi2": 72.08631007559491
+    },
+    {
+      "regime": "centered_skew",
+      "method": "plane_uniform",
+      "median_error_deg": 2.4255388522545047,
+      "median_scenario_mean_nominal_chi2": 75.64195118472472
+    },
+    {
+      "regime": "centered_skew",
+      "method": "quadratic_timing",
+      "median_error_deg": 0.19711773834332488,
+      "median_scenario_mean_nominal_chi2": 1.029794617200063
+    },
+    {
+      "regime": "centered_skew",
+      "method": "quadratic_uniform",
+      "median_error_deg": 0.21924986540817573,
+      "median_scenario_mean_nominal_chi2": 1.1315844011219007
+    }
+  ],
+  "completed_utc": "2026-10-14T01:37:45.108782+00:00"
+}

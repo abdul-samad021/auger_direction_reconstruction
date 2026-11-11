@@ -1,0 +1,98 @@
+{
+  "created_utc": "2026-10-14T01:50:06.285793+00:00",
+  "passed": true,
+  "checks": {
+    "tests_warnings_as_errors": {
+      "command": [
+        "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-W",
+        "error"
+      ],
+      "returncode": 0,
+      "stdout": "........................................................................ [ 12%]\n........................................................................ [ 25%]\n........................................................................ [ 38%]\n........................................................................ [ 51%]\n........................................................................ [ 64%]\n........................................................................ [ 77%]\n........................................................................ [ 90%]\n....................................................                     [100%]\n556 passed in 6.92s\n",
+      "stderr": ""
+    },
+    "lint": {
+      "command": [
+        "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "returncode": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    "new_source_format": {
+      "command": [
+        "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_conference_coordinates.py",
+        "scripts/freeze_conference_release.py",
+        "scripts/preserve_conference_baseline.py",
+        "src/auger_reco/evaluation/conference_instability.py",
+        "src/auger_reco/evaluation/conference_stress.py",
+        "src/auger_reco/evaluation/conference_synthesis.py",
+        "tests/test_conference_coordinates.py",
+        "tests/test_conference_instability.py",
+        "tests/test_conference_release.py",
+        "tests/test_conference_stress.py",
+        "tests/test_conference_synthesis.py"
+      ],
+      "returncode": 0,
+      "stdout": "11 files already formatted\n",
+      "stderr": ""
+    },
+    "git_whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "baseline_preserved": {
+      "command": [
+        "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/python",
+        "scripts/preserve_conference_baseline.py",
+        "verify",
+        "--output",
+        "/home/abdul_samad/projects/auger-direction-reconstruction/reports/results/conference_validation_20261013_v1/baseline"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"checked_files\": 4130,\n  \"changed_originals\": [],\n  \"changed_snapshot_files\": [],\n  \"raw_event_inventory_unchanged\": true,\n  \"git_head_unchanged\": true,\n  \"passed\": true\n}\n",
+      "stderr": ""
+    }
+  },
+  "historical_format_advisory": {
+    "command": [
+      "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/ruff",
+      "format",
+      "--check",
+      "src",
+      "tests",
+      "scripts"
+    ],
+    "returncode": 1,
+    "stdout": "unformatted: File would be reformatted\n   --> tests/test_event_json.py:262:57\n    |\n261 |     guarded_stations = [\n    -         AccessGuardMapping(station, safe_station_fields)\n    -         for station in event_document[\"stations\"]\n262 +         AccessGuardMapping(station, safe_station_fields) for station in event_document[\"stations\"]\n263 |     ]\n--------------------------------------------------------------------------------\n716 |             station[\"t\"] = float(\n    -                 origin_time_ns\n    -                 + position_m @ true_propagation_direction / speed_m_per_ns\n717 +                 origin_time_ns + position_m @ true_propagation_direction / speed_m_per_ns\n718 |             )\n    |\n\n1 file would be reformatted, 50 files already formatted\n",
+    "stderr": ""
+  },
+  "evidence_chain": {
+    "passed": true,
+    "verified_experiment_artifact_counts": {
+      "coordinates/audit_v1": 9,
+      "instability": 80,
+      "instability/anchor_ablation": 13,
+      "stress/final": 157
+    }
+  },
+  "source_changes_during_validation": [],
+  "no_git_writes": true,
+  "protected_raw_event_contents_read": 0
+}

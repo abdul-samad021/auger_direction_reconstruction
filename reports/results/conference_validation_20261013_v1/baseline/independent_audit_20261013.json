@@ -1,0 +1,30 @@
+{
+  "configuration_sha256": "ac5c13df0028fbaaf1d73e2511b363aa53b9dbc2745b9231f46d270099e379ef",
+  "training_events": 711,
+  "counts": {
+    "complete": 711,
+    "fit_attempts": 25392,
+    "successful_fits": 22452,
+    "reference_comparisons": 2844
+  },
+  "fit_failure_types": {
+    "InsufficientStations": 2940
+  },
+  "quality_flags_by_fit": {
+    "surface_like_geometry": 12696,
+    "known_core_assisted": 9756,
+    "nominal_degrees_of_freedom": 9756,
+    "curvature_at_lower_bound": 23,
+    "reduced_chi_square_nominal_boundary": 23
+  },
+  "largest_prediction_recomputation_difference_ns": 2.384185791015625e-07,
+  "largest_objective_relative_difference": 1.379791270586999e-08,
+  "largest_reference_angle_difference_deg": 6.661338147750939e-15,
+  "metric_rtol": 1e-07,
+  "metric_atol": 1e-05,
+  "prediction_atol_ns": 1e-05,
+  "reference_angle_atol_deg": 1e-09,
+  "protected_event_contents_read": 0,
+  "audit_script_sha256": "9fbca9c6699b24957b94b2a261fb94aaa90d74080c9814faa86b497b96f3ebb4",
+  "interpretation": "Internal numerical/provenance consistency, not physical truth validation"
+}

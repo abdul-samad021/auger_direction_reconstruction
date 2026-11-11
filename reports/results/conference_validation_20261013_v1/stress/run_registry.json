@@ -1,0 +1,15 @@
+{
+  "authoritative_run": "final",
+  "scientific_design": "72 scenarios x100 paired trials x4 methods",
+  "unique_primary_datasets": 7200,
+  "primary_fit_count": 28800,
+  "control_fit_count": 96,
+  "other_runs": {
+    "smoke": "One trial per scenario for execution and artifact checks; not additional research evidence.",
+    "full": "Initial full run before reporting-only hardening; all numerical fit records exactly reproduced by final. Preserved, not independent additional evidence."
+  },
+  "independent_audit": "independent_audit.json",
+  "date_local": "2026-10-13",
+  "timezone": "America/Vancouver",
+  "status": "complete"
+}

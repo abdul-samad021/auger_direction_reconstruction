@@ -1,0 +1,24 @@
+name = "pilot_sd1500_vertical_v1"
+release = "3"
+purpose = "Develop and validate the first plane-front direction reconstruction."
+
+[filters]
+require_sd_reconstruction = true
+sd1500_flag = 1
+zenith_min_deg = 0.0
+zenith_max_deg = 60.0
+min_selected_stations = 6
+deduplicate_by = "event_id"
+
+[sampling]
+pilot_events = 1000
+stratify_by = ["zenith_bin", "multiplicity_bin", "energy_bin"]
+seed = 20260826
+
+[split]
+group_key = "event_id"
+method = "deterministic_hash"
+train_fraction = 0.70
+validation_fraction = 0.15
+test_fraction = 0.15
+

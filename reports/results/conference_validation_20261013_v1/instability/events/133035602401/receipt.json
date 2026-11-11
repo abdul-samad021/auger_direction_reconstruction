@@ -1,0 +1,14 @@
+{
+  "event_id": "133035602401",
+  "finished_at_utc": "2026-10-14T01:29:41.375059+00:00",
+  "artifacts": {
+    "archived_predictions.json": "d8787c406166b2aea3f22f7af05c4b0200d4ea76786104f2a4f06db3f8d8c18d",
+    "station_diagnostics.csv": "12af8a03c7bdd574536a3c2db83cbad8ae8d6e97558d0f6dcf64b1660f553465",
+    "input_provenance.json": "9003e6fe625996763e9f1f4eaa2579c6778105b40c1a797d1686bc604c1654a3",
+    "all_fit_attempts.json": "18a39485dfb9acbf414a589c8c258601d0de6eac389b110397b8c79ce801f0ad",
+    "jacobian_checks.json": "bd8664768b14717acd61686a191617e68acc598b4b3edaedd4ef1c484e22e22e",
+    "core_sensitivity.csv": "5b08c21e241588156079adc98167d5e2366f9ef52615122d7c31dc4a2b384750",
+    "direction_profiles.csv": "72c59fd81a298b82eb877240b8825536eb075be5e1995f9261c590eed1bc61c9",
+    "solver_comparison.csv": "a42b559461ff58b1634ae1468e5954b6366ea85de00ad6d02f12b026fd4bed27"
+  }
+}

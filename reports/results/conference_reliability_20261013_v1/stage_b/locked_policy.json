@@ -1,0 +1,8 @@
+{
+  "threshold_deg": 1.0,
+  "development_viable": false,
+  "selection_reason": "No viable development candidate; exploratory maximum balanced-accuracy fallback.",
+  "development_records_sha256": "3a82381cbf17f8d2beb908c247dedd89464eaba7ee3b7b4dc61cd0cbb345faa0",
+  "locked_at_utc": "2026-10-14T02:23:05.482427+00:00",
+  "error_limit_deg": 1.0
+}

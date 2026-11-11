@@ -1,0 +1,21 @@
+{
+  "finished_at_utc": "2026-10-14T01:34:50.856635+00:00",
+  "fit_calls": 1600,
+  "failed_calls": 0,
+  "protected_event_access": false,
+  "artifacts": {
+    "081881294400_all_attempts.json": "21f6c2eed30d55203dafa4caf5ea4f2c4c5d669cbd61609b0307ef17b23bb52b",
+    "082726270900_all_attempts.json": "a84e5e5c3c1ffe9f4175b4d9a71df33b511c9b5cf247954af9e4b2e4485cad14",
+    "133035602401_all_attempts.json": "986c2735f7b6142e255a3dfe31678090c9bb4f5e7fd650a0948b27774870f37f",
+    "140415557800_all_attempts.json": "3531a2026165c61a068fc3d64b9326c2e5f08f0c3bfda49be5c03ce797dc900f",
+    "anchor_ablation.png": "b75209a25a7f755223c1444d50d8d69647838968ad150ecf2b9d6fb780091e80",
+    "anchor_ablation.svg": "ebb7fb40126b18d086747bc6cfa94e13ae97a1446f7757f91c84a969c5126572",
+    "configuration.json": "dc8320095f0db86313ef76d7e46b28adbbdd41995891837fdf47b1799de63013",
+    "source_snapshot/docs/conference_instability_protocol.md": "1bf73346defb8c80f6c225c886847161cb83aefdc0f5dd2e6422cc4fdae44c76",
+    "source_snapshot/src/auger_reco/evaluation/conference_instability.py": "e1c8d934c33e52bee68a5135d05be846c4df2f53ac6c50942538010af2139fcb",
+    "source_snapshot/src/auger_reco/physics/curved_front.py": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273",
+    "source_snapshot/src/auger_reco/physics/plane_front.py": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7",
+    "summary.csv": "1f6393a88652ccbdafeb328c622c8e2c355339eb4ca2fe2d0dde97c9ba94e7e7",
+    "trial_results.csv": "11d2c12c5a6f124ef3ee97cd8d530d6e57d118e36d9f5ae6ca1986d88d6ec3da"
+  }
+}

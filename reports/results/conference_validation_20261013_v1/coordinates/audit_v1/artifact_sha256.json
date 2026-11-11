@@ -1,0 +1,11 @@
+{
+  "coordinate_crosschecks.csv": "621891f3dccfec9586cafbf8844d3c28f213196336132235fe050a70a80ddb53",
+  "counterfactual_delays.csv": "1cff4a59f522a3934546466ff49ca246a2b39895fdf0c65596ebd9548a6522a4",
+  "counterfactual_refits.csv": "16c86ec890b1d87eb81ade7b723a1ef417663becb9580cf864e888293280ebd3",
+  "input_hashes.json": "d774474b1da2cbe4513f4a5e1b64aff6b7fa8d129f17f3aa6a9c9df42f3018f5",
+  "invariance_checks.json": "db895bd823ead0204fd9a6630bb1b8eb8f74c7424ed8aa2646ddb20708be7a22",
+  "official_notebook.zip": "3568191c87dacd42ce26b747c2f1ad31a084cd1d87d3f7f7e841dbcf4e6e6138",
+  "prespecified_protocol.md": "cc0c790f916cc7424498cab2f9459eccd26cb88db5a41dbab3dc7cf8e1d582a6",
+  "summary.json": "8832e365649660f2c2c1e1997d8c744a89276a6987e66a72ad8c834c2a9dad94",
+  "tutorial_source_receipt.json": "eb5dd3f8363f4983e6ff13cd8b04c1b45614d040575aca198ef80ca55cae0215"
+}

@@ -1,0 +1,45 @@
+{
+  "design": "post_hoc_matched_model_anchor_ablation",
+  "created_at_utc": "2026-10-14T01:34:35.177056+00:00",
+  "event_ids": [
+    "081881294400",
+    "082726270900",
+    "133035602401",
+    "140415557800"
+  ],
+  "trials_per_layout": 200,
+  "truth_zenith_deg": 30.0,
+  "truth_azimuth_deg": 45.0,
+  "truth_delay_at_1km_ns": 200.0,
+  "truth_core_time_ns": 100000.0,
+  "seed": 20261013,
+  "bootstrap_seed": 610132026,
+  "bootstrap_resamples": 2000,
+  "large_error_threshold_deg": 1.0,
+  "source_hashes": {
+    "src/auger_reco/evaluation/conference_instability.py": "e1c8d934c33e52bee68a5135d05be846c4df2f53ac6c50942538010af2139fcb",
+    "src/auger_reco/physics/curved_front.py": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273",
+    "src/auger_reco/physics/plane_front.py": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7",
+    "docs/conference_instability_protocol.md": "1bf73346defb8c80f6c225c886847161cb83aefdc0f5dd2e6422cc4fdae44c76"
+  },
+  "protected_event_access": false,
+  "public_fitter_options": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 2000,
+    "positive_curvature_seeds_ns": [
+      100.0
+    ],
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  },
+  "synthetic_core_note": "Published coordinates chosen as generator core; not real truth."
+}

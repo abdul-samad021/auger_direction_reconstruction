@@ -1,0 +1,115 @@
+{
+  "quality_gates": {
+    "tests_warnings_as_errors": {
+      "arguments": [
+        "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-W",
+        "error"
+      ],
+      "returncode": 0,
+      "stdout": "........................................................................ [ 11%]\n........................................................................ [ 22%]\n........................................................................ [ 34%]\n........................................................................ [ 45%]\n........................................................................ [ 56%]\n........................................................................ [ 68%]\n........................................................................ [ 79%]\n........................................................................ [ 90%]\n.........................................................                [100%]\n633 passed in 6.64s\n",
+      "stderr": ""
+    },
+    "all_python_lint": {
+      "arguments": [
+        "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "returncode": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    "new_python_format": {
+      "arguments": [
+        "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/ruff",
+        "format",
+        "--check",
+        "src/auger_reco/evaluation/direction_uncertainty.py",
+        "src/auger_reco/evaluation/reliability_warning.py",
+        "scripts/audit_reliability_followup.py",
+        "scripts/complete_direction_uncertainty_report.py",
+        "scripts/freeze_reliability_followup.py",
+        "tests/test_direction_uncertainty.py",
+        "tests/test_reliability_warning.py",
+        "tests/test_reliability_followup.py",
+        "tests/test_reliability_release.py"
+      ],
+      "returncode": 0,
+      "stdout": "9 files already formatted\n",
+      "stderr": ""
+    }
+  },
+  "original_seal": {
+    "passed": true,
+    "checked_artifacts": 736,
+    "changed_or_missing": [],
+    "unexpected_artifacts": [],
+    "git_head_unchanged": true,
+    "manifest_sha256": "e516716c090a16d4ae57d36c956f573593d7383bd1b1e0068fe9d4059c30c251",
+    "historical_baseline": {
+      "checked_files": 4130,
+      "changed_originals": [],
+      "changed_snapshot_files": [],
+      "raw_event_inventory_unchanged": true,
+      "git_head_unchanged": true,
+      "passed": true
+    }
+  },
+  "source_versions": [
+    {
+      "stage": "A",
+      "source": "src/auger_reco/evaluation/direction_uncertainty.py",
+      "live_matches": true
+    },
+    {
+      "stage": "A",
+      "source": "src/auger_reco/physics/curved_front.py",
+      "live_matches": true
+    },
+    {
+      "stage": "A",
+      "source": "src/auger_reco/physics/plane_front.py",
+      "live_matches": true
+    },
+    {
+      "stage": "A",
+      "source": "docs/direction_uncertainty_protocol.md",
+      "live_matches": true
+    },
+    {
+      "stage": "B",
+      "source": "src/auger_reco/evaluation/reliability_warning.py",
+      "live_matches": true,
+      "plot_only_amendment": false
+    },
+    {
+      "stage": "B",
+      "source": "src/auger_reco/evaluation/direction_uncertainty.py",
+      "live_matches": false,
+      "plot_only_amendment": true
+    },
+    {
+      "stage": "B",
+      "source": "src/auger_reco/physics/curved_front.py",
+      "live_matches": true,
+      "plot_only_amendment": false
+    },
+    {
+      "stage": "B",
+      "source": "src/auger_reco/physics/plane_front.py",
+      "live_matches": true,
+      "plot_only_amendment": false
+    },
+    {
+      "stage": "B",
+      "source": "docs/reliability_warning_protocol.md",
+      "live_matches": true,
+      "plot_only_amendment": false
+    }
+  ]
+}

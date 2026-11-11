@@ -1,0 +1,14 @@
+{
+  "posthoc_not_prespecified": true,
+  "definition": "Unique station-position records with any absolute map-coordinate discrepancy above 1 metre; occurrence check then uses their station IDs across 711 training plus focus events.",
+  "threshold_m": 1,
+  "outlying_position_records": 11,
+  "station_ids": [391, 787, 1206, 1314, 1778, 1797, 1799, 1824, 1849, 1850, 1851],
+  "selected_occurrences": 12,
+  "unselected_occurrences": 5,
+  "events_with_selected_occurrences": 11,
+  "selected_station_ids": [787, 1206, 1314, 1778, 1799, 1824, 1849, 1850, 1851],
+  "focus_outlier_ids": [],
+  "extreme_outlier_ids": [],
+  "interpretation": "Not a quality cut, survey error estimate, or justification to replace event positions. No coordinate values were changed."
+}

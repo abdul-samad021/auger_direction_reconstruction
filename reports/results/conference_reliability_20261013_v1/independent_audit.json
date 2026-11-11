@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "stage_a": {
+    "passed": true,
+    "checked_artifacts": 35,
+    "attempted_fits": 4800,
+    "replayed_available_fits": 4800,
+    "max_discrepancies": {
+      "angular_error_deg": 8.992806499463768e-15,
+      "major_radius_95_deg": 2.886579864025407e-15,
+      "mahalanobis_squared": 4.363176486776865e-13,
+      "relative_chi": 2.55985203797994e-12,
+      "relative_covariance": 1.1175474192454415e-14,
+      "summary_proportion": 1.1102230246251565e-16,
+      "summary_interval": 1.1102230246251565e-16
+    },
+    "manifest_sha256": "ee67eb322af2fcc8c4a14d2e52804faec44c6bdc8ec4f15cbbfe5d279f2b4b74"
+  },
+  "stage_b": {
+    "passed": true,
+    "checked_artifacts": 166,
+    "policy_locked_before_validation": true,
+    "policy_development_selection_replayed": true,
+    "phases": {
+      "development": {
+        "records": 3600,
+        "replayed_available_fits": 3600,
+        "true_positive": 1127,
+        "false_positive": 960,
+        "false_negative": 346,
+        "true_negative": 1167,
+        "retained": 1513,
+        "fit_failures": 0
+      },
+      "validation": {
+        "records": 3600,
+        "replayed_available_fits": 3600,
+        "true_positive": 1612,
+        "false_positive": 688,
+        "false_negative": 429,
+        "true_negative": 871,
+        "retained": 1300,
+        "fit_failures": 0
+      }
+    },
+    "max_discrepancies": {
+      "angular_error_deg": 5.329070518200751e-15,
+      "major_radius_95_deg": 6.419871685460485e-15,
+      "chi_square": 3.4956951795180752e-12
+    },
+    "manifest_sha256": "13b214fa63d8df7a8ebdb5a9849b367edf62a833f77c868f3e3ebddfd172d92b"
+  },
+  "audit_source_sha256": "fc39189a6641ac5d3de9bd7dbfa9722aa1ea8f9355ce66c51564f9772e0f6cdf",
+  "completed_utc": "2026-10-14T02:29:07.291859+00:00",
+  "scope": "Independent numerical replay of conditional local approximation, not detector calibration."
+}

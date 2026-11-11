@@ -1,0 +1,40 @@
+[release]
+name = "Pierre Auger Open Data Release 3"
+version = "3"
+date = "2024-03-20"
+concept_doi = "10.5281/zenodo.4487612"
+release_doi = "10.5281/zenodo.10488964"
+portal = "https://opendata.auger.org/"
+
+[sources."first-event"]
+description = "Documented 56.8 EeV SD-1500 multi-eye event for learning and parser development."
+url = "https://opendata.auger.org/releases/3/data/dataSD1500/Auger_081847956000.json"
+relative_path = "data/raw/events/Auger_081847956000.json"
+expected_bytes = 0
+expected_md5 = ""
+large = false
+
+[sources.summary]
+description = "Reconstructed event-level CSV summaries used to define cohorts and targets."
+url = "https://zenodo.org/api/records/10488964/files/summary.zip/content"
+relative_path = "data/raw/archives/summary.zip"
+expected_bytes = 7852063
+expected_md5 = "8f882fb04dcdc3d267b72ea62c78c49c"
+large = false
+
+[sources.auxiliary]
+description = "Station maps, exposures, and other official auxiliary tables."
+url = "https://zenodo.org/api/records/10488964/files/auxiliary.zip/content"
+relative_path = "data/raw/archives/auxiliary.zip"
+expected_bytes = 969237
+expected_md5 = "337431e74426efe5e29a9e56853334dd"
+large = false
+
+[sources."full-events"]
+description = "All 81,121 pseudo-raw per-event JSON files; download only after pilot validation."
+url = "https://zenodo.org/api/records/10488964/files/data.zip/content"
+relative_path = "data/raw/archives/data.zip"
+expected_bytes = 869470279
+expected_md5 = "6ce00f1156656284425fab154fcd4e4d"
+large = true
+

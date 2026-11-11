@@ -1,0 +1,125 @@
+{
+  "training_events": 711,
+  "focus_events": 1,
+  "protected_event_files_opened": 0,
+  "transformation_residuals_absolute_m": {
+    "sd_core": {
+      "easting_error_m": {
+        "count": 712,
+        "median": 0.14291747499373741,
+        "p95": 0.6361297735129483,
+        "maximum": 0.9323587300023064
+      },
+      "northing_error_m": {
+        "count": 712,
+        "median": 0.13901013461872935,
+        "p95": 0.440326534537598,
+        "maximum": 0.7444850206375122
+      },
+      "altitude_error_m": {
+        "count": 712,
+        "median": 0.041565189973312044,
+        "p95": 0.18539173274303947,
+        "maximum": 0.2611672662451383
+      },
+      "earth_altitude_term_m": {
+        "count": 712,
+        "median": 35.20603166687343,
+        "p95": 89.46477589672224,
+        "maximum": 113.22515413952576
+      }
+    },
+    "unique_station_position": {
+      "easting_error_m": {
+        "count": 1533,
+        "median": 0.13878514006501064,
+        "p95": 0.6800737180397842,
+        "maximum": 2.908437420031987
+      },
+      "northing_error_m": {
+        "count": 1533,
+        "median": 0.13267373014241457,
+        "p95": 0.4756901597604128,
+        "maximum": 4.822097489610314
+      },
+      "altitude_error_m": {
+        "count": 1533,
+        "median": 0.04452888703667668,
+        "p95": 0.1874688831831463,
+        "maximum": 13.93750445075375
+      },
+      "earth_altitude_term_m": {
+        "count": 1533,
+        "median": 39.413236949348295,
+        "p95": 95.62916523020098,
+        "maximum": 127.94548886838096
+      }
+    }
+  },
+  "unmatched_station_positions": [],
+  "synthetic_fit_invariance_checks": 32,
+  "counterfactual_only_not_correction": {
+    "delay_peak_to_peak_ns": {
+      "count": 712,
+      "median": 28.518166005636182,
+      "p95": 53.44645985131304,
+      "maximum": 83.58190513452729
+    },
+    "weighted_centered_rms_delay_ns": {
+      "count": 712,
+      "median": 6.00578680258983,
+      "p95": 10.670531045772295,
+      "maximum": 15.419251734375358
+    }
+  },
+  "counterfactual_refits": [
+    {
+      "event_id": "081881294400",
+      "model": "plane",
+      "direction_shift_deg": 0.22889595475384142,
+      "baseline_reduced_chi_square": 36.609436396236134,
+      "counterfactual_reduced_chi_square": 36.70939315155121,
+      "baseline_rms_ns": 319.4590701295529,
+      "counterfactual_rms_ns": 319.87312283735366
+    },
+    {
+      "event_id": "081881294400",
+      "model": "quadratic",
+      "direction_shift_deg": 0.2287151703734097,
+      "baseline_reduced_chi_square": 2.6676355874329527,
+      "counterfactual_reduced_chi_square": 2.6683529184717254,
+      "baseline_rms_ns": 69.01579660571696,
+      "counterfactual_rms_ns": 69.029205625184
+    },
+    {
+      "event_id": "081847956000",
+      "model": "plane",
+      "direction_shift_deg": 0.03463505806096668,
+      "baseline_reduced_chi_square": 72.93051360815856,
+      "counterfactual_reduced_chi_square": 73.38895562325864,
+      "baseline_rms_ns": 462.7762788397118,
+      "counterfactual_rms_ns": 464.0897118931958
+    },
+    {
+      "event_id": "081847956000",
+      "model": "quadratic",
+      "direction_shift_deg": 0.03009301651037862,
+      "baseline_reduced_chi_square": 4.652169651546963,
+      "counterfactual_reduced_chi_square": 4.661838309516379,
+      "baseline_rms_ns": 96.71357141073874,
+      "counterfactual_rms_ns": 97.09629402869425
+    }
+  ],
+  "horizontal_map_rotation_deg": 0.14447217509184648,
+  "horizontal_map_scale": 0.9994001771107508,
+  "sources": {
+    "docs/conference_coordinate_audit.md": "cc0c790f916cc7424498cab2f9459eccd26cb88db5a41dbab3dc7cf8e1d582a6",
+    "training_configuration": "e548b2fde05ed0ed31b79aefd7bed5da8d8bab46b97564893ab7356334254d22",
+    "data/raw/archives/auxiliary.zip": "f86126d2fa838b8e6cc60d995b7721be566d581e50b26acd0e55d3e17c091d42",
+    "scripts/audit_conference_coordinates.py": "d4b2afe06fbdd66a8eb834be8522237c022c58613a0316eb8683e56f895e7747",
+    "tests/test_conference_coordinates.py": "763d69c5aa14a5755eafbf659697f9210747b5f2be7eab30c51be5213dbfdbd8",
+    "src/auger_reco/physics/plane_front.py": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7",
+    "src/auger_reco/physics/curved_front.py": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273",
+    "src/auger_reco/data/event_json.py": "ed038376c6300d4bc6f1d5e25a756d5fff0b4d55f54b9c1cdee17e51c3675b5d"
+  }
+}

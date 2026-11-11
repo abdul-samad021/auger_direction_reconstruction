@@ -1,0 +1,770 @@
+{
+  "started_at_utc": "2026-10-14T02:22:29.977622+00:00",
+  "seed": 202610132701,
+  "trials_per_scenario": 100,
+  "large_error_strictly_above_deg": 1.0,
+  "candidate_thresholds_deg": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    5.0,
+    10.0
+  ],
+  "sources": [
+    {
+      "path": "src/auger_reco/evaluation/reliability_warning.py",
+      "sha256": "38fbe7520aaadf435fc0e31b7987de9206be6817edac34ff75c3391cc5935e21"
+    },
+    {
+      "path": "src/auger_reco/evaluation/direction_uncertainty.py",
+      "sha256": "f80aa94d7a928f30fe31d0056284820a91b123f5ad280b46bc0139255ee1bba9"
+    },
+    {
+      "path": "src/auger_reco/physics/curved_front.py",
+      "sha256": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273"
+    },
+    {
+      "path": "src/auger_reco/physics/plane_front.py",
+      "sha256": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7"
+    },
+    {
+      "path": "docs/reliability_warning_protocol.md",
+      "sha256": "ab54c762d962b81d068bf4083fa884c6ede518708ab8838e5cbf070dd341ca79"
+    }
+  ],
+  "python": "3.12.13",
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1"
+  },
+  "development_scenarios": [
+    {
+      "split": "development",
+      "geometry_index": 0,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 0,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 0,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 0,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 0,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 0,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 1,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 1,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 1,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 1,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 1,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 1,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 2,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 2,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 2,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 2,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 2,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 2,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 3,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 3,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 3,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 3,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 3,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 3,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 4,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 4,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 4,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 7,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 4,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 4,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 4,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 7,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 5,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 5,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 5,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 13,
+      "zenith_deg": 25.0,
+      "azimuth_deg": 35.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "development",
+      "geometry_index": 5,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "matched"
+    },
+    {
+      "split": "development",
+      "geometry_index": 5,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "development",
+      "geometry_index": 5,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 13,
+      "zenith_deg": 55.0,
+      "azimuth_deg": 210.0,
+      "regime": "underreported_dt"
+    }
+  ],
+  "validation_scenarios": [
+    {
+      "split": "validation",
+      "geometry_index": 0,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 0,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 0,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 0,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 0,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 0,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 1,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 1,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 1,
+      "direction_index": 0,
+      "layout": "spread",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 1,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 1,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 1,
+      "direction_index": 1,
+      "layout": "spread",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 2,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 2,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 2,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 2,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 2,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 2,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 3,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 3,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 3,
+      "direction_index": 0,
+      "layout": "anchored_ring",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 3,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 3,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 3,
+      "direction_index": 1,
+      "layout": "anchored_ring",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 4,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 4,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 4,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 8,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 4,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 4,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 4,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 8,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 5,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 5,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 5,
+      "direction_index": 0,
+      "layout": "anchor_poor_ring",
+      "count": 14,
+      "zenith_deg": 35.0,
+      "azimuth_deg": 100.0,
+      "regime": "underreported_dt"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 5,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "matched"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 5,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "asymmetric_mean"
+    },
+    {
+      "split": "validation",
+      "geometry_index": 5,
+      "direction_index": 1,
+      "layout": "anchor_poor_ring",
+      "count": 14,
+      "zenith_deg": 50.0,
+      "azimuth_deg": 290.0,
+      "regime": "underreported_dt"
+    }
+  ]
+}

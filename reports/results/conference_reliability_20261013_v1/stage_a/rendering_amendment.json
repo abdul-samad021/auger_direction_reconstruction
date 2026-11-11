@@ -1,0 +1,21 @@
+{
+  "canonical_run": "final_v2",
+  "retained_initial_run": "final",
+  "reason": "All 4800 fits and statistical tables completed; Matplotlib rejected a tiny negative errorbar width caused by Wilson endpoint floating-point roundoff.",
+  "initial_recovery": "Separate complete_direction_uncertainty_report.py renderer completed initial artifacts without changing any of its 32 original files.",
+  "subsequent_amendment": "After Stage B completed, clip displayed errorbar widths only using np.maximum(errors, 0.0) inside _figures; clean deterministic rerun to final_v2.",
+  "before_source_sha256": "f80aa94d7a928f30fe31d0056284820a91b123f5ad280b46bc0139255ee1bba9",
+  "after_source_sha256": "1f21282af69071c649a539a7b1968abe864825ad4ec279bb0da3b6f51dc8f39d",
+  "ast_changed_top_level_nodes": ["_figures"],
+  "shared_uncertainty_math_unchanged": true,
+  "fit_and_simulation_logic_unchanged": true,
+  "stage_b_completed_before_source_amendment": true,
+  "scientific_files_byte_identical": 27,
+  "scientific_files_description": "All 24 inputs_*.npz files plus trials.csv, coverage_summary.csv and optimizer_attempts.jsonl.",
+  "trials_csv_sha256_both_runs": "684a4edbbf6a3a36039690dff6c7fe4a4aefc2c8d5b4bc6a5872b8d7f3f9ee8f",
+  "coverage_summary_csv_sha256_both_runs": "5e9c42b984ac0b0daf0e46c7db1138c0f697d7ac02b198745ab741af4b2a544d",
+  "optimizer_attempts_jsonl_sha256_both_runs": "5e98d25128c5bcf022efaa3db5f603cf9f43538b4a540002e2bd0b2432366e00",
+  "distinct_production_trials": 4800,
+  "duplicate_full_rerun_is_additional_scientific_evidence": false,
+  "smoke_trials_excluded": 48
+}
