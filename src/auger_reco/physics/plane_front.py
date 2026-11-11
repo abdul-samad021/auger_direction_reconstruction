@@ -534,19 +534,25 @@ def _slopes_from_propagation(
 
 
 def _objective_residuals(parameters: FloatArray, system: _PreparedSystem) -> FloatArray:
-    """Evaluate the residual vector minimized by SciPy's least-squares solver."""
+    """Evaluate residuals in centred time, preserving small solver perturbations.
+
+    Reintroducing the absolute timestamp here would erase finite-difference
+    steps in the fitted time offset when station times are hundreds of millions
+    of nanoseconds. That creates a spurious zero Jacobian column. Absolute time
+    is restored only when constructing the public prediction/result fields.
+    """
 
     time_offset_ns, horizontal_slope_x, horizontal_slope_y = parameters
     sky_direction = _sky_direction_from_slopes(horizontal_slope_x, horizontal_slope_y)
     propagation_direction = -sky_direction
-    reference_time_ns = system.reference_time_ns + time_offset_ns
-    predicted_times_ns = _predict_station_times_unchecked(
-        reference_time_ns,
+    predicted_centered_times_ns = _predict_station_times_unchecked(
+        float(time_offset_ns),
         propagation_direction,
         system.positions_m,
         system.reference_position_m,
     )
-    return (system.times_ns - predicted_times_ns) / system.fit_scales_ns
+    centered_observed_times_ns = system.times_ns - system.reference_time_ns
+    return (centered_observed_times_ns - predicted_centered_times_ns) / system.fit_scales_ns
 
 
 def _fit_from_seed(

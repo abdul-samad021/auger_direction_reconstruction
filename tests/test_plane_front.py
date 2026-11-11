@@ -141,6 +141,68 @@ def test_sky_angle_conversion_matches_cardinal_directions(
     assert plane_front.C_M_PER_NS == REFERENCE_C_M_PER_NS
 
 
+@pytest.mark.parametrize("weighting", ["timing", "uniform"])
+@pytest.mark.parametrize("absolute_offset_ns", [5.0e8, 1.0e9, -1.0e9])
+def test_large_time_origin_preserves_direction_and_jacobian_rank(
+    station_positions_m: FloatArray,
+    timing_uncertainties_ns: FloatArray,
+    weighting: str,
+    absolute_offset_ns: float,
+) -> None:
+    """Changing the timestamp origin must not remove an identifiable time parameter."""
+    _, exact = _make_exact_event(station_positions_m, origin_time_ns=0.0)
+    rng = np.random.default_rng(842)
+    observed = exact + rng.normal(0.0, timing_uncertainties_ns)
+    baseline = plane_front.fit_plane_front(
+        station_positions_m, observed, timing_uncertainties_ns, weighting=weighting
+    )
+    shifted = plane_front.fit_plane_front(
+        station_positions_m,
+        observed + absolute_offset_ns,
+        timing_uncertainties_ns,
+        weighting=weighting,
+    )
+    assert baseline.final_jacobian_rank == shifted.final_jacobian_rank == 3
+    assert np.isfinite(shifted.reduced_chi_square)
+    assert "rank_deficient_final_jacobian" not in shifted.quality_flags
+    assert (
+        plane_front.angular_separation_deg(baseline.sky_direction, shifted.sky_direction) < 1.0e-6
+    )
+    np.testing.assert_allclose(shifted.chi_square, baseline.chi_square, rtol=1e-6, atol=1e-6)
+    np.testing.assert_allclose(
+        shifted.predicted_times_ns - absolute_offset_ns,
+        baseline.predicted_times_ns,
+        rtol=0.0,
+        atol=1e-4,
+    )
+
+
+def test_time_offset_jacobian_survives_large_absolute_timestamp(
+    station_positions_m: FloatArray,
+    timing_uncertainties_ns: FloatArray,
+) -> None:
+    """The offset derivative is -1/sigma, even below the absolute-time float spacing."""
+    sky, times = _make_exact_event(station_positions_m, origin_time_ns=5.0e8)
+    system = plane_front._prepare_system(
+        station_positions_m,
+        times,
+        timing_uncertainties_ns,
+        "timing",
+        plane_front.PlaneFrontFitOptions(),
+    )
+    parameters = np.array([0.0, sky[0] / sky[2], sky[1] / sky[2]])
+    step = np.sqrt(np.finfo(float).eps)
+    baseline = plane_front._objective_residuals(parameters, system)
+    parameters[0] += step
+    changed = plane_front._objective_residuals(parameters, system)
+    np.testing.assert_allclose(
+        (changed - baseline) / step,
+        -1.0 / timing_uncertainties_ns,
+        rtol=1e-4,
+        atol=1e-5,
+    )
+
+
 def test_predict_station_times_uses_the_expected_sign_convention() -> None:
     """A station farther along propagation must be reached later."""
 
