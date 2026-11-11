@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "direction_frame_version": "auger-core-enu-to-site-enu-wgs84-v1",
+  "events": 712,
+  "training_events": 711,
+  "focus_events": 1,
+  "comparisons": 2848,
+  "maximum_difference_from_verified_separation_deg": 7.827072323607354e-15,
+  "absolute_tolerance_deg": 1e-10,
+  "protected_event_files_opened": 0,
+  "fits_executed": 0,
+  "historical_artifacts_unchanged": true,
+  "artifact_hashes_checked": {
+    "audit_protocol.json": "e5c6f218f3c2308b9eaa8301a22f8abca9f7ca2fb14d59d75a1c813faceddf6c",
+    "audit_source.py": "49ed1346c0552dc94d64a664743c4c75147f523f6ce45372b5d097df0f81357c",
+    "corrected_reference_comparisons.csv": "c0c492fcace304435e5280a3a1d91896a16d74de66f3a142def9285ee21972de",
+    "event_redundancy_checks.csv": "40479431e22211c8cfdeb9791a99aa6be43c966dab56503f9337249da44fbb98",
+    "input_sha256.json": "0df6c65903da813232867ae14cc6dd4086679df694126a0ca200e0663c1603bf",
+    "saved_fit_reference_comparisons.csv": "12d23ea2bea3701e7e7e81c1beaf0f95ba24e4992a7e833bb935936c44a9f0ba",
+    "selected_station_redundancy_checks.csv": "d9ccb4cdbf4f46a8c83e7eda35788b3145e34e991452b6a4de914a4552271651",
+    "summary.json": "8515f44901f358faafab6f33da160d37925ac5e0d99a14d662fd7a82f9769036"
+  },
+  "source_sha256": {
+    "src/auger_reco/data/direction_reference.py": "21ec42f234b902e6e592061cad425828cd22cfb6933ac6b5d4bd871281b4ae71",
+    "src/auger_reco/physics/plane_front.py": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7",
+    "scripts/verify_direction_frame_integration.py": "39c980edbd6ef029b92da4be1c41461c50e631e046d8a4512b68f51fc68e0c08",
+    "pyproject.toml": "b4f2f2d8f01a457d748f1779e0498fa7fab735ade25894aa2549507ce64ce113",
+    "uv.lock": "0533e7575ce15385ed2fb639d511243434d4fc1017d241fe40c246ea87c3b365"
+  },
+  "interpretation": "Production integration regression, not independent truth validation."
+}

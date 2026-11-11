@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "direction_frame_version": "auger-core-enu-to-site-enu-wgs84-v1",
+  "pytest": {
+    "command": ".venv/bin/python -m pytest -W error",
+    "passed": 746,
+    "failed": 0,
+    "warnings_as_errors": true
+  },
+  "lint": {"command": ".venv/bin/ruff check src tests scripts", "passed": true},
+  "lock": {"command": "uv lock --check", "passed": true},
+  "whitespace": {"command": "git diff --check", "passed": true},
+  "regression_receipt": "reports/direction_frame_integration_check_20261014.json",
+  "scope": {
+    "frozen_results_overwritten": false,
+    "protected_event_contents_opened": false,
+    "real_event_fits_rerun": false,
+    "notebook_comparison_cells_tested_with_synthetic_fixtures": true,
+    "complete_research_notebooks_rerun": false,
+    "committed": false,
+    "pushed": false
+  }
+}
