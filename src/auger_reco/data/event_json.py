@@ -190,6 +190,10 @@ class AugerDirectionReference:
     not the public portal's release number; the two version labels need not
     match. ``format_version`` records the schema whose angle semantics were
     validated by this adapter.
+
+    These are the native **core-local ENU** angles, not central-site angles.
+    For comparisons with site-frame fitted vectors, use the frame-aware loader
+    in ``auger_reco.data.direction_reference`` after freezing the prediction.
     """
 
     # Identity fields let us match this reference to a frozen reconstruction.
