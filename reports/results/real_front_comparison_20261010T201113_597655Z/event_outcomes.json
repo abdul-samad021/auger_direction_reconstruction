@@ -1,0 +1,122 @@
+[
+  {
+    "event_id": "081847956000",
+    "loaded_and_compared": true,
+    "fit_attempts": 108,
+    "fit_successes": 108
+  },
+  {
+    "event_id": "160210414600",
+    "loaded_and_compared": true,
+    "fit_attempts": 64,
+    "fit_successes": 64
+  },
+  {
+    "event_id": "120797883000",
+    "loaded_and_compared": true,
+    "fit_attempts": 40,
+    "fit_successes": 40
+  },
+  {
+    "event_id": "130207988600",
+    "loaded_and_compared": true,
+    "fit_attempts": 44,
+    "fit_successes": 44
+  },
+  {
+    "event_id": "140876912800",
+    "loaded_and_compared": true,
+    "fit_attempts": 60,
+    "fit_successes": 60
+  },
+  {
+    "event_id": "133556408900",
+    "loaded_and_compared": true,
+    "fit_attempts": 40,
+    "fit_successes": 40
+  },
+  {
+    "event_id": "112954615400",
+    "loaded_and_compared": true,
+    "fit_attempts": 44,
+    "fit_successes": 44
+  },
+  {
+    "event_id": "123274772200",
+    "loaded_and_compared": true,
+    "fit_attempts": 60,
+    "fit_successes": 60
+  },
+  {
+    "event_id": "113434887000",
+    "loaded_and_compared": true,
+    "fit_attempts": 40,
+    "fit_successes": 40
+  },
+  {
+    "event_id": "163051054600",
+    "loaded_and_compared": true,
+    "fit_attempts": 44,
+    "fit_successes": 44
+  },
+  {
+    "event_id": "103545570600",
+    "loaded_and_compared": true,
+    "fit_attempts": 60,
+    "fit_successes": 60
+  },
+  {
+    "event_id": "173064766400",
+    "loaded_and_compared": true,
+    "fit_attempts": 40,
+    "fit_successes": 40
+  },
+  {
+    "event_id": "162626086100",
+    "loaded_and_compared": true,
+    "fit_attempts": 52,
+    "fit_successes": 52
+  },
+  {
+    "event_id": "070137858700",
+    "loaded_and_compared": true,
+    "fit_attempts": 64,
+    "fit_successes": 64
+  },
+  {
+    "event_id": "130237366100",
+    "loaded_and_compared": true,
+    "fit_attempts": 40,
+    "fit_successes": 40
+  },
+  {
+    "event_id": "111883060100",
+    "loaded_and_compared": true,
+    "fit_attempts": 52,
+    "fit_successes": 52
+  },
+  {
+    "event_id": "103648222300",
+    "loaded_and_compared": true,
+    "fit_attempts": 68,
+    "fit_successes": 68
+  },
+  {
+    "event_id": "162706023800",
+    "loaded_and_compared": true,
+    "fit_attempts": 40,
+    "fit_successes": 40
+  },
+  {
+    "event_id": "133323550000",
+    "loaded_and_compared": true,
+    "fit_attempts": 44,
+    "fit_successes": 44
+  },
+  {
+    "event_id": "080523660200",
+    "loaded_and_compared": true,
+    "fit_attempts": 68,
+    "fit_successes": 68
+  }
+]

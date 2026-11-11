@@ -1,0 +1,100 @@
+{
+  "plane_options": {
+    "minimum_stations": 6,
+    "surface_seed_margin": 1e-06,
+    "vertical_azimuth_tolerance": 1e-12,
+    "planarity_ratio_threshold": 0.05,
+    "surface_condition_warning_threshold": 100000000.0,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "optimizer_method": "trf",
+    "optimizer_loss": "linear",
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "maximum_function_evaluations": 2000
+  },
+  "curved_options": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 2000,
+    "positive_curvature_seeds_ns": [
+      100.0
+    ],
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  },
+  "station_ids": [
+    "840",
+    "818",
+    "839",
+    "1215",
+    "836",
+    "832",
+    "1209",
+    "834",
+    "1213",
+    "835"
+  ],
+  "core_position_m": [
+    -5651.1,
+    9516.7,
+    0.74
+  ],
+  "core_offsets_m": [
+    [
+      100.0,
+      0.0,
+      0.0
+    ],
+    [
+      -100.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      100.0,
+      0.0
+    ],
+    [
+      0.0,
+      -100.0,
+      0.0
+    ],
+    [
+      6.24,
+      0.0,
+      0.0
+    ],
+    [
+      -6.24,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      23.61,
+      0.0
+    ],
+    [
+      0.0,
+      -23.61,
+      0.0
+    ]
+  ],
+  "run_leave_one_out": true,
+  "core_shift_weighting": "timing",
+  "core_shift_model": "quadratic",
+  "leave_one_out_interpretation": "Conditional on fixed core and station selection; not independent end-to-end CV.",
+  "residual_normalization": "Observed measurement sigma only; not predictive uncertainty or a predictive pull.",
+  "reference_direction_used": false
+}

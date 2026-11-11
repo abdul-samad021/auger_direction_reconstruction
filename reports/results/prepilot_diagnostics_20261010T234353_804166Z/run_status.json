@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "pilot_started": false,
+  "signal_model_promoted": false,
+  "fixed_direction_fits": 40,
+  "real_signal_model_attempts": 120,
+  "signal_heldout_attempts": 208,
+  "timing_control_attempts": 2232,
+  "signal_control_attempts": 120
+}

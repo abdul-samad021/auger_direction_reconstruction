@@ -1,0 +1,331 @@
+{
+  "seed": 20261011,
+  "trials_per_case": 30,
+  "directions_deg": [
+    [
+      25.0,
+      20.0
+    ],
+    [
+      54.0,
+      54.0
+    ],
+    [
+      60.0,
+      210.0
+    ]
+  ],
+  "generators": [
+    "plane",
+    "quadratic",
+    "sphere",
+    "quadratic_coherent_gradient"
+  ],
+  "signal_slopes": [
+    [
+      -2.5,
+      0.0
+    ],
+    [
+      -2.5,
+      1.0
+    ],
+    [
+      -3.0,
+      0.0
+    ],
+    [
+      -3.0,
+      1.0
+    ],
+    [
+      -3.5,
+      0.0
+    ],
+    [
+      -3.5,
+      1.0
+    ]
+  ],
+  "previous_run": "reports/results/real_front_comparison_20261010T201113_597655Z",
+  "event_ids": [
+    "081847956000",
+    "160210414600",
+    "120797883000",
+    "130207988600",
+    "140876912800",
+    "133556408900",
+    "112954615400",
+    "123274772200",
+    "113434887000",
+    "163051054600",
+    "103545570600",
+    "173064766400",
+    "162626086100",
+    "070137858700",
+    "130237366100",
+    "111883060100",
+    "103648222300",
+    "162706023800",
+    "133323550000",
+    "080523660200"
+  ],
+  "created_at": "2026-10-10T23:43:53.805219+00:00",
+  "pilot_started": false,
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5"
+  },
+  "git_head": "aaca956418c4be592b48c5d564933dc04f91f2dd",
+  "git_status": " M README.md\n M docs/data_strategy.md\n M docs/project_scope_and_deployment.md\n M docs/scientific_charter.md\n M notebooks/03_reconstruct_first_real_event.ipynb\n M notebooks/README.md\n M src/auger_reco/physics/plane_front.py\n M tests/test_plane_front.py\n?? data/manifests/real_front_development_v1.downloads.json\n?? data/manifests/real_front_development_v1.json\n?? docs/prepilot_diagnostics_protocol.md\n?? docs/real_front_comparison_protocol.md\n?? docs/research_roadmap.md\n?? notebooks/04_benchmark_synthetic_plane_front.ipynb\n?? notebooks/05_benchmark_curved_front.ipynb\n?? notebooks/06_compare_real_event_front_models.ipynb\n?? notebooks/07_pre_pilot_diagnostics.ipynb\n?? reports/controlled_curvature_conclusion.md\n?? reports/first_real_event_conclusion.md\n?? reports/real_front_comparison_conclusion.md\n?? reports/real_front_run_registry.json\n?? reports/results/\n?? src/auger_reco/data/core_reference.py\n?? src/auger_reco/data/development_sample.py\n?? src/auger_reco/evaluation/direction_diagnostics.py\n?? src/auger_reco/evaluation/front_comparison.py\n?? src/auger_reco/evaluation/prepilot_study.py\n?? src/auger_reco/physics/curved_front.py\n?? src/auger_reco/physics/quadratic_front.py\n?? src/auger_reco/physics/signal_core.py\n?? tests/test_core_reference.py\n?? tests/test_curved_front.py\n?? tests/test_development_sample.py\n?? tests/test_direction_diagnostics.py\n?? tests/test_front_comparison.py\n?? tests/test_prepilot_study.py\n?? tests/test_quadratic_front.py\n?? tests/test_signal_core.py\n",
+  "tracked_files": [
+    {
+      "path": "src/auger_reco/data/core_reference.py",
+      "sha256": "1c6ba4b13989b6fc3972b63528b9e5a4f493681af1007be1591781be362d9d30"
+    },
+    {
+      "path": "src/auger_reco/data/development_sample.py",
+      "sha256": "aa3d879cf2645107d11865f5abc342ed557e04b1a59d0727c60a1cf72a74d203"
+    },
+    {
+      "path": "src/auger_reco/data/event_json.py",
+      "sha256": "ed038376c6300d4bc6f1d5e25a756d5fff0b4d55f54b9c1cdee17e51c3675b5d"
+    },
+    {
+      "path": "src/auger_reco/evaluation/direction_diagnostics.py",
+      "sha256": "6748be62ec89667c134638569bd666f33411a939b200563c7a7c5adb530e6b5c"
+    },
+    {
+      "path": "src/auger_reco/evaluation/front_comparison.py",
+      "sha256": "3b6b0e6fc8da698818ec2fd30d1d9b8f6d957498e2657ebe51432123d17a6a28"
+    },
+    {
+      "path": "src/auger_reco/physics/curved_front.py",
+      "sha256": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273"
+    },
+    {
+      "path": "src/auger_reco/physics/plane_front.py",
+      "sha256": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7"
+    },
+    {
+      "path": "src/auger_reco/physics/quadratic_front.py",
+      "sha256": "87ad244836cc6f9537c6b05f316451fdd9f26724f902eb52d2f49d465db94044"
+    },
+    {
+      "path": "src/auger_reco/physics/signal_core.py",
+      "sha256": "ce259d7c2a76bd79a56153115f29a68f4acba3342d268d4a8941a95d7bdceae3"
+    },
+    {
+      "path": "src/auger_reco/evaluation/prepilot_study.py",
+      "sha256": "d778cbef711bfff14a5b5b4d05e0326287eabfed4b105a9f990f274719f27407"
+    },
+    {
+      "path": "data/manifests/real_front_development_v1.json",
+      "sha256": "bbf7241b17581b74bb70a960f096568fa5bea1270af6cf875a00090d1f5752e6"
+    },
+    {
+      "path": "data/manifests/pilot_sd1500_vertical_v1.csv",
+      "sha256": "5d2dad150943385cb0116f1a0dfa5d200cf1ffbe93aae2cc029bf19a969f827b"
+    },
+    {
+      "path": "docs/prepilot_diagnostics_protocol.md",
+      "sha256": "312608b95015fbbf343d32840af0f489b8b49d85356c02e77ee3c50a6fa405b6"
+    },
+    {
+      "path": "notebooks/07_pre_pilot_diagnostics.ipynb",
+      "sha256": "6f5cf6d43edc2d265404ecf4164433f18098ccbd8a36a611655df62d599e3bad"
+    },
+    {
+      "path": "data/raw/events/Auger_081847956000.json",
+      "sha256": "c5292ad278953a55a39a0bedf257f86d0faa58bc5968e69a229dafbe2273d349"
+    },
+    {
+      "path": "data/raw/events/Auger_160210414600.json",
+      "sha256": "2671d7e5f0aebd7969731d6028c8823e02f73c129a789a7830323166e32090d1"
+    },
+    {
+      "path": "data/raw/events/Auger_120797883000.json",
+      "sha256": "f57109586d649ebe4746954d5555dac4034021f25d1f92d1e021a282eb9e5b69"
+    },
+    {
+      "path": "data/raw/events/Auger_130207988600.json",
+      "sha256": "5a79174eaee8c67b1f90b4cd02205b29a76b41f1a1b371e991a64e0fed2b32b8"
+    },
+    {
+      "path": "data/raw/events/Auger_140876912800.json",
+      "sha256": "1b9e3c093cfcd4bdb533000da03dcb1ae57eece81c2af575f3132d7a41ccc240"
+    },
+    {
+      "path": "data/raw/events/Auger_133556408900.json",
+      "sha256": "ecc1a9bf1a1efbddd34a770e18e9c682c9f7e0ea65068379034e890a29dbbbbf"
+    },
+    {
+      "path": "data/raw/events/Auger_112954615400.json",
+      "sha256": "ee9d33e2137e8e9954b4359f9025acf32b0d10c0990cecf4cf082fea18deb41c"
+    },
+    {
+      "path": "data/raw/events/Auger_123274772200.json",
+      "sha256": "2af4c080835a17a653686142874246162b47b1a461c17b9507dd5be9996e4be2"
+    },
+    {
+      "path": "data/raw/events/Auger_113434887000.json",
+      "sha256": "a9038cda5e9a5d332b7461ec5e50c70aaf9f2c5be28e0da2906705db9f9aa5a8"
+    },
+    {
+      "path": "data/raw/events/Auger_163051054600.json",
+      "sha256": "7d80260af1a421515d34951f4ce90621351bbbb73df86bc82eba454a3bcc85f6"
+    },
+    {
+      "path": "data/raw/events/Auger_103545570600.json",
+      "sha256": "c6b89f72d7d424708d49f015e2d067f17195c8e0839a063103c3fa4fde588ede"
+    },
+    {
+      "path": "data/raw/events/Auger_173064766400.json",
+      "sha256": "f8411d046f1249eaf94c2d8cc4258c7d535fca3c4dc39c376b6301cfef021798"
+    },
+    {
+      "path": "data/raw/events/Auger_162626086100.json",
+      "sha256": "ec328e79c792edb6a28197d54cc2aa1115a13f0bf15058d4f7545bd16119cc3f"
+    },
+    {
+      "path": "data/raw/events/Auger_070137858700.json",
+      "sha256": "e274712049a496d48734c13b023f0056231bbffbf6d04c4d7f0fb484accde413"
+    },
+    {
+      "path": "data/raw/events/Auger_130237366100.json",
+      "sha256": "91de497b7cd8902ea1c3e279d5d20f9aa171d9333e936c6f86b15db39f2ebaa6"
+    },
+    {
+      "path": "data/raw/events/Auger_111883060100.json",
+      "sha256": "427543d8ca17fb6031543325f69e07f81c4d5e22272109ccc49d5d26d6636d52"
+    },
+    {
+      "path": "data/raw/events/Auger_103648222300.json",
+      "sha256": "31761a6015c75ce09bdd05e1dc4fc6d6b5030c65d814944a9d4d3911842315f5"
+    },
+    {
+      "path": "data/raw/events/Auger_162706023800.json",
+      "sha256": "a6d4f537694732f6c517ef0c9e10fc73bc5b1421ec0e50065018243b1517c4b4"
+    },
+    {
+      "path": "data/raw/events/Auger_133323550000.json",
+      "sha256": "55bcc00325e7ff0fde55cc1029945abe831965d9e21f31b261de3c9b7c054cc1"
+    },
+    {
+      "path": "data/raw/events/Auger_080523660200.json",
+      "sha256": "340cd790bc54c1c4cfadce415ddc6d4ce10d98029b11a6bc3778b698914a4daa"
+    },
+    {
+      "path": "reports/results/real_front_comparison_20261010T201113_597655Z/artifact_hashes.json",
+      "sha256": "cdbfaed5a3df0cca5089a16b9d10b5cf951f2bb520b36dffe1a6649f0720f237"
+    },
+    {
+      "path": "reports/results/real_front_comparison_20261010T201113_597655Z/all_fit_records_before_reference.csv",
+      "sha256": "64baeb4ff119f9346e9d70d2bcbbeeb9754b7efe56e4e2e24ecf7baeee32e22e"
+    },
+    {
+      "path": "reports/results/real_front_comparison_20261010T201113_597655Z/all_station_residuals.csv",
+      "sha256": "dedaae35c35412edbd718ffac74af2ff82e6d96339a2722d337b1e9edf97ce59"
+    },
+    {
+      "path": "reports/results/real_front_comparison_20261010T201113_597655Z/heldout_summary.csv",
+      "sha256": "331bbb5e15cece417d3cfa4f39a5f3ef1ac42dac533e0923d6b6397f6b99c22e"
+    }
+  ],
+  "signal_options": [
+    {
+      "beta": -2.5,
+      "gamma": 0.0,
+      "radial_softening_m": 1.0,
+      "domain_padding_fraction": 1.0,
+      "minimum_stations": 6,
+      "maximum_function_evaluations": 2000,
+      "optimizer_tolerance": 1e-10,
+      "condition_warning_threshold": 1000000.0
+    },
+    {
+      "beta": -2.5,
+      "gamma": 1.0,
+      "radial_softening_m": 1.0,
+      "domain_padding_fraction": 1.0,
+      "minimum_stations": 6,
+      "maximum_function_evaluations": 2000,
+      "optimizer_tolerance": 1e-10,
+      "condition_warning_threshold": 1000000.0
+    },
+    {
+      "beta": -3.0,
+      "gamma": 0.0,
+      "radial_softening_m": 1.0,
+      "domain_padding_fraction": 1.0,
+      "minimum_stations": 6,
+      "maximum_function_evaluations": 2000,
+      "optimizer_tolerance": 1e-10,
+      "condition_warning_threshold": 1000000.0
+    },
+    {
+      "beta": -3.0,
+      "gamma": 1.0,
+      "radial_softening_m": 1.0,
+      "domain_padding_fraction": 1.0,
+      "minimum_stations": 6,
+      "maximum_function_evaluations": 2000,
+      "optimizer_tolerance": 1e-10,
+      "condition_warning_threshold": 1000000.0
+    },
+    {
+      "beta": -3.5,
+      "gamma": 0.0,
+      "radial_softening_m": 1.0,
+      "domain_padding_fraction": 1.0,
+      "minimum_stations": 6,
+      "maximum_function_evaluations": 2000,
+      "optimizer_tolerance": 1e-10,
+      "condition_warning_threshold": 1000000.0
+    },
+    {
+      "beta": -3.5,
+      "gamma": 1.0,
+      "radial_softening_m": 1.0,
+      "domain_padding_fraction": 1.0,
+      "minimum_stations": 6,
+      "maximum_function_evaluations": 2000,
+      "optimizer_tolerance": 1e-10,
+      "condition_warning_threshold": 1000000.0
+    }
+  ],
+  "plane_options": {
+    "minimum_stations": 4,
+    "surface_seed_margin": 1e-06,
+    "vertical_azimuth_tolerance": 1e-12,
+    "planarity_ratio_threshold": 0.05,
+    "surface_condition_warning_threshold": 100000000.0,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "optimizer_method": "trf",
+    "optimizer_loss": "linear",
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "maximum_function_evaluations": 2000
+  },
+  "quadratic_options": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 2000,
+    "positive_curvature_seeds_ns": [
+      100.0
+    ],
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "main_fit_attempts": 32000,
+  "main_failures": 0,
+  "stress_fit_attempts": 1200,
+  "stress_failures": 0,
+  "exact_fit_attempts": 320,
+  "runtime_seconds": 196.94491416200003
+}

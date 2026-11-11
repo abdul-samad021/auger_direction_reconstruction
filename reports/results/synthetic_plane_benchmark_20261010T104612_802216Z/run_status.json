@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "controls_passed": true,
+  "scenario_count": 432,
+  "paired_trials": 86400,
+  "fit_attempts": 172800,
+  "fitting_elapsed_seconds": 531.8523898039984,
+  "completed_utc": "2026-10-10T10:55:13.426898+00:00"
+}

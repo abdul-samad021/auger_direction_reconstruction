@@ -1,0 +1,149 @@
+{
+  "study_version": 1,
+  "master_seed": 20261010,
+  "trials": 100,
+  "bootstrap_resamples": 2000,
+  "curvature_levels_ns": [
+    0.0,
+    25.0,
+    50.0,
+    100.0,
+    200.0
+  ],
+  "directions_deg": [
+    [
+      20.0,
+      20.0
+    ],
+    [
+      55.0,
+      110.0
+    ]
+  ],
+  "core_positions_m": {
+    "centred": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "offset": [
+      600.0,
+      -400.0,
+      0.0
+    ]
+  },
+  "rms_array_radius_m": 1000.0,
+  "rms_timing_uncertainty_ns": 10.0,
+  "true_core_time_ns": 100000.0,
+  "methods": [
+    [
+      "plane",
+      "timing"
+    ],
+    [
+      "plane",
+      "uniform"
+    ],
+    [
+      "quadratic",
+      "timing"
+    ],
+    [
+      "quadratic",
+      "uniform"
+    ]
+  ],
+  "plane_options": {
+    "minimum_stations": 6,
+    "surface_seed_margin": 1e-06,
+    "vertical_azimuth_tolerance": 1e-12,
+    "planarity_ratio_threshold": 0.05,
+    "surface_condition_warning_threshold": 100000000.0,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "optimizer_method": "trf",
+    "optimizer_loss": "linear",
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "maximum_function_evaluations": 2000
+  },
+  "quadratic_options": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 2000,
+    "positive_curvature_seeds_ns": [
+      100.0
+    ],
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  },
+  "angle_tolerance_deg": 1e-05,
+  "time_tolerance_ns": 0.0001,
+  "curvature_tolerance_ns": 0.001,
+  "objective_relative_tolerance": 1e-06,
+  "streams": {
+    "layout": 1,
+    "uncertainty": 2,
+    "main": 3,
+    "smoke": 4,
+    "bootstrap": 5,
+    "stress": 6
+  },
+  "stress_case": {
+    "geometry": "irregular",
+    "number_of_stations": 24,
+    "zenith_deg": 55.0,
+    "azimuth_deg": 110.0,
+    "core_label": "offset",
+    "delay_at_1km_ns": 100.0
+  },
+  "stress_assumed_core_shifts_m": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      100,
+      0,
+      0
+    ],
+    [
+      -100,
+      0,
+      0
+    ],
+    [
+      0,
+      100,
+      0
+    ],
+    [
+      0,
+      -100,
+      0
+    ]
+  ],
+  "python": "3.12.13",
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "pandas": "3.0.5",
+  "git_head": "aaca956418c4be592b48c5d564933dc04f91f2dd",
+  "git_status": " M README.md\n M docs/data_strategy.md\n M docs/project_scope_and_deployment.md\n M docs/scientific_charter.md\n M notebooks/03_reconstruct_first_real_event.ipynb\n M notebooks/README.md\n?? docs/research_roadmap.md\n?? notebooks/04_benchmark_synthetic_plane_front.ipynb\n?? notebooks/05_benchmark_curved_front.ipynb\n?? reports/controlled_curvature_conclusion.md\n?? reports/first_real_event_conclusion.md\n?? reports/results/\n?? src/auger_reco/physics/curved_front.py\n?? src/auger_reco/physics/quadratic_front.py\n?? tests/test_curved_front.py\n?? tests/test_quadratic_front.py\n",
+  "source_sha256": {
+    "src/auger_reco/physics/plane_front.py": "b1397a127bc8cb896fb746c41ee24d2731c07060cf62487916d191e5c0606fb0",
+    "src/auger_reco/physics/quadratic_front.py": "87ad244836cc6f9537c6b05f316451fdd9f26724f902eb52d2f49d465db94044",
+    "src/auger_reco/physics/curved_front.py": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273",
+    "notebooks/05_benchmark_curved_front.ipynb": "277aab1bbf96dae64003f6efd06cf2142c4f32d03aa9e54917797fb01b610fe3"
+  },
+  "assumption": "Known true core supplied to quadratic fits in primary grid."
+}

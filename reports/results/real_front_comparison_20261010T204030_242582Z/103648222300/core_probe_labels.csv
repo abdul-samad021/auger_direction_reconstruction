@@ -1,0 +1,9 @@
+scenario,probe_label,offset_x_m,offset_y_m
+core_shift_0,fixed_x_plus_100m,100.0,0.0
+core_shift_1,fixed_x_minus_100m,-100.0,0.0
+core_shift_2,fixed_y_plus_100m,0.0,100.0
+core_shift_3,fixed_y_minus_100m,0.0,-100.0
+core_shift_4,released_x_plus_axis_uncertainty,15.19,0.0
+core_shift_5,released_x_minus_axis_uncertainty,-15.19,0.0
+core_shift_6,released_y_plus_axis_uncertainty,0.0,15.13
+core_shift_7,released_y_minus_axis_uncertainty,0.0,-15.13

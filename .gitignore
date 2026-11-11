@@ -26,3 +26,7 @@ data/processed/*
 .vscode/settings.json
 .DS_Store
 Thumbs.db
+
+# Complete run archives stay local; only reviewed evidence is explicitly tracked.
+# See reports/README.md and reports/published_results_manifest.json.
+reports/results/

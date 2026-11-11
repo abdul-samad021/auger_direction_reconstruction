@@ -1,0 +1,4710 @@
+{
+  "fits": [
+    {
+      "scenario_id": "0e6f386cb4020662c6033740594173f8ab12193967f1e541d22a687cbdab6ad5",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.021441692635748393,
+      "zenith_deg": 39.98282990989375,
+      "azimuth_deg": 20.019983217758018,
+      "chi_square": 3.1675751150700924,
+      "reduced_chi_square": 1.0558583716900307,
+      "rms_residual_ns": 7.265873559628019,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 1.5837875575350462,
+      "optimizer_optimality": 8.962347612229138e-05,
+      "optimizer_nfev": 5,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 3.1675751150700924,
+          "scipy_cost": 1.5837875575350462,
+          "optimality": 8.962347612229138e-05,
+          "function_evaluations": 5,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.5293491987422754e-09,
+            0.7879158964608381,
+            0.287089181130626
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 3.167575115071322,
+          "scipy_cost": 1.583787557535661,
+          "optimality": 4.252211960409369e-05,
+          "function_evaluations": 14,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.4875150723545194e-07,
+            0.7879158968670944,
+            0.2870891820964684
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.822837465646439,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6037303409969501,
+        0.2199783631718398,
+        0.7662370358420066
+      ],
+      "optimizer_parameters": [
+        -1.5293491987422754e-09,
+        0.7879158964608381,
+        0.287089181130626
+      ]
+    },
+    {
+      "scenario_id": "0e6f386cb4020662c6033740594173f8ab12193967f1e541d22a687cbdab6ad5",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.02144169292670854,
+      "zenith_deg": 39.98282990978857,
+      "azimuth_deg": 20.019983218295078,
+      "chi_square": 3.1675751150692584,
+      "reduced_chi_square": 1.0558583716897527,
+      "rms_residual_ns": 7.265873559627062,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 158.3787557534629,
+      "optimizer_optimality": 0.009043891319038266,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 316.7575115069258,
+          "scipy_cost": 158.3787557534629,
+          "optimality": 0.009043891319038266,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7879158964552092,
+            0.28708918113694104
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 316.7575115070289,
+          "scipy_cost": 158.37875575351444,
+          "optimality": 0.011180033263769928,
+          "function_evaluations": 21,
+          "jacobian_evaluations": 17,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.3321307902234765e-11,
+            0.7879158974013075,
+            0.2870891822993313
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.8228374656464394,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6037303409935664,
+        0.21997836317701727,
+        0.7662370358431863
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7879158964552092,
+        0.28708918113694104
+      ]
+    },
+    {
+      "scenario_id": "0e6f386cb4020662c6033740594173f8ab12193967f1e541d22a687cbdab6ad5",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.11620832502122204,
+      "zenith_deg": 40.01729879687617,
+      "azimuth_deg": 19.82125834446435,
+      "chi_square": 3.116066777594763,
+      "reduced_chi_square": 1.038688925864921,
+      "rms_residual_ns": 7.206555785758273,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 1.5580333887973814,
+      "optimizer_optimality": 6.73883938304698e-05,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 3.116066777594763,
+          "scipy_cost": 1.5580333887973814,
+          "optimality": 6.73883938304698e-05,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -9.136324485187982e-08,
+            0.7898713338259334,
+            0.2847022728076985
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 3.1160667775952398,
+          "scipy_cost": 1.5580333887976199,
+          "optimality": 1.0082531989863419e-08,
+          "function_evaluations": 14,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.7945156020544485e-07,
+            0.7898713341144127,
+            0.28470227294721845
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.822837465646439,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6049232273184708,
+        0.2180393316181418,
+        0.7658503371534936
+      ],
+      "optimizer_parameters": [
+        -9.136324485187982e-08,
+        0.7898713338259334,
+        0.2847022728076985
+      ]
+    },
+    {
+      "scenario_id": "0e6f386cb4020662c6033740594173f8ab12193967f1e541d22a687cbdab6ad5",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.11620830285437926,
+      "zenith_deg": 40.01729884683479,
+      "azimuth_deg": 19.821258391122935,
+      "chi_square": 3.116066777594842,
+      "reduced_chi_square": 1.0386889258649472,
+      "rms_residual_ns": 7.206555785758365,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 155.8033388797421,
+      "optimizer_optimality": 0.009463126684750023,
+      "optimizer_nfev": 5,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 311.6066777594842,
+          "scipy_cost": 155.8033388797421,
+          "optimality": 0.009463126684750023,
+          "function_evaluations": 5,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7898713349926327,
+            0.28470227395502057
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 311.6066777595399,
+          "scipy_cost": 155.80333887976994,
+          "optimality": 0.014335617435335735,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.1000009680980258e-11,
+            0.7898713353506183,
+            0.2847022746709217
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.8228374656464394,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6049232277691263,
+        0.2180393323371932,
+        0.7658503365928181
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7898713349926327,
+        0.28470227395502057
+      ]
+    },
+    {
+      "scenario_id": "86fbf318597eaff2049f38c128ec3a4002e4d0588a95ab2d8576264b8623b510",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.1204810054598941,
+      "zenith_deg": 40.11987869301515,
+      "azimuth_deg": 19.9813046420123,
+      "chi_square": 0.8794398648242792,
+      "reduced_chi_square": 0.29314662160809307,
+      "rms_residual_ns": 4.070314659569378,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 0.4397199324121396,
+      "optimizer_optimality": 9.234252743794968e-05,
+      "optimizer_nfev": 15,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 0.8794398648258113,
+          "scipy_cost": 0.43971993241290563,
+          "optimality": 2.308476280177274e-05,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.9251370809551144e-08,
+            0.7919460342626204,
+            0.2879521774932451
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 0.8794398648242792,
+          "scipy_cost": 0.4397199324121396,
+          "optimality": 9.234252743794968e-05,
+          "function_evaluations": 15,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.690319104109337e-08,
+            0.7919460330674797,
+            0.28795217696503356
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.1974895456427466,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.605599450236633,
+        0.22019641842136378,
+        0.7646978770648521
+      ],
+      "optimizer_parameters": [
+        -1.690319104109337e-08,
+        0.7919460330674797,
+        0.28795217696503356
+      ]
+    },
+    {
+      "scenario_id": "86fbf318597eaff2049f38c128ec3a4002e4d0588a95ab2d8576264b8623b510",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.10865432513333163,
+      "zenith_deg": 40.108443517440534,
+      "azimuth_deg": 20.01051270534376,
+      "chi_square": 1.2201535608058947,
+      "reduced_chi_square": 0.4067178536019649,
+      "rms_residual_ns": 3.608866557483997,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 39.07175348917919,
+      "optimizer_optimality": 0.0011441270344221266,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 78.14350697835837,
+          "scipy_cost": 39.07175348917919,
+          "optimality": 0.0011441270344221266,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -9.663234854401727e-12,
+            0.7914784940026235,
+            0.28823908350810507
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 4,
+          "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+          "objective_sum_squares": 78.14350697837875,
+          "scipy_cost": 39.071753489189376,
+          "optimality": 0.008332766062267183,
+          "function_evaluations": 20,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            3.55133120371031e-11,
+            0.791478494707875,
+            0.288239084198405
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.8228374656464394,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6053437025936118,
+        0.2204528807353889,
+        0.7648264699300916
+      ],
+      "optimizer_parameters": [
+        -9.663234854401727e-12,
+        0.7914784940026235,
+        0.28823908350810507
+      ]
+    },
+    {
+      "scenario_id": "86fbf318597eaff2049f38c128ec3a4002e4d0588a95ab2d8576264b8623b510",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.06222755354596188,
+      "zenith_deg": 40.05513138398179,
+      "azimuth_deg": 20.044869764073624,
+      "chi_square": 5.58342102119175,
+      "reduced_chi_square": 1.86114034039725,
+      "rms_residual_ns": 11.280165814934126,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 2.791710510595875,
+      "optimizer_optimality": 0.0001167305637785887,
+      "optimizer_nfev": 14,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 5.583421021191897,
+          "scipy_cost": 2.7917105105959483,
+          "optimality": 4.966211909618323e-05,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.0421963092486233e-07,
+            0.7898123746195046,
+            0.288168854937887
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 5.58342102119175,
+          "scipy_cost": 2.791710510595875,
+          "optimality": 0.0001167305637785887,
+          "function_evaluations": 14,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.3647572552586433e-07,
+            0.7898123749579037,
+            0.2881688551805695
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.1974895456427466,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6045425974113819,
+        0.22057181392379566,
+        0.7654255828083265
+      ],
+      "optimizer_parameters": [
+        1.3647572552586433e-07,
+        0.7898123749579037,
+        0.2881688551805695
+      ]
+    },
+    {
+      "scenario_id": "86fbf318597eaff2049f38c128ec3a4002e4d0588a95ab2d8576264b8623b510",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.2787026762872637,
+      "zenith_deg": 40.23404238288759,
+      "azimuth_deg": 20.23485017274519,
+      "chi_square": 10.65616101084018,
+      "reduced_chi_square": 3.55205367028006,
+      "rms_residual_ns": 9.47574795098623,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 269.36939769185926,
+      "optimizer_optimality": 0.02164333178234301,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 538.7387953837185,
+          "scipy_cost": 269.36939769185926,
+          "optimality": 0.02164333178234301,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.6844569205870825e-11,
+            0.7938665404283308,
+            0.29263437348200527
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 538.7387953840047,
+          "scipy_cost": 269.36939769200234,
+          "optimality": 0.006552144262514048,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 19,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.3258171167497392e-11,
+            0.7938665392067338,
+            0.29263437219179506
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.8228374656464394,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6060475562085053,
+        0.2234007076500376,
+        0.7634123940801336
+      ],
+      "optimizer_parameters": [
+        -1.6844569205870825e-11,
+        0.7938665404283308,
+        0.29263437348200527
+      ]
+    },
+    {
+      "scenario_id": "88819f6c67a400877c9a25dd82b72b09189b6887d908ec6e443b9dc0d2af2d81",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.13972612183603542,
+      "zenith_deg": 39.99135705653414,
+      "azimuth_deg": 19.783021421351307,
+      "chi_square": 15.829622305530995,
+      "reduced_chi_square": 1.7588469228367771,
+      "rms_residual_ns": 11.485361083255428,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 7.914811152765497,
+      "optimizer_optimality": 0.00022834906152979784,
+      "optimizer_nfev": 18,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 15.829622305533771,
+          "scipy_cost": 7.914811152766886,
+          "optimality": 5.550843592061483e-05,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.049312968443774e-07,
+            0.789335046070474,
+            0.28391390802810984
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 15.829622305530995,
+          "scipy_cost": 7.914811152765497,
+          "optimality": 0.00022834906152979784,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -4.431687238922818e-07,
+            0.7893350433602477,
+            0.28391390683266987
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.4145130621170834,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6047422532259321,
+        0.21751819735413128,
+        0.7661413975129081
+      ],
+      "optimizer_parameters": [
+        -4.431687238922818e-07,
+        0.7893350433602477,
+        0.28391390683266987
+      ]
+    },
+    {
+      "scenario_id": "88819f6c67a400877c9a25dd82b72b09189b6887d908ec6e443b9dc0d2af2d81",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.1397261067394094,
+      "zenith_deg": 39.991357155912276,
+      "azimuth_deg": 19.783021435526546,
+      "chi_square": 15.829622305530236,
+      "reduced_chi_square": 1.758846922836693,
+      "rms_residual_ns": 11.485361083255151,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 791.4811152765119,
+      "optimizer_optimality": 0.03663024981506169,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1582.9622305530233,
+          "scipy_cost": 791.4811152765119,
+          "optimality": 0.03663024981506169,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.2126202700334756e-12,
+            0.7893350460705596,
+            0.2839139080280852
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1582.9622305534638,
+          "scipy_cost": 791.4811152767319,
+          "optimality": 0.01719827992201317,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -4.590184344547722e-12,
+            0.7893350475262706,
+            0.28391390798360516
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.4145130621170836,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6047422544225433,
+        0.21751819795350988,
+        0.766141396398209
+      ],
+      "optimizer_parameters": [
+        1.2126202700334756e-12,
+        0.7893350460705596,
+        0.2839139080280852
+      ]
+    },
+    {
+      "scenario_id": "88819f6c67a400877c9a25dd82b72b09189b6887d908ec6e443b9dc0d2af2d81",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.07911158195994894,
+      "zenith_deg": 39.99869462073791,
+      "azimuth_deg": 20.123060701795847,
+      "chi_square": 13.573886240350186,
+      "reduced_chi_square": 1.5082095822611317,
+      "rms_residual_ns": 10.635587368339603,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 6.786943120175095,
+      "optimizer_optimality": 0.00031230779472934955,
+      "optimizer_nfev": 14,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 13.573886240358444,
+          "scipy_cost": 6.786943120179222,
+          "optimality": 0.00032737720118802827,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -4.155957076296337e-07,
+            0.7878410617763593,
+            0.28866849886493146
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 13.573886240350186,
+          "scipy_cost": 6.786943120175095,
+          "optimality": 0.00031230779472934955,
+          "function_evaluations": 14,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -2.2340970374504223e-07,
+            0.7878410604078568,
+            0.2886684985273536
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.4145130621170834,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6035328039548022,
+        0.22113712661719376,
+        0.7660590876570458
+      ],
+      "optimizer_parameters": [
+        -2.2340970374504223e-07,
+        0.7878410604078568,
+        0.2886684985273536
+      ]
+    },
+    {
+      "scenario_id": "88819f6c67a400877c9a25dd82b72b09189b6887d908ec6e443b9dc0d2af2d81",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.07911157142108872,
+      "zenith_deg": 39.99869463568109,
+      "azimuth_deg": 20.123060685762354,
+      "chi_square": 13.573886240353566,
+      "reduced_chi_square": 1.5082095822615074,
+      "rms_residual_ns": 10.635587368340925,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 678.6943120176783,
+      "optimizer_optimality": 0.02154184695245931,
+      "optimizer_nfev": 18,
+      "optimizer_njev": 18,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1357.3886240357779,
+          "scipy_cost": 678.6943120178888,
+          "optimality": 0.016445356930489652,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -6.0115733654077066e-12,
+            0.7878410618818916,
+            0.2886684988840318
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1357.3886240353565,
+          "scipy_cost": 678.6943120176783,
+          "optimality": 0.02154184695245931,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -3.485013101330112e-12,
+            0.7878410609059299,
+            0.2886684984597844
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.4145130621170836,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6035328042042826,
+        0.22113712651703954,
+        0.7660590874894064
+      ],
+      "optimizer_parameters": [
+        -3.485013101330112e-12,
+        0.7878410609059299,
+        0.2886684984597844
+      ]
+    },
+    {
+      "scenario_id": "1c7136603fa624bfc31f7cc08703f422d6f9b5d93d17a67ba12bb137933624c2",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.08925089698615787,
+      "zenith_deg": 39.93824064270566,
+      "azimuth_deg": 20.10030313266245,
+      "chi_square": 6.197302045645316,
+      "reduced_chi_square": 0.6885891161828128,
+      "rms_residual_ns": 9.352229347401128,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 3.098651022822658,
+      "optimizer_optimality": 9.653484363525422e-05,
+      "optimizer_nfev": 19,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 6.197302045646638,
+          "scipy_cost": 3.0986510228233186,
+          "optimality": 0.00016629664084177875,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.2006766647545421e-08,
+            0.7862687079143543,
+            0.2877382042211167
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 6.197302045645316,
+          "scipy_cost": 3.098651022822658,
+          "optimality": 9.653484363525422e-05,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -7.458249746671894e-09,
+            0.7862687070053571,
+            0.2877382039055341
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.1778764907294013,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6028612006093258,
+        0.220619487361182,
+        0.7667368613783816
+      ],
+      "optimizer_parameters": [
+        -7.458249746671894e-09,
+        0.7862687070053571,
+        0.2877382039055341
+      ]
+    },
+    {
+      "scenario_id": "1c7136603fa624bfc31f7cc08703f422d6f9b5d93d17a67ba12bb137933624c2",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.05058607443008672,
+      "zenith_deg": 39.95370029936659,
+      "azimuth_deg": 20.031718804091767,
+      "chi_square": 6.85354793014046,
+      "reduced_chi_square": 0.7615053255711621,
+      "rms_residual_ns": 9.094725792202565,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 496.28422341212746,
+      "optimizer_optimality": 0.012957309845660347,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 992.5684468242549,
+          "scipy_cost": 496.28422341212746,
+          "optimality": 0.012957309845660347,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7870438741028356,
+            0.28695406810493274
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 992.5684468245213,
+          "scipy_cost": 496.28422341226064,
+          "optimality": 0.011368504268830293,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -6.40772766901323e-12,
+            0.7870438734620863,
+            0.286954068233679
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.4145130621170836,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6033191998049413,
+        0.21996854870027238,
+        0.766563618187963
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7870438741028356,
+        0.28695406810493274
+      ]
+    },
+    {
+      "scenario_id": "1c7136603fa624bfc31f7cc08703f422d6f9b5d93d17a67ba12bb137933624c2",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.10320316067795342,
+      "zenith_deg": 40.101393574900726,
+      "azimuth_deg": 19.97009703926225,
+      "chi_square": 2.526286657988185,
+      "reduced_chi_square": 0.2806985175542428,
+      "rms_residual_ns": 5.24798020615587,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 1.2631433289940925,
+      "optimizer_optimality": 0.0002505094660278928,
+      "optimizer_nfev": 20,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 2.5262866579882375,
+          "scipy_cost": 1.2631433289941187,
+          "optimality": 0.000184844363914749,
+          "function_evaluations": 7,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7914839378924147,
+            0.2876088809873787
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 2.526286657988185,
+          "scipy_cost": 1.2631433289940925,
+          "optimality": 0.0002505094660278928,
+          "function_evaluations": 20,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.4834233944134002e-08,
+            0.7914839380973668,
+            0.28760888121683253
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.1778764907294013,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6054106026308662,
+        0.2199936823961824,
+        0.7649057340142634
+      ],
+      "optimizer_parameters": [
+        -1.4834233944134002e-08,
+        0.7914839380973668,
+        0.28760888121683253
+      ]
+    },
+    {
+      "scenario_id": "1c7136603fa624bfc31f7cc08703f422d6f9b5d93d17a67ba12bb137933624c2",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.12104571278467925,
+      "zenith_deg": 40.11832070205798,
+      "azimuth_deg": 20.039683938976104,
+      "chi_square": 4.608529490076304,
+      "reduced_chi_square": 0.5120588322307005,
+      "rms_residual_ns": 4.294709298251249,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 4,
+      "optimizer_message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+      "optimizer_cost": 110.6671677389144,
+      "optimizer_optimality": 0.005949133923422778,
+      "optimizer_nfev": 20,
+      "optimizer_njev": 18,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 4,
+          "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+          "objective_sum_squares": 221.3343354778974,
+          "scipy_cost": 110.6671677389487,
+          "optimality": 0.008591926090957713,
+          "function_evaluations": 3,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            5.136619407421072e-12,
+            0.7916085399348644,
+            0.28874301573169425
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 4,
+          "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+          "objective_sum_squares": 221.33433547782877,
+          "scipy_cost": 110.6671677389144,
+          "optimality": 0.005949133923422778,
+          "function_evaluations": 20,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -7.9662156461508e-11,
+            0.7916085397583118,
+            0.28874301565145283
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.4145130621170836,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6053552403755231,
+        0.2208062304378436,
+        0.7647153990536103
+      ],
+      "optimizer_parameters": [
+        -7.9662156461508e-11,
+        0.7916085397583118,
+        0.28874301565145283
+      ]
+    },
+    {
+      "scenario_id": "a9436a7d9a04700d67a70771fae50599a0c290420e09e1ea5211e2f323c6c37c",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.11111905171825064,
+      "zenith_deg": 40.06519167741413,
+      "azimuth_deg": 19.860101328709217,
+      "chi_square": 20.04581080631812,
+      "reduced_chi_square": 0.9545624193484818,
+      "rms_residual_ns": 9.139158150124779,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 10.02290540315906,
+      "optimizer_optimality": 0.0002646834660708919,
+      "optimizer_nfev": 3,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 20.04581080631812,
+          "scipy_cost": 10.02290540315906,
+          "optimality": 0.0002646834660708919,
+          "function_evaluations": 3,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            5.380307255974341e-08,
+            0.7910194724323635,
+            0.2857221898149751
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 20.04581080631936,
+          "scipy_cost": 10.022905403159678,
+          "optimality": 0.0003684314782930187,
+          "function_evaluations": 17,
+          "jacobian_evaluations": 15,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            9.522856690527536e-08,
+            0.7910194704063385,
+            0.28572218898567237
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.279176682120926,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6053771513929997,
+        0.21866678556987038,
+        0.7653125776176931
+      ],
+      "optimizer_parameters": [
+        5.380307255974341e-08,
+        0.7910194724323635,
+        0.2857221898149751
+      ]
+    },
+    {
+      "scenario_id": "a9436a7d9a04700d67a70771fae50599a0c290420e09e1ea5211e2f323c6c37c",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.11111905018894296,
+      "zenith_deg": 40.06519167579683,
+      "azimuth_deg": 19.86010132982125,
+      "chi_square": 20.04581080632191,
+      "reduced_chi_square": 0.9545624193486624,
+      "rms_residual_ns": 9.139158150125642,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 1002.2905403160953,
+      "optimizer_optimality": 0.002677288353879703,
+      "optimizer_nfev": 3,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 2004.5810806321908,
+          "scipy_cost": 1002.2905403160953,
+          "optimality": 0.002677288353879703,
+          "function_evaluations": 3,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7910194723814907,
+            0.2857221898139552
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 2004.5810806322577,
+          "scipy_cost": 1002.290540316129,
+          "optimality": 0.008701002805537428,
+          "function_evaluations": 20,
+          "jacobian_evaluations": 19,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            3.504343860931282e-12,
+            0.7910194718076885,
+            0.2857221894778413
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.279176682120926,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.605377151368438,
+        0.218666785574281,
+        0.7653125776358616
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7910194723814907,
+        0.2857221898139552
+      ]
+    },
+    {
+      "scenario_id": "a9436a7d9a04700d67a70771fae50599a0c290420e09e1ea5211e2f323c6c37c",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.048072297343731175,
+      "zenith_deg": 39.9537116923069,
+      "azimuth_deg": 20.020194506527506,
+      "chi_square": 14.858406762910949,
+      "reduced_chi_square": 0.7075431791862357,
+      "rms_residual_ns": 7.868292583451357,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 7.429203381455474,
+      "optimizer_optimality": 0.00015299643230548554,
+      "optimizer_nfev": 17,
+      "optimizer_njev": 16,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 14.858406762911173,
+          "scipy_cost": 7.4292033814555865,
+          "optimality": 0.00036927964669075664,
+          "function_evaluations": 3,
+          "jacobian_evaluations": 3,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.255339124592225e-08,
+            0.7871018929247401,
+            0.2867958749943786
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 14.858406762910949,
+          "scipy_cost": 7.429203381455474,
+          "optimality": 0.00015299643230548554,
+          "function_evaluations": 17,
+          "jacobian_evaluations": 16,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.405137637217676e-08,
+            0.7871018931855512,
+            0.2867958745558625
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.279176682120926,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6033635746166521,
+        0.21984724665951375,
+        0.7665634904964145
+      ],
+      "optimizer_parameters": [
+        2.405137637217676e-08,
+        0.7871018931855512,
+        0.2867958745558625
+      ]
+    },
+    {
+      "scenario_id": "a9436a7d9a04700d67a70771fae50599a0c290420e09e1ea5211e2f323c6c37c",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.04807229754992017,
+      "zenith_deg": 39.953711698069995,
+      "azimuth_deg": 20.020194539717366,
+      "chi_square": 14.858406762906831,
+      "reduced_chi_square": 0.7075431791860396,
+      "rms_residual_ns": 7.868292583450265,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 742.9203381453415,
+      "optimizer_optimality": 0.058733202666189754,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1485.840676290683,
+          "scipy_cost": 742.9203381453415,
+          "optimality": 0.058733202666189754,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.4692518981714196e-12,
+            0.7871018931802483,
+            0.28679587507041027
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1485.8406762910213,
+          "scipy_cost": 742.9203381455106,
+          "optimality": 0.03025224508201063,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 19,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.601642283199768e-12,
+            0.7871018933468807,
+            0.28679587481967816
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.279176682120926,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6033635745617462,
+        0.21984724703542244,
+        0.7665634904318219
+      ],
+      "optimizer_parameters": [
+        2.4692518981714196e-12,
+        0.7871018931802483,
+        0.28679587507041027
+      ]
+    },
+    {
+      "scenario_id": "5db5b9cd13965f3c73a39f1d46e59f4b8eea6fa5dea9896933dd94710efb81f2",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.08710676811191753,
+      "zenith_deg": 39.912893927762596,
+      "azimuth_deg": 19.999457834342046,
+      "chi_square": 31.154193878089238,
+      "reduced_chi_square": 1.4835330418137733,
+      "rms_residual_ns": 11.699845054394434,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 15.57709693904462,
+      "optimizer_optimality": 0.0005322164672634244,
+      "optimizer_nfev": 8,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 31.154193878089238,
+          "scipy_cost": 15.57709693904462,
+          "optimality": 0.0005322164672634244,
+          "function_evaluations": 8,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7860670726985571,
+            0.2860965930356503
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 31.15419387809893,
+          "scipy_cost": 15.577096939049468,
+          "optimality": 0.0002776824328520888,
+          "function_evaluations": 17,
+          "jacobian_evaluations": 16,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -7.675719909058268e-08,
+            0.7860670726741641,
+            0.28609659307622676
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.480141476505128,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6029297789252157,
+        0.21944203183332078,
+        0.7670207796077328
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7860670726985571,
+        0.2860965930356503
+      ]
+    },
+    {
+      "scenario_id": "5db5b9cd13965f3c73a39f1d46e59f4b8eea6fa5dea9896933dd94710efb81f2",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.1356149100877018,
+      "zenith_deg": 39.86493742765178,
+      "azimuth_deg": 19.98095099822043,
+      "chi_square": 33.35130642094953,
+      "reduced_chi_square": 1.588157448616644,
+      "rms_residual_ns": 11.515517425112742,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 1591.2856988169026,
+      "optimizer_optimality": 0.02748236438492313,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 3182.571397633805,
+          "scipy_cost": 1591.2856988169026,
+          "optimality": 0.02748236438492313,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7848233236199935,
+            0.28535686988721043
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 3182.571397634219,
+          "scipy_cost": 1591.2856988171093,
+          "optimality": 0.004852659345488064,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.4015510746061465e-13,
+            0.7848233245544709,
+            0.28535687048374997
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.279176682120926,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6023970658495619,
+        0.21902781934052554,
+        0.7675575479472354
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7848233236199935,
+        0.28535686988721043
+      ]
+    },
+    {
+      "scenario_id": "5db5b9cd13965f3c73a39f1d46e59f4b8eea6fa5dea9896933dd94710efb81f2",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.05572808190806025,
+      "zenith_deg": 40.01820055197403,
+      "azimuth_deg": 20.08192787159885,
+      "chi_square": 15.278433182004244,
+      "reduced_chi_square": 0.7275444372382973,
+      "rms_residual_ns": 8.312038339701992,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 7.63921659100212,
+      "optimizer_optimality": 0.00041140295934383175,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 15.278433182004244,
+          "scipy_cost": 7.63921659100212,
+          "optimality": 0.00041140295934383175,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -2.708005642546309e-08,
+            0.7885931014672939,
+            0.2883020801879891
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 15.278433182007554,
+          "scipy_cost": 7.639216591003778,
+          "optimality": 3.176849742203558e-05,
+          "function_evaluations": 20,
+          "jacobian_evaluations": 16,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.0667669311824377e-08,
+            0.7885931010612449,
+            0.2883020796814952
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.480141476505128,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6039363118300415,
+        0.22079332760798226,
+        0.7658402168448201
+      ],
+      "optimizer_parameters": [
+        -2.708005642546309e-08,
+        0.7885931014672939,
+        0.2883020801879891
+      ]
+    },
+    {
+      "scenario_id": "5db5b9cd13965f3c73a39f1d46e59f4b8eea6fa5dea9896933dd94710efb81f2",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.04978963614545579,
+      "zenith_deg": 39.99926112766886,
+      "azimuth_deg": 20.077450992349238,
+      "chi_square": 15.55686207927046,
+      "reduced_chi_square": 0.7408029561557361,
+      "rms_residual_ns": 8.279990206751712,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 822.6988538868512,
+      "optimizer_optimality": 0.014367699841386639,
+      "optimizer_nfev": 20,
+      "optimizer_njev": 19,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 4,
+          "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+          "objective_sum_squares": 1645.3977077741536,
+          "scipy_cost": 822.6988538870768,
+          "optimality": 0.012475114781409502,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.0513776591277153e-12,
+            0.788086427804151,
+            0.2880470388080581
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1645.3977077737022,
+          "scipy_cost": 822.6988538868512,
+          "optimality": 0.014367699841386639,
+          "function_evaluations": 20,
+          "jacobian_evaluations": 19,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.0237442445562477e-11,
+            0.788086426942979,
+            0.2880470383773823
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 1.279176682120926,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6037157606377853,
+        0.2206592207761052,
+        0.7660527322867677
+      ],
+      "optimizer_parameters": [
+        -1.0237442445562477e-11,
+        0.788086426942979,
+        0.2880470383773823
+      ]
+    },
+    {
+      "scenario_id": "cb90c61ae743f6b77ac0f680cf814fbe51dcfe5372a4e5ceabbbee0710d82a8e",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.6748928602010437,
+      "zenith_deg": 40.391772827807735,
+      "azimuth_deg": 20.85148169748383,
+      "chi_square": 3.4126431875876744,
+      "reduced_chi_square": 1.1375477291958915,
+      "rms_residual_ns": 7.5417097835832,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 1.7063215937938372,
+      "optimizer_optimality": 0.0002227482690457805,
+      "optimizer_nfev": 23,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 3.4126431875891474,
+          "scipy_cost": 1.7063215937945737,
+          "optimality": 0.0001240823894619325,
+          "function_evaluations": 9,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7950957863660288,
+            0.30284633625896895
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 3.4126431875876744,
+          "scipy_cost": 1.7063215937938372,
+          "optimality": 0.0002227482690457805,
+          "function_evaluations": 23,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.945116932516199e-07,
+            0.7950957864620337,
+            0.30284633699797275
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 7.2759130715187,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.60556988837574,
+        0.23065726873855255,
+        0.7616313640276804
+      ],
+      "optimizer_parameters": [
+        2.945116932516199e-07,
+        0.7950957864620337,
+        0.30284633699797275
+      ]
+    },
+    {
+      "scenario_id": "cb90c61ae743f6b77ac0f680cf814fbe51dcfe5372a4e5ceabbbee0710d82a8e",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.6748928590619535,
+      "zenith_deg": 40.39177282805823,
+      "azimuth_deg": 20.851481695037354,
+      "chi_square": 3.4126431875924927,
+      "reduced_chi_square": 1.1375477291974976,
+      "rms_residual_ns": 7.541709783588525,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 170.63215937962462,
+      "optimizer_optimality": 0.008431590906184283,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 341.26431875924925,
+          "scipy_cost": 170.63215937962462,
+          "optimality": 0.008431590906184283,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.1457779526958262e-12,
+            0.7950957864820083,
+            0.30284633696670565
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 341.2643187594124,
+          "scipy_cost": 170.6321593797062,
+          "optimality": 0.01687330934032616,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            8.717152373916405e-12,
+            0.7950957912466434,
+            0.30284635447137837
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 7.275913071518705,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6055698883887006,
+        0.23065726871388054,
+        0.7616313640248472
+      ],
+      "optimizer_parameters": [
+        2.1457779526958262e-12,
+        0.7950957864820083,
+        0.30284633696670565
+      ]
+    },
+    {
+      "scenario_id": "cb90c61ae743f6b77ac0f680cf814fbe51dcfe5372a4e5ceabbbee0710d82a8e",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.31816119779381896,
+      "zenith_deg": 39.73754178947038,
+      "azimuth_deg": 19.719451476297753,
+      "chi_square": 0.41927410354111055,
+      "reduced_chi_square": 0.13975803451370353,
+      "rms_residual_ns": 2.6434639633793338,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 0.20963705177055528,
+      "optimizer_optimality": 6.622780417453455e-05,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 0.41927410354111055,
+          "scipy_cost": 0.20963705177055528,
+          "optimality": 6.622780417453455e-05,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.1770204592262145e-08,
+            0.7825713560736275,
+            0.2805008854221938
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 0.4192741035417113,
+          "scipy_cost": 0.20963705177085565,
+          "optimality": 2.411631085807997e-05,
+          "function_evaluations": 16,
+          "jacobian_evaluations": 15,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.1797864383513982e-08,
+            0.7825713552623355,
+            0.28050088291827663
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 7.2759130715187,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6017823877241351,
+        0.21569980970811353,
+        0.7689808514631054
+      ],
+      "optimizer_parameters": [
+        -1.1770204592262145e-08,
+        0.7825713560736275,
+        0.2805008854221938
+      ]
+    },
+    {
+      "scenario_id": "cb90c61ae743f6b77ac0f680cf814fbe51dcfe5372a4e5ceabbbee0710d82a8e",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.31816137333912475,
+      "zenith_deg": 39.737541697762204,
+      "azimuth_deg": 19.719451200337662,
+      "chi_square": 0.4192741035409467,
+      "reduced_chi_square": 0.1397580345136489,
+      "rms_residual_ns": 2.6434639633788173,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 20.963705177047338,
+      "optimizer_optimality": 0.0017346743210282511,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 41.927410354094675,
+          "scipy_cost": 20.963705177047338,
+          "optimality": 0.0017346743210282511,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -2.4254134833092957e-12,
+            0.7825713548765835,
+            0.28050088073969687
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 41.92741035414099,
+          "scipy_cost": 20.963705177070494,
+          "optimality": 0.007663463408334792,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            4.519336125967351e-10,
+            0.782571355434818,
+            0.28050088184610455
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 7.275913071518705,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6017823876043773,
+        0.21569980639437844,
+        0.7689808524863299
+      ],
+      "optimizer_parameters": [
+        -2.4254134833092957e-12,
+        0.7825713548765835,
+        0.28050088073969687
+      ]
+    },
+    {
+      "scenario_id": "7bec91fa1a0656d20f433ec41570b0d6fbc55ada1f234fef1080eb90d2424b88",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.19087324683788956,
+      "zenith_deg": 39.91966333129987,
+      "azimuth_deg": 19.730411210618588,
+      "chi_square": 5.763469355395931,
+      "reduced_chi_square": 1.9211564517986437,
+      "rms_residual_ns": 11.10011892975631,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 2.8817346776979655,
+      "optimizer_optimality": 0.00013279752745631868,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 5.763469355395931,
+          "scipy_cost": 2.8817346776979655,
+          "optimality": 0.00013279752745631868,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            3.1337219904686395e-08,
+            0.7875908909686882,
+            0.28247008191360884
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 5.763469355397266,
+          "scipy_cost": 2.881734677698633,
+          "optimality": 0.00011373341642695323,
+          "function_evaluations": 14,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -4.980097859032881e-08,
+            0.7875908904912067,
+            0.282470078165077
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 4.786490781093168,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6040388703748468,
+        0.2166390078279487,
+        0.7669449676238844
+      ],
+      "optimizer_parameters": [
+        3.1337219904686395e-08,
+        0.7875908909686882,
+        0.28247008191360884
+      ]
+    },
+    {
+      "scenario_id": "7bec91fa1a0656d20f433ec41570b0d6fbc55ada1f234fef1080eb90d2424b88",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.31646409035450596,
+      "zenith_deg": 40.13772107899759,
+      "azimuth_deg": 20.442632614919265,
+      "chi_square": 7.700008095223714,
+      "reduced_chi_square": 2.566669365074571,
+      "rms_residual_ns": 10.180186469871837,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 310.90858968408475,
+      "optimizer_optimality": 0.026595829362577206,
+      "optimizer_nfev": 19,
+      "optimizer_njev": 18,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 621.8171793681773,
+          "scipy_cost": 310.90858968408867,
+          "optimality": 0.014155990037124866,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            8.387605308094908e-12,
+            0.790101006921362,
+            0.2945052939747982
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 621.8171793681695,
+          "scipy_cost": 310.90858968408475,
+          "optimality": 0.026595829362577206,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            9.791637380826336e-11,
+            0.7901010160975239,
+            0.29450532777423327
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 7.275913071518705,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.604029992290586,
+        0.22514849018122163,
+        0.7644971718604007
+      ],
+      "optimizer_parameters": [
+        9.791637380826336e-11,
+        0.7901010160975239,
+        0.29450532777423327
+      ]
+    },
+    {
+      "scenario_id": "7bec91fa1a0656d20f433ec41570b0d6fbc55ada1f234fef1080eb90d2424b88",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.5981935189163138,
+      "zenith_deg": 39.757383303997216,
+      "azimuth_deg": 19.14719355427339,
+      "chi_square": 4.615104368109401,
+      "reduced_chi_square": 1.5383681227031338,
+      "rms_residual_ns": 9.045975423851266,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 2.3075521840547006,
+      "optimizer_optimality": 0.00026890565051473914,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 4.615104368109401,
+          "scipy_cost": 2.3075521840547006,
+          "optimality": 0.00026890565051473914,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -5.022794216109898e-09,
+            0.7858872482563906,
+            0.2728630090351282
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 4.615104368111793,
+          "scipy_cost": 2.3075521840558966,
+          "optimality": 0.00016194638595834476,
+          "function_evaluations": 14,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -6.99735189370371e-08,
+            0.7858872502957357,
+            0.2728630151525499
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 4.786490781093168,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6041582296225574,
+        0.20976601011646,
+        0.7687594256847576
+      ],
+      "optimizer_parameters": [
+        -5.022794216109898e-09,
+        0.7858872482563906,
+        0.2728630090351282
+      ]
+    },
+    {
+      "scenario_id": "7bec91fa1a0656d20f433ec41570b0d6fbc55ada1f234fef1080eb90d2424b88",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.07979685301789852,
+      "zenith_deg": 40.07949557330033,
+      "azimuth_deg": 19.989231470660734,
+      "chi_square": 10.330675713637174,
+      "reduced_chi_square": 3.443558571212391,
+      "rms_residual_ns": 7.178539254958081,
+      "degrees_of_freedom": 3,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 154.59427750492236,
+      "optimizer_optimality": 0.006851441920389334,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 309.1885550098447,
+          "scipy_cost": 154.59427750492236,
+          "optimality": 0.006851441920389334,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7907741646784002,
+            0.287649957665895
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 309.1885550099293,
+          "scipy_cost": 154.59427750496465,
+          "optimality": 0.01432963385423136,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -7.313466122729843e-12,
+            0.7907741654394648,
+            0.28764995991058867
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 7.275913071518705,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6050623263427125,
+        0.22009590137342436,
+        0.7651518642984311
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7907741646784002,
+        0.287649957665895
+      ]
+    },
+    {
+      "scenario_id": "ead1f5d230951a719a1dbc4a8227cd1c1397668835f2951012999cccbb1ddeeb",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.08164154768843929,
+      "zenith_deg": 40.077874458318426,
+      "azimuth_deg": 20.038105379239564,
+      "chi_square": 8.31315258131618,
+      "reduced_chi_square": 0.9236836201462422,
+      "rms_residual_ns": 8.32323684097528,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 4.15657629065809,
+      "optimizer_optimality": 0.00016144399023687583,
+      "optimizer_nfev": 18,
+      "optimizer_njev": 15,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 8.313152581318064,
+          "scipy_cost": 4.156576290659032,
+          "optimality": 0.00033727679851836,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            3.223565101794752e-07,
+            0.7904831092240291,
+            0.28830783640686397
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 8.31315258131618,
+          "scipy_cost": 4.15657629065809,
+          "optimality": 0.00016144399023687583,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 15,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.646095545706092e-08,
+            0.7904831074681029,
+            0.2883078328527826
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 2.828568116905874,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6048540233286609,
+        0.22060452780163842,
+        0.7651700809470715
+      ],
+      "optimizer_parameters": [
+        1.646095545706092e-08,
+        0.7904831074681029,
+        0.2883078328527826
+      ]
+    },
+    {
+      "scenario_id": "ead1f5d230951a719a1dbc4a8227cd1c1397668835f2951012999cccbb1ddeeb",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.08164154682114697,
+      "zenith_deg": 40.07787445843641,
+      "azimuth_deg": 20.038105374166836,
+      "chi_square": 8.31315258131409,
+      "reduced_chi_square": 0.9236836201460101,
+      "rms_residual_ns": 8.323236840974236,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 415.65762906570455,
+      "optimizer_optimality": 0.024593276511950535,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 831.3152581314091,
+          "scipy_cost": 415.65762906570455,
+          "optimality": 0.024593276511950535,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.889889254978585e-12,
+            0.7904831074969325,
+            0.2883078327840016
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 831.3152581316263,
+          "scipy_cost": 415.6576290658131,
+          "optimality": 0.03155400998366531,
+          "function_evaluations": 23,
+          "jacobian_evaluations": 17,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -9.236707015658265e-09,
+            0.7904831067811253,
+            0.28830783385068354
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 2.8285681169058736,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6048540233496724,
+        0.22060452774862704,
+        0.7651700809457457
+      ],
+      "optimizer_parameters": [
+        1.889889254978585e-12,
+        0.7904831074969325,
+        0.2883078327840016
+      ]
+    },
+    {
+      "scenario_id": "ead1f5d230951a719a1dbc4a8227cd1c1397668835f2951012999cccbb1ddeeb",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.09207495436938336,
+      "zenith_deg": 39.950259803950374,
+      "azimuth_deg": 20.120605534734263,
+      "chi_square": 13.548386317627875,
+      "reduced_chi_square": 1.5053762575142082,
+      "rms_residual_ns": 10.625592657050506,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 6.7741931588139375,
+      "optimizer_optimality": 0.0003338502513372532,
+      "optimizer_nfev": 21,
+      "optimizer_njev": 15,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 13.54838631763006,
+          "scipy_cost": 6.77419315881503,
+          "optimality": 0.00027767309902060333,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -2.3119139890136962e-07,
+            0.7865018086253913,
+            0.28813956419658165
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 13.548386317627875,
+          "scipy_cost": 6.7741931588139375,
+          "optimality": 0.0003338502513372532,
+          "function_evaluations": 21,
+          "jacobian_evaluations": 15,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -5.918383156170492e-08,
+            0.7865018092080991,
+            0.2881395646939878
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 2.828568116905874,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6029339997157042,
+        0.2208884177802588,
+        0.7666021777149847
+      ],
+      "optimizer_parameters": [
+        -5.918383156170492e-08,
+        0.7865018092080991,
+        0.2881395646939878
+      ]
+    },
+    {
+      "scenario_id": "ead1f5d230951a719a1dbc4a8227cd1c1397668835f2951012999cccbb1ddeeb",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.09207494458661215,
+      "zenith_deg": 39.950259783686185,
+      "azimuth_deg": 20.12060549641691,
+      "chi_square": 13.548386317631039,
+      "reduced_chi_square": 1.50537625751456,
+      "rms_residual_ns": 10.625592657051746,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 677.4193158815519,
+      "optimizer_optimality": 0.010499028951016953,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1354.8386317631039,
+          "scipy_cost": 677.4193158815519,
+          "optimality": 0.010499028951016953,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.5478469382703852e-12,
+            0.786501808835705,
+            0.28813956396097923
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1354.8386317636848,
+          "scipy_cost": 677.4193158818424,
+          "optimality": 0.013083986606943654,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.5982816496047136e-11,
+            0.7865018094482467,
+            0.2881395676773202
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 2.8285681169058736,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6029339996088438,
+        0.22088841728377043,
+        0.7666021779420886
+      ],
+      "optimizer_parameters": [
+        1.5478469382703852e-12,
+        0.786501808835705,
+        0.28813956396097923
+      ]
+    },
+    {
+      "scenario_id": "238b472639bc360e743556b6047e5204dc970e51c55f98f38d7a447f0bef7aec",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.1165502544727723,
+      "zenith_deg": 39.98361036735321,
+      "azimuth_deg": 20.179548925935105,
+      "chi_square": 13.320477794789817,
+      "reduced_chi_square": 1.4800530883099796,
+      "rms_residual_ns": 9.318798589518178,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 6.660238897394908,
+      "optimizer_optimality": 0.00020138696675076062,
+      "optimizer_nfev": 22,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 13.320477794792993,
+          "scipy_cost": 6.660238897396496,
+          "optimality": 6.873034669752087e-05,
+          "function_evaluations": 5,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            5.070864166055971e-09,
+            0.7871350914268818,
+            0.28929037222682574
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 13.320477794789817,
+          "scipy_cost": 6.660238897394908,
+          "optimality": 0.00020138696675076062,
+          "function_evaluations": 22,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.2523437959369785e-07,
+            0.7871350906015347,
+            0.2892903724351045
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 3.395975032142001,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6031251690655602,
+        0.22166246539793272,
+        0.7662282831332642
+      ],
+      "optimizer_parameters": [
+        -1.2523437959369785e-07,
+        0.7871350906015347,
+        0.2892903724351045
+      ]
+    },
+    {
+      "scenario_id": "238b472639bc360e743556b6047e5204dc970e51c55f98f38d7a447f0bef7aec",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.12899839608193645,
+      "zenith_deg": 40.061534035153635,
+      "azimuth_deg": 20.17626926594064,
+      "chi_square": 15.301976466023506,
+      "reduced_chi_square": 1.700219607335945,
+      "rms_residual_ns": 8.768529636071312,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 461.3226718719653,
+      "optimizer_optimality": 0.0066356449333397904,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 1,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 922.6453437439307,
+          "scipy_cost": 461.3226718719653,
+          "optimality": 0.0066356449333397904,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.7893284732693149,
+            0.29004520772927816
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 922.6453437439537,
+          "scipy_cost": 461.32267187197687,
+          "optimality": 0.03661651322909165,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.2241052504304162e-09,
+            0.7893284718573463,
+            0.2900452057319943
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 2.8285681169058736,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6041154406040194,
+        0.22198716300795698,
+        0.7653536658849228
+      ],
+      "optimizer_parameters": [
+        0.0,
+        0.7893284732693149,
+        0.29004520772927816
+      ]
+    },
+    {
+      "scenario_id": "238b472639bc360e743556b6047e5204dc970e51c55f98f38d7a447f0bef7aec",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.21340874498139867,
+      "zenith_deg": 40.03911867138457,
+      "azimuth_deg": 20.326247251211488,
+      "chi_square": 10.376822593069372,
+      "reduced_chi_square": 1.1529802881188191,
+      "rms_residual_ns": 11.565062368297175,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 5.188411296534686,
+      "optimizer_optimality": 0.0002992513407775732,
+      "optimizer_nfev": 21,
+      "optimizer_njev": 14,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 10.37682259307181,
+          "scipy_cost": 5.188411296535905,
+          "optimality": 0.00023767962593979064,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -5.031777669166885e-09,
+            0.7879404599916111,
+            0.2918784436328972
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 10.376822593069372,
+          "scipy_cost": 5.188411296534686,
+          "optimality": 0.0002992513407775732,
+          "function_evaluations": 21,
+          "jacobian_evaluations": 14,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            8.03186635279848e-08,
+            0.7879404591493621,
+            0.29187844329021384
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 3.395975032142001,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.603251471676213,
+        0.22346371279813487,
+        0.7656054016155814
+      ],
+      "optimizer_parameters": [
+        8.03186635279848e-08,
+        0.7879404591493621,
+        0.29187844329021384
+      ]
+    },
+    {
+      "scenario_id": "238b472639bc360e743556b6047e5204dc970e51c55f98f38d7a447f0bef7aec",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.3685306064841604,
+      "zenith_deg": 40.12355887068716,
+      "azimuth_deg": 20.539456523184626,
+      "chi_square": 13.088639885892219,
+      "reduced_chi_square": 1.454293320654691,
+      "rms_residual_ns": 10.773892002178032,
+      "degrees_of_freedom": 9,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 696.4604932475746,
+      "optimizer_optimality": 0.01469518143494497,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1392.9209864951492,
+          "scipy_cost": 696.4604932475746,
+          "optimality": 0.01469518143494497,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.2864289121602158e-12,
+            0.7892062534987561,
+            0.2956917441732096
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1392.9209864954232,
+          "scipy_cost": 696.4604932477116,
+          "optimality": 0.006866501316835638,
+          "function_evaluations": 18,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -5.9033658214819045e-12,
+            0.7892062540497166,
+            0.29569174545429
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 2.8285681169058736,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6034716802129485,
+        0.22610260992006367,
+        0.7646564855987924
+      ],
+      "optimizer_parameters": [
+        -1.2864289121602158e-12,
+        0.7892062534987561,
+        0.2956917441732096
+      ]
+    },
+    {
+      "scenario_id": "43a56ba9aa5bc95a08c6ab871906abb8d35b9db7463407f963217d9badb27c76",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.12064984971847827,
+      "zenith_deg": 39.9401863393828,
+      "azimuth_deg": 19.83689071046693,
+      "chi_square": 13.099425603939697,
+      "reduced_chi_square": 0.623782171616176,
+      "rms_residual_ns": 7.3878914459008795,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 6.549712801969849,
+      "optimizer_optimality": 0.00013452259983637305,
+      "optimizer_nfev": 4,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 13.099425603939697,
+          "scipy_cost": 6.549712801969849,
+          "optimality": 0.00013452259983637305,
+          "function_evaluations": 4,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            5.279623813407514e-09,
+            0.7876375829433705,
+            0.28413997550888603
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 13.09942560394369,
+          "scipy_cost": 6.549712801971845,
+          "optimality": 9.735951896061579e-05,
+          "function_evaluations": 15,
+          "jacobian_evaluations": 15,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            6.601132592967689e-08,
+            0.7876375833058289,
+            0.2841399769883757
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.111572972681813,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6038935972043008,
+        0.21785439856536162,
+        0.7667150606851114
+      ],
+      "optimizer_parameters": [
+        5.279623813407514e-09,
+        0.7876375829433705,
+        0.28413997550888603
+      ]
+    },
+    {
+      "scenario_id": "43a56ba9aa5bc95a08c6ab871906abb8d35b9db7463407f963217d9badb27c76",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.12064965614326577,
+      "zenith_deg": 39.94018642423659,
+      "azimuth_deg": 19.836890982185956,
+      "chi_square": 13.099425603945521,
+      "reduced_chi_square": 0.6237821716164534,
+      "rms_residual_ns": 7.387891445902524,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 654.9712801972761,
+      "optimizer_optimality": 0.028972098316444317,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1309.9425603945522,
+          "scipy_cost": 654.9712801972761,
+          "optimality": 0.028972098316444317,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            4.1596761053862145e-12,
+            0.7876375839656825,
+            0.28413998009908187
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1309.9425603946163,
+          "scipy_cost": 654.9712801973081,
+          "optimality": 0.014943644458980998,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 19,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            4.873985811169987e-12,
+            0.7876375845192336,
+            0.28413998125913204
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.111572972681812,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6038935972392611,
+        0.2178544018145823,
+        0.766715059734342
+      ],
+      "optimizer_parameters": [
+        4.1596761053862145e-12,
+        0.7876375839656825,
+        0.28413998009908187
+      ]
+    },
+    {
+      "scenario_id": "43a56ba9aa5bc95a08c6ab871906abb8d35b9db7463407f963217d9badb27c76",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.2457934406593711,
+      "zenith_deg": 39.88381780876045,
+      "azimuth_deg": 19.66261981045004,
+      "chi_square": 18.80762961578368,
+      "reduced_chi_square": 0.8956014102754133,
+      "rms_residual_ns": 8.852407774108617,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 9.403814807891838,
+      "optimizer_optimality": 5.5546983560361696e-05,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 18.80762961578368,
+          "scipy_cost": 9.403814807891838,
+          "optimality": 5.5546983560361696e-05,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.4366822226240607e-07,
+            0.7869234827723484,
+            0.2811803216204857
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 18.80762961579108,
+          "scipy_cost": 9.403814807895541,
+          "optimality": 0.00030801701943516946,
+          "function_evaluations": 15,
+          "jacobian_evaluations": 15,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -4.260577469342856e-08,
+            0.7869234809625547,
+            0.2811803135904175
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.111572972681813,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6038428130121167,
+        0.21576267589930911,
+        0.7673462874494043
+      ],
+      "optimizer_parameters": [
+        -1.4366822226240607e-07,
+        0.7869234827723484,
+        0.2811803216204857
+      ]
+    },
+    {
+      "scenario_id": "43a56ba9aa5bc95a08c6ab871906abb8d35b9db7463407f963217d9badb27c76",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.24579353378101004,
+      "zenith_deg": 39.8838177732892,
+      "azimuth_deg": 19.6626196753648,
+      "chi_square": 18.807629615783178,
+      "reduced_chi_square": 0.8956014102753894,
+      "rms_residual_ns": 8.8524077741085,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 940.381480789159,
+      "optimizer_optimality": 0.010346895585826132,
+      "optimizer_nfev": 22,
+      "optimizer_njev": 18,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 1880.7629615785636,
+          "scipy_cost": 940.3814807892817,
+          "optimality": 0.01158406886929697,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -1.1662945790552839e-11,
+            0.7869234819928445,
+            0.2811803187336857
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 1880.762961578318,
+          "scipy_cost": 940.381480789159,
+          "optimality": 0.010346895585826132,
+          "function_evaluations": 22,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.4821144329644673e-10,
+            0.7869234824451823,
+            0.28118031941139165
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.111572972681812,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6038428130734605,
+        0.21576267431579224,
+        0.767346287846385
+      ],
+      "optimizer_parameters": [
+        1.4821144329644673e-10,
+        0.7869234824451823,
+        0.28118031941139165
+      ]
+    },
+    {
+      "scenario_id": "5be844a7573da9fb625175d235ac653f76505526ab31b20035ca5899d354acfc",
+      "trial_id": 0,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.10677714638033706,
+      "zenith_deg": 40.04874770110561,
+      "azimuth_deg": 20.14771910308809,
+      "chi_square": 21.029700667173934,
+      "reduced_chi_square": 1.001414317484473,
+      "rms_residual_ns": 10.479292664461193,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 10.514850333586967,
+      "optimizer_optimality": 0.0003876964167375263,
+      "optimizer_nfev": 16,
+      "optimizer_njev": 16,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 21.02970066717795,
+          "scipy_cost": 10.514850333588974,
+          "optimality": 0.00012226954672200918,
+          "function_evaluations": 6,
+          "jacobian_evaluations": 1,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            0.0,
+            0.789115306122153,
+            0.2895206554662186
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 21.029700667173934,
+          "scipy_cost": 10.514850333586967,
+          "optimality": 0.0003876964167375263,
+          "function_evaluations": 16,
+          "jacobian_evaluations": 16,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            6.976242014985352e-08,
+            0.7891153058484935,
+            0.2895206539776882
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.890917235743635,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6040656179900068,
+        0.2216272723006606,
+        0.7654972771570908
+      ],
+      "optimizer_parameters": [
+        6.976242014985352e-08,
+        0.7891153058484935,
+        0.2895206539776882
+      ]
+    },
+    {
+      "scenario_id": "5be844a7573da9fb625175d235ac653f76505526ab31b20035ca5899d354acfc",
+      "trial_id": 0,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.008764808202020923,
+      "zenith_deg": 39.99253628317228,
+      "azimuth_deg": 20.007149236139576,
+      "chi_square": 21.92531257553523,
+      "reduced_chi_square": 1.0440625035969158,
+      "rms_residual_ns": 10.367365501500968,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 2,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_cost": 1289.7872093005492,
+      "optimizer_optimality": 0.017542960260470863,
+      "optimizer_nfev": 2,
+      "optimizer_njev": 2,
+      "initializer": "surface_minus",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 2579.5744186010984,
+          "scipy_cost": 1289.7872093005492,
+          "optimality": 0.017542960260470863,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.0716861686712079e-11,
+            0.7882513497006509,
+            0.2870114193402463
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 2579.5744186011107,
+          "scipy_cost": 1289.787209300555,
+          "optimality": 0.04743859106383752,
+          "function_evaluations": 19,
+          "jacobian_evaluations": 19,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            8.256722585334702e-12,
+            0.7882513517598226,
+            0.2870114257021463
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.111572972681812,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6039015642576362,
+        0.21988753354523563,
+        0.7661281702682475
+      ],
+      "optimizer_parameters": [
+        1.0716861686712079e-11,
+        0.7882513497006509,
+        0.2870114193402463
+      ]
+    },
+    {
+      "scenario_id": "5be844a7573da9fb625175d235ac653f76505526ab31b20035ca5899d354acfc",
+      "trial_id": 1,
+      "weighting": "timing",
+      "status": "success",
+      "angular_error_deg": 0.1388709735136033,
+      "zenith_deg": 40.05860178808361,
+      "azimuth_deg": 20.195747492191334,
+      "chi_square": 26.878538155230153,
+      "reduced_chi_square": 1.279930388344293,
+      "rms_residual_ns": 10.650704873496418,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 13.439269077615078,
+      "optimizer_optimality": 0.00016527901055951588,
+      "optimizer_nfev": 21,
+      "optimizer_njev": 15,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 26.878538155238264,
+          "scipy_cost": 13.439269077619134,
+          "optimality": 0.00011065768390494668,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            -3.016982683424964e-08,
+            0.7891478332124406,
+            0.29028337664305426
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 26.878538155230153,
+          "scipy_cost": 13.439269077615078,
+          "optimality": 0.00016527901055951588,
+          "function_evaluations": 21,
+          "jacobian_evaluations": 15,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            6.75854435896865e-08,
+            0.789147830932462,
+            0.29028336971170243
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.890917235743635,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6040031776962036,
+        0.22217900229296292,
+        0.7653866031444447
+      ],
+      "optimizer_parameters": [
+        6.75854435896865e-08,
+        0.789147830932462,
+        0.29028336971170243
+      ]
+    },
+    {
+      "scenario_id": "5be844a7573da9fb625175d235ac653f76505526ab31b20035ca5899d354acfc",
+      "trial_id": 1,
+      "weighting": "uniform",
+      "status": "success",
+      "angular_error_deg": 0.20119798743032394,
+      "zenith_deg": 40.096858606500064,
+      "azimuth_deg": 20.274074991416594,
+      "chi_square": 27.220579346440537,
+      "reduced_chi_square": 1.296218064116216,
+      "rms_residual_ns": 10.611217137814922,
+      "degrees_of_freedom": 21,
+      "quality_flags": [
+        "rank_two_surface_geometry",
+        "surface_like_geometry"
+      ],
+      "optimizer_status": 3,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "optimizer_cost": 1351.1751497502853,
+      "optimizer_optimality": 0.015768253460919368,
+      "optimizer_nfev": 22,
+      "optimizer_njev": 18,
+      "initializer": "vertical_fallback",
+      "optimizer_attempts": [
+        {
+          "initializer": "surface_minus",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 2,
+          "message": "`ftol` termination condition is satisfied.",
+          "objective_sum_squares": 2702.3502995006957,
+          "scipy_cost": 1351.1751497503478,
+          "optimality": 0.028765060711521073,
+          "function_evaluations": 2,
+          "jacobian_evaluations": 2,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            1.8732503785671103e-11,
+            0.7898200335913849,
+            0.29175710380519965
+          ],
+          "exception_type": null
+        },
+        {
+          "initializer": "vertical_fallback",
+          "accepted": true,
+          "scipy_success": true,
+          "status": 3,
+          "message": "`xtol` termination condition is satisfied.",
+          "objective_sum_squares": 2702.35029950057,
+          "scipy_cost": 1351.1751497502853,
+          "optimality": 0.015768253460919368,
+          "function_evaluations": 22,
+          "jacobian_evaluations": 18,
+          "active_mask": [
+            0,
+            0,
+            0
+          ],
+          "final_parameters": [
+            2.6339442494944853e-10,
+            0.7898200303389199,
+            0.29175709228819535
+          ],
+          "exception_type": null
+        }
+      ],
+      "initializer_rejections": [
+        "surface_plus:not_downward",
+        "horizontal_fallback:duplicate"
+      ],
+      "exception_type": null,
+      "exception_message": null,
+      "surface_condition_number": 5.111572972681812,
+      "final_jacobian_rank": 3,
+      "sky_direction": [
+        0.6041781362914576,
+        0.223181547058076,
+        0.7649567155598707
+      ],
+      "optimizer_parameters": [
+        2.6339442494944853e-10,
+        0.7898200303389199,
+        0.29175709228819535
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "scenario_id": "0e6f386cb4020662c6033740594173f8ab12193967f1e541d22a687cbdab6ad5",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.021441692635748393,
+      "uniform_angular_error_deg": 0.02144169292670854,
+      "improvement_deg": 2.909601483358504e-10,
+      "outcome": "tie",
+      "fit_separation_deg": 3.607685565059218e-10,
+      "prediction_difference_ns": 1.775333657860756e-08,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "18eab59b304a5fa372c370f4b4453784105d55abd6980f945c300e93ac5eb5a8"
+    },
+    {
+      "scenario_id": "0e6f386cb4020662c6033740594173f8ab12193967f1e541d22a687cbdab6ad5",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.11620832502122204,
+      "uniform_angular_error_deg": 0.11620830285437926,
+      "improvement_deg": -2.216684277800418e-08,
+      "outcome": "tie",
+      "fit_separation_deg": 5.827525445913888e-08,
+      "prediction_difference_ns": 2.901957486756146e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "2869987cb4ae0b9b57c73477b8157b4a830744eb1cc77d6ab307dd7bcedf4271"
+    },
+    {
+      "scenario_id": "86fbf318597eaff2049f38c128ec3a4002e4d0588a95ab2d8576264b8623b510",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.1204810054598941,
+      "uniform_angular_error_deg": 0.10865432513333163,
+      "improvement_deg": -0.011826680326562464,
+      "outcome": "uniform_win",
+      "fit_separation_deg": 0.02202096051161871,
+      "prediction_difference_ns": 2.9141580284776865,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "684716305b9a4500ec59545b268a01532fe304aa894ba6e877289194354b90b6"
+    },
+    {
+      "scenario_id": "86fbf318597eaff2049f38c128ec3a4002e4d0588a95ab2d8576264b8623b510",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.06222755354596188,
+      "uniform_angular_error_deg": 0.2787026762872637,
+      "improvement_deg": 0.21647512274130182,
+      "outcome": "timing_win",
+      "fit_separation_deg": 0.2168210886385991,
+      "prediction_difference_ns": 10.093981207013712,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "b2f114ae2e9d09d45d3e438e7af25ec9f7291de1d553055dd060d626163377e4"
+    },
+    {
+      "scenario_id": "88819f6c67a400877c9a25dd82b72b09189b6887d908ec6e443b9dc0d2af2d81",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.13972612183603542,
+      "uniform_angular_error_deg": 0.1397261067394094,
+      "improvement_deg": -1.5096626004851288e-08,
+      "outcome": "tie",
+      "fit_separation_deg": 9.979482494756823e-08,
+      "prediction_difference_ns": 5.839407094754279e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "2b146b2610dcfae6cfe12d174fc608dd260042646c7021215bb0c4595b56705e"
+    },
+    {
+      "scenario_id": "88819f6c67a400877c9a25dd82b72b09189b6887d908ec6e443b9dc0d2af2d81",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.07911158195994894,
+      "uniform_angular_error_deg": 0.07911157142108872,
+      "improvement_deg": -1.0538860215070223e-08,
+      "outcome": "tie",
+      "fit_separation_deg": 1.8152389229579685e-08,
+      "prediction_difference_ns": 1.1150987120345235e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "4fee2a92df108ebd1fa17ddc7bb7c7234cab8c24b155fc3359e62cb467e70ff3"
+    },
+    {
+      "scenario_id": "1c7136603fa624bfc31f7cc08703f422d6f9b5d93d17a67ba12bb137933624c2",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.08925089698615787,
+      "uniform_angular_error_deg": 0.05058607443008672,
+      "improvement_deg": -0.038664822556071156,
+      "outcome": "uniform_win",
+      "fit_separation_deg": 0.04667048613625792,
+      "prediction_difference_ns": 3.9476488858199446,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "9b982579c8a18aadc0a3d4eed0266c597a505c4ed7d3a4ab85820e9d8e8af331"
+    },
+    {
+      "scenario_id": "1c7136603fa624bfc31f7cc08703f422d6f9b5d93d17a67ba12bb137933624c2",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.10320316067795342,
+      "uniform_angular_error_deg": 0.12104571278467925,
+      "improvement_deg": 0.017842552106725834,
+      "outcome": "timing_win",
+      "fit_separation_deg": 0.0479208807866938,
+      "prediction_difference_ns": 4.979182252165629,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "f3e193c78bf18dd923f05070ad36fe2f4b3cb3229291d031115f965d52a821f2"
+    },
+    {
+      "scenario_id": "a9436a7d9a04700d67a70771fae50599a0c290420e09e1ea5211e2f323c6c37c",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.11111905171825064,
+      "uniform_angular_error_deg": 0.11111905018894296,
+      "improvement_deg": -1.529307680492309e-09,
+      "outcome": "tie",
+      "fit_separation_deg": 1.7686012384060304e-09,
+      "prediction_difference_ns": 1.7609272617846727e-07,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "5aecccb1c1ee1966ff8f921039d84728c993aae7a4e4f60fd1a2ab9a91de4f4a"
+    },
+    {
+      "scenario_id": "a9436a7d9a04700d67a70771fae50599a0c290420e09e1ea5211e2f323c6c37c",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.048072297343731175,
+      "uniform_angular_error_deg": 0.04807229754992017,
+      "improvement_deg": 2.0618899643221056e-10,
+      "outcome": "tie",
+      "fit_separation_deg": 2.207889677827702e-08,
+      "prediction_difference_ns": 1.6706326277926564e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "d319ad3d4a81887909c16f09a86412274dbea5ad8216a06f7646480fca18058c"
+    },
+    {
+      "scenario_id": "5db5b9cd13965f3c73a39f1d46e59f4b8eea6fa5dea9896933dd94710efb81f2",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.08710676811191753,
+      "uniform_angular_error_deg": 0.1356149100877018,
+      "improvement_deg": 0.048508141975784264,
+      "outcome": "timing_win",
+      "fit_separation_deg": 0.0494033006373813,
+      "prediction_difference_ns": 4.179162299493328,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "33b10db1c9b421a5a677c9d95a1ebf9d6f79e637bbb2f70179a94287fafbc123"
+    },
+    {
+      "scenario_id": "5db5b9cd13965f3c73a39f1d46e59f4b8eea6fa5dea9896933dd94710efb81f2",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.05572808190806025,
+      "uniform_angular_error_deg": 0.04978963614545579,
+      "improvement_deg": -0.005938445762604459,
+      "outcome": "uniform_win",
+      "fit_separation_deg": 0.019156874928824886,
+      "prediction_difference_ns": 1.4191176892636577,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "6ba625b7f67c3f48e21f9ded7306ddd6b1cd2df1a1a9ef8c0095a9c2b154f970"
+    },
+    {
+      "scenario_id": "cb90c61ae743f6b77ac0f680cf814fbe51dcfe5372a4e5ceabbbee0710d82a8e",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.6748928602010437,
+      "uniform_angular_error_deg": 0.6748928590619535,
+      "improvement_deg": -1.1390901555330402e-09,
+      "outcome": "tie",
+      "fit_separation_deg": 1.6050105071222048e-09,
+      "prediction_difference_ns": 3.496679710224271e-07,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "867ead5c1907e26d5f883ede4cf8b774533c44d47dfc66d6fd73d9c8c9a623fb"
+    },
+    {
+      "scenario_id": "cb90c61ae743f6b77ac0f680cf814fbe51dcfe5372a4e5ceabbbee0710d82a8e",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.31816119779381896,
+      "uniform_angular_error_deg": 0.31816137333912475,
+      "improvement_deg": 1.7554530579166894e-07,
+      "outcome": "tie",
+      "fit_separation_deg": 1.988268442997423e-07,
+      "prediction_difference_ns": 2.180939191021025e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "b710bc6139241cac7440ab31581f437bff8729edab8984ee15acb0e452bdc9cc"
+    },
+    {
+      "scenario_id": "7bec91fa1a0656d20f433ec41570b0d6fbc55ada1f234fef1080eb90d2424b88",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.19087324683788956,
+      "uniform_angular_error_deg": 0.31646409035450596,
+      "improvement_deg": 0.1255908435166164,
+      "outcome": "timing_win",
+      "fit_separation_deg": 0.5073300572888387,
+      "prediction_difference_ns": 7.3189975314890034,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "7b104694ea1eb041d4e670d5ef93107d6f4f24ca4db6eaf78839489b518ac6d4"
+    },
+    {
+      "scenario_id": "7bec91fa1a0656d20f433ec41570b0d6fbc55ada1f234fef1080eb90d2424b88",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.5981935189163138,
+      "uniform_angular_error_deg": 0.07979685301789852,
+      "improvement_deg": -0.5183966658984153,
+      "outcome": "uniform_win",
+      "fit_separation_deg": 0.6290537899237622,
+      "prediction_difference_ns": 7.8942731696151895,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "4736c9652231214ed8cab7ee2ce46a45a102f34a612db1b2a0c8d02a88c368a5"
+    },
+    {
+      "scenario_id": "ead1f5d230951a719a1dbc4a8227cd1c1397668835f2951012999cccbb1ddeeb",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.08164154768843929,
+      "uniform_angular_error_deg": 0.08164154682114697,
+      "improvement_deg": -8.672923212937889e-10,
+      "outcome": "tie",
+      "fit_separation_deg": 3.268094640987673e-09,
+      "prediction_difference_ns": 1.230509951710701e-07,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "0270eff920584374cd382d455e7735148c9ecef8925307a8b5d4ad7f39868f52"
+    },
+    {
+      "scenario_id": "ead1f5d230951a719a1dbc4a8227cd1c1397668835f2951012999cccbb1ddeeb",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.09207495436938336,
+      "uniform_angular_error_deg": 0.09207494458661215,
+      "improvement_deg": -9.782771204225327e-09,
+      "outcome": "tie",
+      "fit_separation_deg": 3.18749978517329e-08,
+      "prediction_difference_ns": 1.52598659042269e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "846bd825afac5d8c80a06f1b84a4244069073d7afe92ac2085d1a1d1c24e1a36"
+    },
+    {
+      "scenario_id": "238b472639bc360e743556b6047e5204dc970e51c55f98f38d7a447f0bef7aec",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.1165502544727723,
+      "uniform_angular_error_deg": 0.12899839608193645,
+      "improvement_deg": 0.012448141609164146,
+      "outcome": "timing_win",
+      "fit_separation_deg": 0.07795220563576183,
+      "prediction_difference_ns": 5.569425099078217,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "9b2a75367bfe2d7540e86b69d0a3df1ea616bb864cfc28c5a1994450831ef33e"
+    },
+    {
+      "scenario_id": "238b472639bc360e743556b6047e5204dc970e51c55f98f38d7a447f0bef7aec",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.21340874498139867,
+      "uniform_angular_error_deg": 0.3685306064841604,
+      "improvement_deg": 0.15512186150276175,
+      "outcome": "timing_win",
+      "fit_separation_deg": 0.16117045773247607,
+      "prediction_difference_ns": 9.095678540834342,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "8505f183f800f9c3335681d05900056563db7da93c90a2dc8613a3a60b65956e"
+    },
+    {
+      "scenario_id": "43a56ba9aa5bc95a08c6ab871906abb8d35b9db7463407f963217d9badb27c76",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.12064984971847827,
+      "uniform_angular_error_deg": 0.12064965614326577,
+      "improvement_deg": -1.935752124981871e-07,
+      "outcome": "tie",
+      "fit_separation_deg": 1.939834039412451e-07,
+      "prediction_difference_ns": 4.387489752843976e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "937491396283bebe3c15ea23778b5546b2c931a89a9069e1042918426a1c56ce"
+    },
+    {
+      "scenario_id": "43a56ba9aa5bc95a08c6ab871906abb8d35b9db7463407f963217d9badb27c76",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.2457934406593711,
+      "uniform_angular_error_deg": 0.24579353378101004,
+      "improvement_deg": 9.312163895547343e-08,
+      "outcome": "tie",
+      "fit_separation_deg": 9.360247961987664e-08,
+      "prediction_difference_ns": 2.3061875253915787e-06,
+      "equal_control_pass": true,
+      "objective_order_pass": true,
+      "noise_sha256": "81ec23e32c626713fe91eb5dd568eb3e80c64cb26c0b1502194d41dd98b39942"
+    },
+    {
+      "scenario_id": "5be844a7573da9fb625175d235ac653f76505526ab31b20035ca5899d354acfc",
+      "trial_id": 0,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.10677714638033706,
+      "uniform_angular_error_deg": 0.008764808202020923,
+      "improvement_deg": -0.09801233817831613,
+      "outcome": "uniform_win",
+      "fit_separation_deg": 0.1064473502712628,
+      "prediction_difference_ns": 3.36757082339318,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "2e6522c6df04ec45355280c42d95f56973c1acd64f8f5530e8ede15cdc79c6d7"
+    },
+    {
+      "scenario_id": "5be844a7573da9fb625175d235ac653f76505526ab31b20035ca5899d354acfc",
+      "trial_id": 1,
+      "paired_success": true,
+      "timing_success": true,
+      "uniform_success": true,
+      "timing_angular_error_deg": 0.1388709735136033,
+      "uniform_angular_error_deg": 0.20119798743032394,
+      "improvement_deg": 0.06232701391672063,
+      "outcome": "timing_win",
+      "fit_separation_deg": 0.06329848259008715,
+      "prediction_difference_ns": 1.9939448670629645,
+      "equal_control_pass": null,
+      "objective_order_pass": true,
+      "noise_sha256": "eefbc445d7764ce355981a6f5337df9946950abe77c2aa4ef5487ea0e7e5eccc"
+    }
+  ]
+}

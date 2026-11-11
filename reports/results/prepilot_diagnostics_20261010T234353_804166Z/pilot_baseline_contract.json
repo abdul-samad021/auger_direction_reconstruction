@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "status": "frozen_baseline_comparison_only",
+  "pilot_executed": false,
+  "original_manifest_sha256": "5d2dad150943385cb0116f1a0dfa5d200cf1ffbe93aae2cc029bf19a969f827b",
+  "execution_manifest_sha256": "9fc63792bb14f9b79a562acf518c37c86278662c0e2d7921609f727cd27b75ab",
+  "event_count": 1000,
+  "models": [
+    "plane",
+    "published_core_assisted_quadratic"
+  ],
+  "weightings": [
+    "timing",
+    "uniform"
+  ],
+  "plane_options": {
+    "minimum_stations": 4,
+    "surface_seed_margin": 1e-06,
+    "vertical_azimuth_tolerance": 1e-12,
+    "planarity_ratio_threshold": 0.05,
+    "surface_condition_warning_threshold": 100000000.0,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "optimizer_method": "trf",
+    "optimizer_loss": "linear",
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "maximum_function_evaluations": 2000
+  },
+  "quadratic_options": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 2000,
+    "positive_curvature_seeds_ns": [
+      100.0
+    ],
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  },
+  "selection": "auger_isSelected",
+  "uncertainty_rescaling": false,
+  "residual_station_rejection": false,
+  "earth_curvature_correction": "none_added",
+  "signal_model_promoted": false,
+  "fixed_reference_direction_fit_in_pilot": false,
+  "reference_access": "only after complete per-event predictions are persisted and hashed",
+  "failure_policy": "retain every event/fit; no replacement or silent fallback",
+  "quality_policy": "retain all solver and geometry flags; convergence is not validity",
+  "heldout_policy": "refit every station; <6 retained stations is explicit quadratic failure",
+  "influence_warning_deg": 1.0,
+  "influence_warning_action": "report only; never exclude from primary aggregates",
+  "reporting": [
+    "failure denominators",
+    "flagged event counts",
+    "per-event timing RMS",
+    "nominal reduced chi-square",
+    "conditional heldout RMS and normalized MSE",
+    "maximum leave-one-station-out direction change",
+    "reference separation",
+    "median, p68 and p95 per-event metrics by split and multiplicity"
+  ],
+  "pairing": "paired complete events, with incomplete counts also reported",
+  "claim_limits": "reference agreement, not true-direction accuracy or superiority to Auger",
+  "data_dependence": "official selection/core; development used only train plus old focus",
+  "future_ml_test_split": "remains unavailable to model development and tuning",
+  "execution_stages": "train analysis first; protected predictions/references stay sealed",
+  "protected_evaluation": "after full-procedure freeze only; never feed results into tuning"
+}

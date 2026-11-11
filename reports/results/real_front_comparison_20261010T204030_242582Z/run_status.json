@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "selected_events": 20,
+  "compared_events": 20,
+  "event_failures": 0,
+  "fit_records": 1072,
+  "failed_fits": 0,
+  "nested_objective_violations": 0,
+  "completed_utc": "2026-10-10T20:40:41.319989+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "notebook_path": "notebooks/03_reconstruct_first_real_event.ipynb",
+  "executed_code_cells": 12,
+  "fresh_kernel": true,
+  "python_executable": "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/python",
+  "git_head": "aaca956418c4be592b48c5d564933dc04f91f2dd",
+  "working_tree_changes_present": true,
+  "notebook_code_sha256": "4bc90f77e9e846f8358a8680061be4e3fcf480a04be7f0a4eb4c4157e2d0f798",
+  "artifact_sha256": {
+    "comparison_with_auger.csv": "2a7f85ec5384de93967afcaecf37b0635ff261e05d19bc74071cc3a7b528848b",
+    "executed_notebook.ipynb": "60d775bcd262f1dcea6f087a189d2d21bad844b1a2028ef145169bcc94b0604c",
+    "predictions_before_reference.csv": "e4e62731c529aa7d2049f5c7edf73c333c571e292dec49131ed3a45c7a6db6c1",
+    "run_metadata.json": "c001ccd3a5eb5fc90ed0c48c63f0b6e28945fc9006d6b61f58497153b7cecc1c",
+    "scientific_conclusion.md": "4f67df847b4e8b6f79fbecc2f9abac4d9a6329381b4826414e63663f0108367f",
+    "timing_optimizer_attempts.csv": "374b4ddc76f2f995aab3068348ce7df21e86db646c1bcb5442fe1e378edb9e39",
+    "uniform_optimizer_attempts.csv": "52a5f10bd6d10a214f8163260700dd2bf79df7aa72eed3e5dd2b5c67b509c4ad",
+    "weighted_chi_square_contributions.csv": "21c79b35e99aac46ace0c124603488719af24ac4042ce2ddd9da48bc8b5e8bea",
+    "weighted_chi_square_contributions.png": "7ca995b51f079460b33eca2aa0ec8466fe26f074b2394434dc0ed10f8a488580",
+    "weighted_leave_one_out.csv": "3c37b93b43a0e51ea006ee2fe8dac6b7dc272f288d0116d86fe753eeaca170ff",
+    "weighted_leave_one_out_optimizer_attempts.csv": "47d7f8cf14dd29e1cf7336a67b8912cacab7486ca67ebec94d5cfcccce5f95ae",
+    "weighted_leave_one_out_sensitivity.png": "756fb51f098a4659f3540336c2ea3ddf47719cb5736826ecfa837171a1570955",
+    "weighted_spatial_residual_diagnostics.png": "fa416a01b91077556697b99abe600b0cf4071efe7b60a824a1965460690d44af",
+    "weighted_station_diagnostics.csv": "1b54fe2ce54d153d69860dddb2ebec5d0ac14250b0a83a2770d5195b9f557da5",
+    "weighted_timing_diagnostics.png": "ae348e931084eaf80f5d1b7e8db8900ffb3a2d08b00a7157bbf6ab6774c3052e"
+  },
+  "verification": "Both fit modes; all omission rows; chi-square sum; unchanged event/module hashes."
+}

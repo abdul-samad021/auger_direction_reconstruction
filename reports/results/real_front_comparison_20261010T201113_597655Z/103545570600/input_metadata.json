@@ -1,0 +1,10 @@
+{
+  "event_id": "103545570600",
+  "embedded_release": "1",
+  "format_version": 2,
+  "selected_stations": 12,
+  "triggered_stations": 14,
+  "selection_policy": "auger_isSelected",
+  "adapter_flags": [],
+  "event_sha256": "c6b89f72d7d424708d49f015e2d067f17195c8e0839a063103c3fa4fde588ede"
+}

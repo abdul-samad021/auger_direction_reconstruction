@@ -1,0 +1,26 @@
+{
+  "event_id": 80523660200,
+  "canonical_event_id": "080523660200",
+  "embedded_release": "1",
+  "format_version": 2,
+  "source_path": "/home/abdul_samad/projects/auger-direction-reconstruction/data/raw/events/Auger_080523660200.json",
+  "position_m": [
+    12029.29,
+    32317.33,
+    -78.47
+  ],
+  "uncertainty_x_m": 13.49,
+  "uncertainty_y_m": 8.76,
+  "source": "sdrec",
+  "position_field_paths": [
+    "/sdrec/x",
+    "/sdrec/y",
+    "/sdrec/z"
+  ],
+  "uncertainty_field_paths": [
+    "/sdrec/dx",
+    "/sdrec/dy"
+  ],
+  "coordinate_frame": "released site coordinates",
+  "documentation_url": "https://opendata.auger.org/data.php"
+}

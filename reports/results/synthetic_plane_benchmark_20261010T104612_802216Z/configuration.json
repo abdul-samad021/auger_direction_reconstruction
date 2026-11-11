@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-10-10T10:46:12.831486+00:00",
+  "master_seed": 20261010,
+  "scenario_count": 432,
+  "trials_per_scenario": 200,
+  "bootstrap_resamples": 2000,
+  "bootstrap_confidence": 0.95,
+  "minimum_bootstrap_pairs": 20,
+  "tie_tolerance_deg": 1e-05,
+  "control_direction_tolerance_deg": 1e-05,
+  "control_time_tolerance_ns": 0.001,
+  "objective_relative_tolerance": 1e-06,
+  "array_rms_radius_m": 1000.0,
+  "east_west_stretch": 4.0,
+  "timing_rms_sigma_ns": 10.0,
+  "true_origin_time_ns": 100000.0,
+  "fit_options": {
+    "minimum_stations": 6,
+    "surface_seed_margin": 1e-06,
+    "vertical_azimuth_tolerance": 1e-12,
+    "planarity_ratio_threshold": 0.05,
+    "surface_condition_warning_threshold": 100000000.0,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "optimizer_method": "trf",
+    "optimizer_loss": "linear",
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "maximum_function_evaluations": 2000
+  },
+  "seed_policy": "PCG64 SeedSequence([master_seed, stream, SHA256_spec_le_uint32s, trial])",
+  "streams": {
+    "geometry": 1,
+    "uncertainty_assignment": 2,
+    "main": 3,
+    "smoke": 4,
+    "bootstrap": 5
+  },
+  "python_executable": "/home/abdul_samad/projects/auger-direction-reconstruction/.venv/bin/python",
+  "python_version": "3.12.13",
+  "package_versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1",
+    "ipykernel": "7.3.0"
+  },
+  "git_head": "aaca956418c4be592b48c5d564933dc04f91f2dd",
+  "git_status": [
+    " M README.md",
+    " M docs/data_strategy.md",
+    " M docs/project_scope_and_deployment.md",
+    " M docs/scientific_charter.md",
+    " M notebooks/03_reconstruct_first_real_event.ipynb",
+    "?? docs/research_roadmap.md",
+    "?? notebooks/04_benchmark_synthetic_plane_front.ipynb",
+    "?? reports/first_real_event_conclusion.md",
+    "?? reports/results/"
+  ],
+  "source_sha256": {
+    "plane_front.py": "b1397a127bc8cb896fb746c41ee24d2731c07060cf62487916d191e5c0606fb0",
+    "notebook_file_at_run_start": "c5905dd6cb8da4cc4131b050cded1c97c597f31508a51f52ad50e7757b1a2891"
+  }
+}

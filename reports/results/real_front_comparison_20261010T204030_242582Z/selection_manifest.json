@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "name": "real_front_development_v1",
+  "status": "frozen_before_download_and_fit",
+  "frozen_on": "2026-10-10",
+  "source_manifest": "data/manifests/pilot_sd1500_vertical_v1.csv",
+  "source_sha256": "5d2dad150943385cb0116f1a0dfa5d200cf1ffbe93aae2cc029bf19a969f827b",
+  "release_url_version": "3",
+  "selection_rule": {
+    "seed": 20261010,
+    "additional_event_count": 19,
+    "eligible_split": "train",
+    "minimum_selected_stations": 7,
+    "fields_consumed": ["event_id", "split", "selected_stations", "zenith_bin", "multiplicity_bin"],
+    "strata": ["zenith_bin", "multiplicity_bin"],
+    "stratum_order": "Ascending lexicographic tuple order",
+    "within_stratum_order": "Ascending SHA256(UTF-8 decimal seed + ':' + canonical twelve-digit event_id), then event_id",
+    "algorithm": "One event per nonempty stratum per round until nineteen; exclude focus event",
+    "no_replacements": true
+  },
+  "limitations": [
+    "Focus event was already examined and is not an independent validation event.",
+    "Additional events are training-development data, not validation or test events.",
+    "At least seven officially selected stations are required so leave-one-out retains six; findings do not represent low-multiplicity events.",
+    "Strata derive from existing published-reconstruction bins; no exact direction or energy is used for selection.",
+    "Stratified convenience sample with deterministic uneven final round, not an unbiased population sample.",
+    "Retain download, parsing and fitting failures; never replace an event based on outcomes."
+  ],
+  "events": [
+    {"event_id": "081847956000", "role": "focus_previously_unblinded", "split": "previously_examined_focus"},
+    {"event_id": "160210414600", "role": "training_development", "split": "train", "selected_stations": 13, "zenith_bin": "0-15", "multiplicity_bin": "12+"},
+    {"event_id": "120797883000", "role": "training_development", "split": "train", "selected_stations": 7, "zenith_bin": "0-15", "multiplicity_bin": "6-7"},
+    {"event_id": "130207988600", "role": "training_development", "split": "train", "selected_stations": 8, "zenith_bin": "0-15", "multiplicity_bin": "8-11"},
+    {"event_id": "140876912800", "role": "training_development", "split": "train", "selected_stations": 12, "zenith_bin": "15-30", "multiplicity_bin": "12+"},
+    {"event_id": "133556408900", "role": "training_development", "split": "train", "selected_stations": 7, "zenith_bin": "15-30", "multiplicity_bin": "6-7"},
+    {"event_id": "112954615400", "role": "training_development", "split": "train", "selected_stations": 8, "zenith_bin": "15-30", "multiplicity_bin": "8-11"},
+    {"event_id": "123274772200", "role": "training_development", "split": "train", "selected_stations": 12, "zenith_bin": "30-45", "multiplicity_bin": "12+"},
+    {"event_id": "113434887000", "role": "training_development", "split": "train", "selected_stations": 7, "zenith_bin": "30-45", "multiplicity_bin": "6-7"},
+    {"event_id": "163051054600", "role": "training_development", "split": "train", "selected_stations": 8, "zenith_bin": "30-45", "multiplicity_bin": "8-11"},
+    {"event_id": "103545570600", "role": "training_development", "split": "train", "selected_stations": 12, "zenith_bin": "45-60", "multiplicity_bin": "12+"},
+    {"event_id": "173064766400", "role": "training_development", "split": "train", "selected_stations": 7, "zenith_bin": "45-60", "multiplicity_bin": "6-7"},
+    {"event_id": "162626086100", "role": "training_development", "split": "train", "selected_stations": 10, "zenith_bin": "45-60", "multiplicity_bin": "8-11"},
+    {"event_id": "070137858700", "role": "training_development", "split": "train", "selected_stations": 13, "zenith_bin": "0-15", "multiplicity_bin": "12+"},
+    {"event_id": "130237366100", "role": "training_development", "split": "train", "selected_stations": 7, "zenith_bin": "0-15", "multiplicity_bin": "6-7"},
+    {"event_id": "111883060100", "role": "training_development", "split": "train", "selected_stations": 10, "zenith_bin": "0-15", "multiplicity_bin": "8-11"},
+    {"event_id": "103648222300", "role": "training_development", "split": "train", "selected_stations": 14, "zenith_bin": "15-30", "multiplicity_bin": "12+"},
+    {"event_id": "162706023800", "role": "training_development", "split": "train", "selected_stations": 7, "zenith_bin": "15-30", "multiplicity_bin": "6-7"},
+    {"event_id": "133323550000", "role": "training_development", "split": "train", "selected_stations": 8, "zenith_bin": "15-30", "multiplicity_bin": "8-11"},
+    {"event_id": "080523660200", "role": "training_development", "split": "train", "selected_stations": 14, "zenith_bin": "30-45", "multiplicity_bin": "12+"}
+  ]
+}

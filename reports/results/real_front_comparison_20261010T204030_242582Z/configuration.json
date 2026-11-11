@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-10-10T20:40:30.244520+00:00",
+  "focus_event": "081847956000",
+  "plane_options": {
+    "minimum_stations": 6,
+    "surface_seed_margin": 1e-06,
+    "vertical_azimuth_tolerance": 1e-12,
+    "planarity_ratio_threshold": 0.05,
+    "surface_condition_warning_threshold": 100000000.0,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "optimizer_method": "trf",
+    "optimizer_loss": "linear",
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "maximum_function_evaluations": 2000
+  },
+  "quadratic_options": {
+    "minimum_stations": 6,
+    "maximum_function_evaluations": 2000,
+    "positive_curvature_seeds_ns": [
+      100.0
+    ],
+    "optimizer_ftol": 1e-10,
+    "optimizer_xtol": 1e-10,
+    "optimizer_gtol": 1e-10,
+    "jacobian_rank_relative_tolerance": 1e-10,
+    "geometry_condition_warning_threshold": 100000000.0,
+    "boundary_curvature_tolerance_ns": 1e-06,
+    "minimum_sky_z_for_slopes": 1e-12,
+    "near_horizon_sky_z_threshold": 0.01,
+    "vertical_azimuth_tolerance": 1e-12,
+    "nested_objective_relative_tolerance": 1e-07,
+    "nested_objective_absolute_tolerance": 1e-08
+  },
+  "fixed_core_shift_m": 100.0,
+  "source_sha256": {
+    "auger_reco.data.core_reference": "1c6ba4b13989b6fc3972b63528b9e5a4f493681af1007be1591781be362d9d30",
+    "auger_reco.data.development_sample": "aa3d879cf2645107d11865f5abc342ed557e04b1a59d0727c60a1cf72a74d203",
+    "auger_reco.data.event_json": "ed038376c6300d4bc6f1d5e25a756d5fff0b4d55f54b9c1cdee17e51c3675b5d",
+    "auger_reco.evaluation.front_comparison": "3b6b0e6fc8da698818ec2fd30d1d9b8f6d957498e2657ebe51432123d17a6a28",
+    "auger_reco.physics.plane_front": "5f5ca6f734d156e2087b498b09beb47d4851acd7455f0bf1e22e90bef6f7d6f7",
+    "auger_reco.physics.curved_front": "1ef0e110facaeb7389bd85f36d98deab36d83aba3479b92738fa941e3e3b0273",
+    "auger_reco.physics.quadratic_front": "87ad244836cc6f9537c6b05f316451fdd9f26724f902eb52d2f49d465db94044"
+  },
+  "selection_manifest_sha256": "bbf7241b17581b74bb70a960f096568fa5bea1270af6cf875a00090d1f5752e6",
+  "python": "3.12.13",
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1"
+  },
+  "git_head": "aaca956418c4be592b48c5d564933dc04f91f2dd",
+  "git_status": " M README.md\n M docs/data_strategy.md\n M docs/project_scope_and_deployment.md\n M docs/scientific_charter.md\n M notebooks/03_reconstruct_first_real_event.ipynb\n M notebooks/README.md\n M src/auger_reco/physics/plane_front.py\n M tests/test_plane_front.py\n?? data/manifests/real_front_development_v1.downloads.json\n?? data/manifests/real_front_development_v1.json\n?? docs/real_front_comparison_protocol.md\n?? docs/research_roadmap.md\n?? notebooks/04_benchmark_synthetic_plane_front.ipynb\n?? notebooks/05_benchmark_curved_front.ipynb\n?? notebooks/06_compare_real_event_front_models.ipynb\n?? reports/controlled_curvature_conclusion.md\n?? reports/first_real_event_conclusion.md\n?? reports/real_front_comparison_conclusion.md\n?? reports/real_front_run_registry.json\n?? reports/results/\n?? src/auger_reco/data/core_reference.py\n?? src/auger_reco/data/development_sample.py\n?? src/auger_reco/evaluation/front_comparison.py\n?? src/auger_reco/physics/curved_front.py\n?? src/auger_reco/physics/quadratic_front.py\n?? tests/test_core_reference.py\n?? tests/test_curved_front.py\n?? tests/test_development_sample.py\n?? tests/test_front_comparison.py\n?? tests/test_quadratic_front.py\n",
+  "role": "core-assisted, inherited station selection, training-only development",
+  "held_out_caveat": "fixed full-event Auger core and selection; not end-to-end cross-validation",
+  "nonfinite_json": "unavailable or nonfinite numeric diagnostics serialized as null"
+}

@@ -1,0 +1,21 @@
+{
+  "angular_error_by_geometry_and_count.png": "da05fabb021db11e48e352f814b23813d30d45b4db6dc0738b8056390491be3e",
+  "configuration.json": "a84ee7066643dbeb5d0e45120a222e8568f291260ef48104f3b49a49f27a3973",
+  "control_checks.json": "5d76944ce18c5bd52bcd6721236435ec95aa2e95f6f458acc78307a7063d906a",
+  "descriptive_grid_summary.csv": "a6bb705a01af46a700824ef17785f40130e3071971ecba0389d25d3bd9f164d3",
+  "exact_recovery_checks.csv": "9dc3a58548d94d5629e1951f8428235900a403dbff7c16298d9d4b14c937239c",
+  "fit_metrics.csv.gz": "fedb2bcf62e48e4c9763c4a2e4980adb70eea00e49bde6beebd8644624811b94",
+  "fit_records.jsonl.gz": "6d1a2b9f9f12aeb39098ce9e4d72e422a863d5e30bb2f7be5d19f0ba1dd7f15e",
+  "gaussian_noise_and_preselected_example.png": "7f6734d00de2f561493d28c9a5605043d10779cb63c2776d99acfddbbfe61eea",
+  "method_summary_by_scenario.csv": "64293367586583a2a1fb009e231403b26bf07951f2b31fa2bf3ee0581c89d01b",
+  "noise_generation_checks.json": "70ea394d32be831c58d56a797dc3ec57ab6855b119113e43c79d4407a9c7209a",
+  "notebook_at_run_start.ipynb": "c5905dd6cb8da4cc4131b050cded1c97c597f31508a51f52ad50e7757b1a2891",
+  "paired_improvement_direction_heatmaps.png": "ad1f2ea0efd0bfc2532433a3979a097c0218d4e6750b8a848585a4032370662b",
+  "paired_summary_by_scenario.csv": "36172c7e8c713851fcb55a6f4f3ca517991d76d5772a0527accc49aff7d2dcd7",
+  "paired_trials.csv.gz": "85f204ce14054ffe62dda2028f622febb95448a8e8bb76e5bc18a95f0cdb08a2",
+  "run_status.json": "f46bd34a08b68e90a6cbc55e7ba5d813d6ecaf7f3b4ef47f4df2d1e966530c5a",
+  "scenario_manifest.json": "9de50a5416dc5a902b0576de49277b455160e17b9b91bbb6e5a297fa3a36cfed",
+  "scientific_conclusion.md": "e6250539517a0e961f1ad32c98fca289fccc3f2142d4e3e38c5d279434b2c32b",
+  "smoke_test.json": "c0409fcd9cdad3ef6b7bf9e4355a894b4c72cd607be60b995fdc2b49de68f491",
+  "timing_noise_draws.npz": "a1b0bfc270dd8de2985f85297667b21d2cfeaab0afa89a6e2881f6d056488f81"
+}

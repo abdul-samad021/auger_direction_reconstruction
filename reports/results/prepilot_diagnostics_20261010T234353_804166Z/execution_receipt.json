@@ -1,0 +1,13 @@
+{
+  "verified_preexisting_artifacts": 35,
+  "independent_fixed_direction_checks": 40,
+  "independent_signal_objective_checks": 120,
+  "tests_passed": 399,
+  "warnings_as_errors": true,
+  "lint": "passed",
+  "notebook_code_cells": 5,
+  "fresh_kernel": true,
+  "figures_visually_checked": 4,
+  "pilot_executed": false,
+  "committed": false
+}
