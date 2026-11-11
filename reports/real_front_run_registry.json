@@ -1,0 +1,20 @@
+{
+  "authoritative_run": "real_front_comparison_20261010T201113_597655Z",
+  "runs": [
+    {
+      "run": "real_front_comparison_20261010T191401_384396Z",
+      "use_for_final_analysis": false,
+      "reason": "Exploratory integration run exposed false plane Jacobian rank deficiency. Its execution completed, but scientific reporting was not accepted. Artifacts are preserved unchanged."
+    },
+    {
+      "run": "real_front_comparison_20261010T200925_870156Z",
+      "use_for_final_analysis": false,
+      "reason": "Corrected numerical run, superseded by final notebook formatting and figure labels. Artifacts are preserved unchanged."
+    },
+    {
+      "run": "real_front_comparison_20261010T201113_597655Z",
+      "use_for_final_analysis": true,
+      "reason": "Fresh-kernel run; complete tests, independent replay and artifact-integrity audit passed. Scientific interpretation limited to core-assisted development results."
+    }
+  ]
+}
